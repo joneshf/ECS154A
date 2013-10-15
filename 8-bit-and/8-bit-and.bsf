@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 112 336)
-	(text "and8" (rect 5 0 34 12)(font "Arial" (font_size 8)))
+	(text "8-bit-and" (rect 5 0 56 12)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 306 26 316)(font "Arial" ))
 	(port
 		(pt 0 32)
