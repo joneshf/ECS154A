@@ -1,0 +1,20 @@
+Analysis & Synthesis Status : Successful - Mon Oct 14 19:14:22 2013
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : 1-bit-comparator
+Top-level Entity Name : 1-bit-comparator
+Family : Arria II GX
+Logic utilization : N/A
+    Combinational ALUTs : 2
+    Memory ALUTs : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 4
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 18-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0
+Total DLLs : 0
