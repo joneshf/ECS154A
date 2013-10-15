@@ -1,5 +1,5 @@
 Flow report for 1-bit-comparator
-Mon Oct 14 19:33:20 2013
+Mon Oct 14 20:07:51 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Flow Status                       ; Successful - Mon Oct 14 19:33:20 2013           ;
+; Flow Status                       ; Successful - Mon Oct 14 20:07:51 2013           ;
 ; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                     ; 1-bit-comparator                                ;
 ; Top-level Entity Name             ; 1-bit-comparator                                ;
@@ -103,7 +103,17 @@ applicable agreement for further details.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 858 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 858 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 874 MB              ; 00:00:01                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:10                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -121,6 +131,16 @@ applicable agreement for further details.
 ; EDA Netlist Writer   ; arch-laptop-hp   ; Arch Linux ; Arch Linux ; x86_64         ;
 ; EDA Netlist Writer   ; arch-laptop-hp   ; Arch Linux ; Arch Linux ; x86_64         ;
 ; EDA Netlist Writer   ; arch-laptop-hp   ; Arch Linux ; Arch Linux ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7  ; 6.1        ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -135,6 +155,16 @@ quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator --vector_source=/home/joneshf/school/group/ECS154A/1_bit_comparator/Waveform.vwf --testbench_file=./simulation/qsim/1-bit-comparator.vt
 quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator --vector_source=/home/joneshf/school/group/ECS154A/1_bit_comparator/Waveform.vwf --testbench_file=./simulation/qsim/1-bit-comparator.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/Waveform1.vwf" --testbench_file=./simulation/qsim/1-bit-comparator.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/Waveform1.vwf" --testbench_file=./simulation/qsim/1-bit-comparator.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/Waveform.vwf" --testbench_file=./simulation/qsim/1-bit-comparator.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/Waveform.vwf" --testbench_file=./simulation/qsim/1-bit-comparator.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/Waveform.vwf" --testbench_file=./simulation/qsim/1-bit-comparator.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog 1-bit-comparator -c 1-bit-comparator
 
 

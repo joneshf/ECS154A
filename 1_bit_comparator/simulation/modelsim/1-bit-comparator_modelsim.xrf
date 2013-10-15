@@ -1,8 +1,9 @@
 vendor_name = ModelSim
-source_file = 1, /home/joneshf/school/group/ECS154A/1_bit_comparator/1_bit-comparator.bdf
-source_file = 1, /home/joneshf/school/group/ECS154A/1_bit_comparator/1-bit-comparator.bdf
-source_file = 1, /home/joneshf/school/group/ECS154A/1_bit_comparator/Waveform.vwf
-source_file = 1, /home/joneshf/school/group/ECS154A/1_bit_comparator/db/1-bit-comparator.cbx.xml
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/1_bit-comparator.bdf
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/1-bit-comparator.bdf
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/Waveform.vwf
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/Waveform1.vwf
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1_bit_comparator/db/1-bit-comparator.cbx.xml
 design_name = \1-bit-comparator 
 instance = comp, \E~output , E~output, \1-bit-comparator , 1
 instance = comp, \N~output , N~output, \1-bit-comparator , 1
