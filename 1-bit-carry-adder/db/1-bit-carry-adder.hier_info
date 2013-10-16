@@ -1,0 +1,48 @@
+|1-bit-carry-adder
+P <= 1-bit-xor:p_xor.C
+A => 1-bit-xor:p_xor.A
+A => g_and.IN0
+A => 1-bit-full-adder:sum.A
+B => 1-bit-xor:p_xor.B
+B => g_and.IN1
+B => 1-bit-full-adder:sum.B
+G <= g_and.DB_MAX_OUTPUT_PORT_TYPE
+S <= 1-bit-full-adder:sum.S
+C => 1-bit-full-adder:sum.C_IN
+
+
+|1-bit-carry-adder|1-bit-xor:p_xor
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
+|1-bit-carry-adder|1-bit-full-adder:sum
+S <= 1-bit-xor:inst1.C
+A => 1-bit-xor:inst.A
+A => inst3.IN1
+B => 1-bit-xor:inst.B
+B => inst3.IN0
+C_IN => 1-bit-xor:inst1.B
+C_IN => inst2.IN1
+C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|1-bit-carry-adder|1-bit-full-adder:sum|1-bit-xor:inst1
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
+|1-bit-carry-adder|1-bit-full-adder:sum|1-bit-xor:inst
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
