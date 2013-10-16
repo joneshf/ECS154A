@@ -1,6 +1,6 @@
 Analysis & Synthesis report for 1-bit-carry-adder
-Tue Oct 15 20:27:56 2013
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Oct 16 09:38:56 2013
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -41,8 +41,8 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Tue Oct 15 20:27:56 2013           ;
-; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status       ; Successful - Wed Oct 16 09:38:56 2013           ;
+; Quartus II 32-bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                     ; 1-bit-carry-adder                               ;
 ; Top-level Entity Name             ; 1-bit-carry-adder                               ;
 ; Family                            ; Arria II GX                                     ;
@@ -164,13 +164,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
-+-------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ; Library ;
-+-------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
-; ../1-bit-full-adder/1-bit-full-adder.bdf  ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/1-bit-full-adder/1-bit-full-adder.bdf  ;         ;
-; ../proj_01/1-bit-xor.bdf                  ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/proj_01/1-bit-xor.bdf                  ;         ;
-; ../1-bit-full-adder/1-bit-carry-adder.bdf ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/1-bit-full-adder/1-bit-carry-adder.bdf ;         ;
-+-------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
++------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                               ; Library ;
++------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; 1-bit-carry-adder.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/1-bit-carry-adder/1-bit-carry-adder.bdf ;         ;
+; ../1-bit-full-adder/1-bit-full-adder.bdf ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/1-bit-full-adder/1-bit-full-adder.bdf   ;         ;
++------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -219,15 +218,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------+--------------+
-; |1-bit-carry-adder         ; 3 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 6    ; 0            ; |1-bit-carry-adder                                      ; work         ;
-;    |1-bit-full-adder:sum|  ; 2 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |1-bit-carry-adder|1-bit-full-adder:sum                 ; work         ;
-;       |1-bit-xor:inst1|    ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |1-bit-carry-adder|1-bit-full-adder:sum|1-bit-xor:inst1 ; work         ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------+--------------+
+; |1-bit-carry-adder         ; 3 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 6    ; 0            ; |1-bit-carry-adder                      ; work         ;
+;    |1-bit-full-adder:sum|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |1-bit-carry-adder|1-bit-full-adder:sum ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -259,19 +257,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 15 20:27:54 2013
+    Info: Processing started: Wed Oct 16 09:38:54 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 1-bit-carry-adder -c 1-bit-carry-adder
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file 1-bit-carry-adder.bdf
+    Info (12023): Found entity 1: 1-bit-carry-adder
 Info (12021): Found 1 design units, including 1 entities, in source file /home/joneshf/school/group/ECS154A/1-bit-full-adder/1-bit-full-adder.bdf
     Info (12023): Found entity 1: 1-bit-full-adder
-Info (12021): Found 1 design units, including 1 entities, in source file /home/joneshf/school/group/ECS154A/proj_01/1-bit-xor.bdf
-    Info (12023): Found entity 1: 1-bit-xor
-Info (12021): Found 1 design units, including 1 entities, in source file /home/joneshf/school/group/ECS154A/1-bit-full-adder/1-bit-carry-adder.bdf
-    Info (12023): Found entity 1: 1-bit-carry-adder
 Info (12127): Elaborating entity "1-bit-carry-adder" for the top level hierarchy
-Info (12128): Elaborating entity "1-bit-xor" for hierarchy "1-bit-xor:p_xor"
 Info (12128): Elaborating entity "1-bit-full-adder" for hierarchy "1-bit-full-adder:sum"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -280,9 +275,9 @@ Info (21057): Implemented 9 device resources after synthesis - the final resourc
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 3 output pins
     Info (21061): Implemented 3 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 641 megabytes
-    Info: Processing ended: Tue Oct 15 20:27:56 2013
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 376 megabytes
+    Info: Processing ended: Wed Oct 16 09:38:56 2013
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
