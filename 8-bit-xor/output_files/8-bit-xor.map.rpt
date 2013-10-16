@@ -1,6 +1,6 @@
 Analysis & Synthesis report for 8-bit-xor
-Tue Oct 15 17:22:24 2013
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Oct 16 06:34:56 2013
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -41,8 +41,8 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Tue Oct 15 17:22:24 2013           ;
-; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status       ; Successful - Wed Oct 16 06:34:56 2013           ;
+; Quartus II 32-bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                     ; 8-bit-xor                                       ;
 ; Top-level Entity Name             ; 8-bit-xor                                       ;
 ; Family                            ; Arria II GX                                     ;
@@ -168,71 +168,62 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                               ; Library ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------+---------+
 ; 8-bit-xor.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/8-bit-xor/8-bit-xor.bdf ;         ;
-; ../proj_01/1-bit-xor.bdf         ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/proj_01/1-bit-xor.bdf   ;         ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+-----------------------------------------------+------------------------+
-; Resource                                      ; Usage                  ;
-+-----------------------------------------------+------------------------+
-; Estimated ALUTs Used                          ; 8                      ;
-;     -- Combinational ALUTs                    ; 8                      ;
-;     -- Memory ALUTs                           ; 0                      ;
-;     -- LUT_REGs                               ; 0                      ;
-; Dedicated logic registers                     ; 0                      ;
-;                                               ;                        ;
-; Estimated ALUTs Unavailable                   ; 0                      ;
-;     -- Due to unpartnered combinational logic ; 0                      ;
-;     -- Due to Memory ALUTs                    ; 0                      ;
-;                                               ;                        ;
-; Total combinational functions                 ; 8                      ;
-; Combinational ALUT usage by number of inputs  ;                        ;
-;     -- 7 input functions                      ; 0                      ;
-;     -- 6 input functions                      ; 0                      ;
-;     -- 5 input functions                      ; 0                      ;
-;     -- 4 input functions                      ; 0                      ;
-;     -- <=3 input functions                    ; 8                      ;
-;                                               ;                        ;
-; Combinational ALUTs by mode                   ;                        ;
-;     -- normal mode                            ; 8                      ;
-;     -- extended LUT mode                      ; 0                      ;
-;     -- arithmetic mode                        ; 0                      ;
-;     -- shared arithmetic mode                 ; 0                      ;
-;                                               ;                        ;
-; Estimated ALUT/register pairs used            ; 8                      ;
-;                                               ;                        ;
-; Total registers                               ; 0                      ;
-;     -- Dedicated logic registers              ; 0                      ;
-;     -- I/O registers                          ; 0                      ;
-;     -- LUT_REGs                               ; 0                      ;
-;                                               ;                        ;
-;                                               ;                        ;
-; I/O pins                                      ; 24                     ;
-; DSP block 18-bit elements                     ; 0                      ;
-; Maximum fan-out node                          ; 1-bit-xor:inst|inst1~0 ;
-; Maximum fan-out                               ; 1                      ;
-; Total fan-out                                 ; 48                     ;
-; Average fan-out                               ; 0.86                   ;
-+-----------------------------------------------+------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++-----------------------------------------------+---------+
+; Resource                                      ; Usage   ;
++-----------------------------------------------+---------+
+; Estimated ALUTs Used                          ; 8       ;
+;     -- Combinational ALUTs                    ; 8       ;
+;     -- Memory ALUTs                           ; 0       ;
+;     -- LUT_REGs                               ; 0       ;
+; Dedicated logic registers                     ; 0       ;
+;                                               ;         ;
+; Estimated ALUTs Unavailable                   ; 0       ;
+;     -- Due to unpartnered combinational logic ; 0       ;
+;     -- Due to Memory ALUTs                    ; 0       ;
+;                                               ;         ;
+; Total combinational functions                 ; 8       ;
+; Combinational ALUT usage by number of inputs  ;         ;
+;     -- 7 input functions                      ; 0       ;
+;     -- 6 input functions                      ; 0       ;
+;     -- 5 input functions                      ; 0       ;
+;     -- 4 input functions                      ; 0       ;
+;     -- <=3 input functions                    ; 8       ;
+;                                               ;         ;
+; Combinational ALUTs by mode                   ;         ;
+;     -- normal mode                            ; 8       ;
+;     -- extended LUT mode                      ; 0       ;
+;     -- arithmetic mode                        ; 0       ;
+;     -- shared arithmetic mode                 ; 0       ;
+;                                               ;         ;
+; Estimated ALUT/register pairs used            ; 8       ;
+;                                               ;         ;
+; Total registers                               ; 0       ;
+;     -- Dedicated logic registers              ; 0       ;
+;     -- I/O registers                          ; 0       ;
+;     -- LUT_REGs                               ; 0       ;
+;                                               ;         ;
+;                                               ;         ;
+; I/O pins                                      ; 24      ;
+; DSP block 18-bit elements                     ; 0       ;
+; Maximum fan-out node                          ; inst[7] ;
+; Maximum fan-out                               ; 1       ;
+; Total fan-out                                 ; 48      ;
+; Average fan-out                               ; 0.86    ;
++-----------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------+--------------+
-; |8-bit-xor                 ; 8 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 24   ; 0            ; |8-bit-xor                  ; work         ;
-;    |1-bit-xor:inst11|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |8-bit-xor|1-bit-xor:inst11 ; work         ;
-;    |1-bit-xor:inst12|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |8-bit-xor|1-bit-xor:inst12 ; work         ;
-;    |1-bit-xor:inst13|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |8-bit-xor|1-bit-xor:inst13 ; work         ;
-;    |1-bit-xor:inst14|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |8-bit-xor|1-bit-xor:inst14 ; work         ;
-;    |1-bit-xor:inst15|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |8-bit-xor|1-bit-xor:inst15 ; work         ;
-;    |1-bit-xor:inst8|       ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |8-bit-xor|1-bit-xor:inst8  ; work         ;
-;    |1-bit-xor:inst9|       ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |8-bit-xor|1-bit-xor:inst9  ; work         ;
-;    |1-bit-xor:inst|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |8-bit-xor|1-bit-xor:inst   ; work         ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-----------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------+--------------+
+; |8-bit-xor                 ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 24   ; 0            ; |8-bit-xor          ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -264,17 +255,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Oct 15 17:22:21 2013
+    Info: Processing started: Wed Oct 16 06:34:54 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8-bit-xor -c 8-bit-xor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file 8-bit-xor.bdf
     Info (12023): Found entity 1: 8-bit-xor
-Info (12021): Found 1 design units, including 1 entities, in source file /home/joneshf/school/group/ECS154A/proj_01/1-bit-xor.bdf
-    Info (12023): Found entity 1: 1-bit-xor
 Info (12127): Elaborating entity "8-bit-xor" for the top level hierarchy
-Info (12128): Elaborating entity "1-bit-xor" for hierarchy "1-bit-xor:inst"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -282,10 +270,10 @@ Info (21057): Implemented 32 device resources after synthesis - the final resour
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 8 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 649 megabytes
-    Info: Processing ended: Tue Oct 15 17:22:24 2013
-    Info: Elapsed time: 00:00:03
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 375 megabytes
+    Info: Processing ended: Wed Oct 16 06:34:56 2013
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
