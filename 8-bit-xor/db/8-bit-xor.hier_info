@@ -1,0 +1,91 @@
+|8-bit-xor
+C0 <= 1-bit-xor:inst.C
+A0 => 1-bit-xor:inst.A
+B0 => 1-bit-xor:inst.B
+C2 <= 1-bit-xor:inst9.C
+A2 => 1-bit-xor:inst9.A
+B2 => 1-bit-xor:inst9.B
+C3 <= 1-bit-xor:inst11.C
+A3 => 1-bit-xor:inst11.A
+B3 => 1-bit-xor:inst11.B
+C4 <= 1-bit-xor:inst12.C
+A4 => 1-bit-xor:inst12.A
+B4 => 1-bit-xor:inst12.B
+C5 <= 1-bit-xor:inst13.C
+A5 => 1-bit-xor:inst13.A
+B5 => 1-bit-xor:inst13.B
+C6 <= 1-bit-xor:inst14.C
+A6 => 1-bit-xor:inst14.A
+B6 => 1-bit-xor:inst14.B
+C7 <= 1-bit-xor:inst15.C
+A7 => 1-bit-xor:inst15.A
+B7 => 1-bit-xor:inst15.B
+C1 <= 1-bit-xor:inst8.C
+A1 => 1-bit-xor:inst8.A
+B1 => 1-bit-xor:inst8.B
+
+
+|8-bit-xor|1-bit-xor:inst
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
+|8-bit-xor|1-bit-xor:inst9
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
+|8-bit-xor|1-bit-xor:inst11
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
+|8-bit-xor|1-bit-xor:inst12
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
+|8-bit-xor|1-bit-xor:inst13
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
+|8-bit-xor|1-bit-xor:inst14
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
+|8-bit-xor|1-bit-xor:inst15
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
+|8-bit-xor|1-bit-xor:inst8
+C <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+B => inst2.IN0
+B => inst.IN1
+A => inst2.IN1
+A => inst.IN0
+
+
