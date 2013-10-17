@@ -1,6 +1,6 @@
 Analysis & Synthesis report for 4-bit-carry-lookahead-adder
-Wed Oct 16 00:47:50 2013
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Oct 16 18:13:52 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -9,13 +9,12 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Elapsed Time Per Partition
+  9. Analysis & Synthesis Messages
 
 
 
@@ -41,8 +40,8 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Wed Oct 16 00:47:50 2013           ;
-; Quartus II 32-bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status       ; Successful - Wed Oct 16 18:13:52 2013           ;
+; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                     ; 4-bit-carry-lookahead-adder                     ;
 ; Top-level Entity Name             ; 4-bit-carry-lookahead-adder                     ;
 ; Family                            ; Arria II GX                                     ;
@@ -151,27 +150,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+-----------------------------+-----------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
-+--------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                   ; Library ;
-+--------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
-; ../1-bit-full-adder/1-bit-full-adder.bdf   ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/1-bit-full-adder/1-bit-full-adder.bdf                       ;         ;
-; ../proj_01/1-bit-xor.bdf                   ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/proj_01/1-bit-xor.bdf                                       ;         ;
-; ../1-bit-carry-adder/1-bit-carry-adder.bdf ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/1-bit-carry-adder/1-bit-carry-adder.bdf                     ;         ;
-; 4-bit-carry-lookahead-adder.bdf            ; yes             ; User Block Diagram/Schematic File  ; /home/joneshf/school/group/ECS154A/4-bit-carry-lookahead-adder/4-bit-carry-lookahead-adder.bdf ;         ;
-+--------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                    ;
++--------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path           ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                ; Library ;
++--------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; ../1-bit-full-adder/1-bit-full-adder.bdf   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1-bit-full-adder/1-bit-full-adder.bdf                       ;         ;
+; ../1-bit-carry-adder/1-bit-carry-adder.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/1-bit-carry-adder/1-bit-carry-adder.bdf                     ;         ;
+; 4-bit-carry-lookahead-adder.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/4-bit-carry-lookahead-adder/4-bit-carry-lookahead-adder.bdf ;         ;
++--------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -220,25 +207,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                               ;
-+------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                       ; Library Name ;
-+------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
-; |4-bit-carry-lookahead-adder ; 6 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 14   ; 0            ; |4-bit-carry-lookahead-adder                                                              ; work         ;
-;    |1-bit-carry-adder:inst1| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst1                                      ; work         ;
-;       |1-bit-full-adder:sum| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst1|1-bit-full-adder:sum                 ; work         ;
-;          |1-bit-xor:inst1|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst1|1-bit-full-adder:sum|1-bit-xor:inst1 ; work         ;
-;    |1-bit-carry-adder:inst2| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst2                                      ; work         ;
-;       |1-bit-full-adder:sum| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst2|1-bit-full-adder:sum                 ; work         ;
-;          |1-bit-xor:inst1|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst2|1-bit-full-adder:sum|1-bit-xor:inst1 ; work         ;
-;    |1-bit-carry-adder:inst3| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst3                                      ; work         ;
-;       |1-bit-full-adder:sum| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst3|1-bit-full-adder:sum                 ; work         ;
-;          |1-bit-xor:inst1|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst3|1-bit-full-adder:sum|1-bit-xor:inst1 ; work         ;
-;    |1-bit-carry-adder:inst|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst                                       ; work         ;
-;       |1-bit-full-adder:sum| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst|1-bit-full-adder:sum                  ; work         ;
-;          |1-bit-xor:inst1|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst|1-bit-full-adder:sum|1-bit-xor:inst1  ; work         ;
-+------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
++------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Library Name ;
++------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
+; |4-bit-carry-lookahead-adder ; 6 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 14   ; 0            ; |4-bit-carry-lookahead-adder                                              ; work         ;
+;    |1-bit-carry-adder:inst1| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst1                      ; work         ;
+;       |1-bit-full-adder:sum| ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst1|1-bit-full-adder:sum ; work         ;
+;    |1-bit-carry-adder:inst2| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst2                      ; work         ;
+;       |1-bit-full-adder:sum| ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst2|1-bit-full-adder:sum ; work         ;
+;    |1-bit-carry-adder:inst3| ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst3                      ; work         ;
+;       |1-bit-full-adder:sum| ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst3|1-bit-full-adder:sum ; work         ;
+;    |1-bit-carry-adder:inst|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst                       ; work         ;
+;       |1-bit-full-adder:sum| ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |4-bit-carry-lookahead-adder|1-bit-carry-adder:inst|1-bit-full-adder:sum  ; work         ;
++------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -262,7 +245,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -270,22 +253,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Oct 16 00:47:48 2013
+    Info: Processing started: Wed Oct 16 18:13:50 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 4-bit-carry-lookahead-adder -c 4-bit-carry-lookahead-adder
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file /home/joneshf/school/group/ECS154A/1-bit-full-adder/1-bit-full-adder.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/1-bit-full-adder/1-bit-full-adder.bdf
     Info (12023): Found entity 1: 1-bit-full-adder
-Info (12021): Found 1 design units, including 1 entities, in source file /home/joneshf/school/group/ECS154A/proj_01/1-bit-xor.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/proj_01/1-bit-xor.bdf
     Info (12023): Found entity 1: 1-bit-xor
-Info (12021): Found 1 design units, including 1 entities, in source file /home/joneshf/school/group/ECS154A/1-bit-carry-adder/1-bit-carry-adder.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/1-bit-carry-adder/1-bit-carry-adder.bdf
     Info (12023): Found entity 1: 1-bit-carry-adder
 Info (12021): Found 1 design units, including 1 entities, in source file 4-bit-carry-lookahead-adder.bdf
     Info (12023): Found entity 1: 4-bit-carry-lookahead-adder
 Info (12127): Elaborating entity "4-bit-carry-lookahead-adder" for the top level hierarchy
 Info (12128): Elaborating entity "1-bit-carry-adder" for hierarchy "1-bit-carry-adder:inst3"
-Info (12128): Elaborating entity "1-bit-xor" for hierarchy "1-bit-carry-adder:inst3|1-bit-xor:p_xor"
 Info (12128): Elaborating entity "1-bit-full-adder" for hierarchy "1-bit-carry-adder:inst3|1-bit-full-adder:sum"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -294,10 +276,10 @@ Info (21057): Implemented 20 device resources after synthesis - the final resour
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 6 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 373 megabytes
-    Info: Processing ended: Wed Oct 16 00:47:50 2013
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Wed Oct 16 18:13:52 2013
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,6 +1,6 @@
 Flow report for 8-bit-and
-Wed Oct 16 06:31:52 2013
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Oct 16 18:09:10 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -40,8 +40,8 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Flow Status                       ; Successful - Wed Oct 16 06:31:52 2013           ;
-; Quartus II 32-bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Flow Status                       ; Successful - Wed Oct 16 18:09:10 2013           ;
+; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                     ; 8-bit-and                                       ;
 ; Top-level Entity Name             ; 8-bit-and                                       ;
 ; Family                            ; Arria II GX                                     ;
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/16/2013 06:31:51 ;
+; Start date & time ; 10/16/2013 18:08:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 8-bit-and           ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.138193031103736               ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 52229847979.138197211704092     ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
@@ -94,24 +94,30 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 366 MB              ; 00:00:02                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 473 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; arch-laptop-hp   ; Arch Linux ; Arch Linux ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off 8-bit-and -c 8-bit-and
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog 8-bit-and -c 8-bit-and --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/8-bit-and/WaveformAND.vwf" --testbench_file=./simulation/qsim/8-bit-and.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog 8-bit-and -c 8-bit-and
 
 
 
