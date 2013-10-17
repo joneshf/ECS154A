@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+Analysis & Synthesis Status : Failed - Wed Oct 16 19:51:04 2013
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+=======
 Analysis & Synthesis Status : Successful - Wed Oct 16 19:57:02 2013
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+>>>>>>> f96a8f797571677adb0427634e527e9eeb12096b
 Revision Name : EightBitAdd
 Top-level Entity Name : EightBitAdd
 Family : Arria II GX

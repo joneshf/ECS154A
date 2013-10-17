@@ -315,7 +315,7 @@ TRANSITION_LIST("gray_vlg_vec_tst|B2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -342,7 +342,7 @@ TRANSITION_LIST("gray_vlg_vec_tst|G1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -351,7 +351,7 @@ TRANSITION_LIST("gray_vlg_vec_tst|G2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -441,7 +441,7 @@ TRANSITION_LIST("gray_vlg_vec_tst|i1|G1~output_o")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -450,7 +450,7 @@ TRANSITION_LIST("gray_vlg_vec_tst|i1|G2~output_o")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -495,7 +495,7 @@ TRANSITION_LIST("gray_vlg_vec_tst|i1|B2~input_o")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -504,7 +504,7 @@ TRANSITION_LIST("gray_vlg_vec_tst|i1|inst1~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -522,7 +522,7 @@ TRANSITION_LIST("gray_vlg_vec_tst|i1|inst~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 

@@ -1,5 +1,5 @@
 Flow report for EightBitAnd
-Wed Oct 16 18:16:48 2013
+Wed Oct 16 19:54:38 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Flow Status                       ; Successful - Wed Oct 16 18:16:48 2013           ;
+; Flow Status                       ; Successful - Wed Oct 16 19:54:38 2013           ;
 ; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                     ; EightBitAnd                                     ;
 ; Top-level Entity Name             ; EightBitAnd                                     ;
@@ -68,25 +68,26 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/16/2013 18:16:20 ;
+; Start date & time ; 10/16/2013 19:52:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EightBitAnd         ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 52229847979.138197258004032     ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
++------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                 ;
++-------------------------------------+-----------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                       ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+-----------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 52229847979.138197832203664 ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                          ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                 ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)   ; <None>        ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                    ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING       ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                      ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                ; --            ; --          ; --             ;
++-------------------------------------+-----------------------------+---------------+-------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -94,10 +95,14 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 481 MB              ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 473 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
-; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:07                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,6 +114,10 @@ applicable agreement for further details.
 ; Analysis & Synthesis ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
 ; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
 ; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -116,7 +125,11 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off EightBitAnd -c EightBitAnd
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog EightBitAnd -c EightBitAnd --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitAnd/WaveformAND.vwf" --testbench_file=./simulation/qsim/EightBitAnd.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog EightBitAnd -c EightBitAnd --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitAnd/Waveformand.vwf" --testbench_file=./simulation/qsim/EightBitAnd.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog EightBitAnd -c EightBitAnd
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog EightBitAnd -c EightBitAnd --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitAnd/Waveformand.vwf" --testbench_file=./simulation/qsim/EightBitAnd.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog EightBitAnd -c EightBitAnd
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog EightBitAnd -c EightBitAnd --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitAnd/Waveformand.vwf" --testbench_file=./simulation/qsim/EightBitAnd.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog EightBitAnd -c EightBitAnd
 
 

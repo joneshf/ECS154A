@@ -245,7 +245,7 @@ TRANSITION_LIST("OneBitFullAdder_vlg_vec_tst|C_IN")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -263,7 +263,7 @@ TRANSITION_LIST("OneBitFullAdder_vlg_vec_tst|S")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -335,7 +335,7 @@ TRANSITION_LIST("OneBitFullAdder_vlg_vec_tst|i1|S~output_o")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -353,7 +353,7 @@ TRANSITION_LIST("OneBitFullAdder_vlg_vec_tst|i1|C_IN~input_o")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -380,7 +380,7 @@ TRANSITION_LIST("OneBitFullAdder_vlg_vec_tst|i1|inst1~combout")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 

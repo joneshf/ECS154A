@@ -1,5 +1,5 @@
 Flow report for OneBitFullAdder
-Wed Oct 16 18:45:55 2013
+Wed Oct 16 20:06:42 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Flow Status                       ; Successful - Wed Oct 16 18:45:55 2013           ;
+; Flow Status                       ; Successful - Wed Oct 16 20:06:42 2013           ;
 ; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                     ; OneBitFullAdder                                 ;
 ; Top-level Entity Name             ; OneBitFullAdder                                 ;
@@ -97,7 +97,19 @@ applicable agreement for further details.
 ; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 473 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
-; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 446 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 446 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 446 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 446 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 430 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 446 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 430 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 446 MB              ; 00:00:01                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,6 +121,18 @@ applicable agreement for further details.
 ; Analysis & Synthesis ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
 ; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
 ; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -117,6 +141,18 @@ applicable agreement for further details.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off OneBitFullAdder -c OneBitFullAdder
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/WaveformFA.vwf" --testbench_file=./simulation/qsim/OneBitFullAdder.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/WaveformFA.vwf" --testbench_file=./simulation/qsim/OneBitFullAdder.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/WaveformFA.vwf" --testbench_file=./simulation/qsim/OneBitFullAdder.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/WaveformFA.vwf" --testbench_file=./simulation/qsim/OneBitFullAdder.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/WaveformFA1.vwf" --testbench_file=./simulation/qsim/OneBitFullAdder.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/Waveform2.vwf" --testbench_file=./simulation/qsim/OneBitFullAdder.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/Waveform3.vwf" --testbench_file=./simulation/qsim/OneBitFullAdder.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog OneBitFullAdder -c OneBitFullAdder
 
 
