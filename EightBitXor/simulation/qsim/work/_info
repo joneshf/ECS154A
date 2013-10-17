@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\EightBitXor\simulation\qsim
+vEightBitXor
+Z1 IcnMQHkCzAUADfIDoQ]c0h1
+Z2 V>1_ZBDC<7J:I<:WU_Xz^70
+Z3 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\EightBitXor\simulation\qsim
+Z4 w1381976488
+Z5 8EightBitXor.vo
+Z6 FEightBitXor.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@eight@bit@xor
+!i10b 1
+Z10 !s100 j0313gnHa=_TeQQ0UfY>a3
+!s85 0
+Z11 !s108 1381976489.493000
+Z12 !s107 EightBitXor.vo|
+Z13 !s90 -work|work|EightBitXor.vo|
+!s101 -O0
+vEightBitXor_vlg_check_tst
+!i10b 1
+!s100 5mGnThUC:Bg44oO1e6A_a1
+Iho=d^A2hbVBHf`<ZIXE_I0
+VcmoC<ESbXVa6gYmNJAbmk2
+R3
+Z14 w1381976487
+Z15 8EightBitXor.vt
+Z16 FEightBitXor.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z17 !s108 1381976489.588000
+Z18 !s107 EightBitXor.vt|
+Z19 !s90 -work|work|EightBitXor.vt|
+!s101 -O0
+R8
+n@eight@bit@xor_vlg_check_tst
+vEightBitXor_vlg_sample_tst
+!i10b 1
+!s100 Jd_T=DeZ62?D[ngHJ`z1W0
+I[<JHVzo5AiQ^>Af@ELz9K0
+V:cfoSo=L:l?cO8dK`AMTF0
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@eight@bit@xor_vlg_sample_tst
+vEightBitXor_vlg_vec_tst
+!i10b 1
+!s100 ijA<LW5HoET:23UzG2_;I1
+I2?klU1XLlU36diSd8<P:h1
+VhWWmG5I;>5HDQci][l51d2
+R3
+R14
+R15
+R16
+L0 279
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@eight@bit@xor_vlg_vec_tst
