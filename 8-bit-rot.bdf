@@ -55,7 +55,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 72 280 240 296)
+	(rect 128 280 296 296)
 	(text "INPUT" (rect 125 0 154 9)(font "Arial" (font_size 6)))
 	(text "A[7..0]" (rect 5 0 39 10)(font "Arial" ))
 	(pt 168 8)
@@ -71,7 +71,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 696 824 712 1000)
+	(rect 720 776 736 952)
 	(text "OUTPUT" (rect 7 1 16 41)(font "Arial" (font_size 6))(vertical))
 	(text "B[7..0]" (rect 6 90 16 124)(font "Arial" )(vertical))
 	(pt 8 0)
@@ -1439,78 +1439,6 @@ applicable agreement for further details.
 	(pt 720 504)
 )
 (connector
-	(text "A[0]" (rect 346 288 367 298)(font "Arial" ))
-	(pt 336 296)
-	(pt 416 296)
-)
-(connector
-	(pt 416 296)
-	(pt 432 296)
-)
-(connector
-	(text "A[1]" (rect 346 320 367 330)(font "Arial" ))
-	(pt 336 328)
-	(pt 408 328)
-)
-(connector
-	(pt 408 328)
-	(pt 512 328)
-)
-(connector
-	(text "A[2]" (rect 346 352 367 362)(font "Arial" ))
-	(pt 336 360)
-	(pt 400 360)
-)
-(connector
-	(pt 400 360)
-	(pt 432 360)
-)
-(connector
-	(text "A[3]" (rect 346 384 367 394)(font "Arial" ))
-	(pt 336 392)
-	(pt 392 392)
-)
-(connector
-	(pt 392 392)
-	(pt 512 392)
-)
-(connector
-	(text "A[4]" (rect 346 416 367 426)(font "Arial" ))
-	(pt 336 424)
-	(pt 392 424)
-)
-(connector
-	(pt 392 424)
-	(pt 432 424)
-)
-(connector
-	(text "A[5]" (rect 346 448 367 458)(font "Arial" ))
-	(pt 336 456)
-	(pt 400 456)
-)
-(connector
-	(pt 400 456)
-	(pt 512 456)
-)
-(connector
-	(text "A[6]" (rect 346 480 367 490)(font "Arial" ))
-	(pt 336 488)
-	(pt 408 488)
-)
-(connector
-	(pt 408 488)
-	(pt 432 488)
-)
-(connector
-	(text "A[7]" (rect 346 512 367 522)(font "Arial" ))
-	(pt 336 520)
-	(pt 416 520)
-)
-(connector
-	(pt 416 520)
-	(pt 512 520)
-)
-(connector
 	(text "B[7]" (rect 592 732 602 753)(font "Arial" )(vertical))
 	(pt 600 728)
 	(pt 600 760)
@@ -1550,6 +1478,78 @@ applicable agreement for further details.
 	(pt 992 728)
 	(pt 992 760)
 )
+(connector
+	(text "A[0]" (rect 322 288 343 298)(font "Arial" ))
+	(pt 312 296)
+	(pt 416 296)
+)
+(connector
+	(pt 416 296)
+	(pt 432 296)
+)
+(connector
+	(text "A[1]" (rect 322 320 343 330)(font "Arial" ))
+	(pt 312 328)
+	(pt 408 328)
+)
+(connector
+	(pt 408 328)
+	(pt 512 328)
+)
+(connector
+	(text "A[2]" (rect 322 352 343 362)(font "Arial" ))
+	(pt 312 360)
+	(pt 400 360)
+)
+(connector
+	(pt 400 360)
+	(pt 432 360)
+)
+(connector
+	(text "A[3]" (rect 322 384 343 394)(font "Arial" ))
+	(pt 312 392)
+	(pt 392 392)
+)
+(connector
+	(pt 392 392)
+	(pt 512 392)
+)
+(connector
+	(text "A[4]" (rect 322 416 343 426)(font "Arial" ))
+	(pt 312 424)
+	(pt 392 424)
+)
+(connector
+	(pt 392 424)
+	(pt 432 424)
+)
+(connector
+	(text "A[5]" (rect 322 448 343 458)(font "Arial" ))
+	(pt 312 456)
+	(pt 400 456)
+)
+(connector
+	(pt 400 456)
+	(pt 512 456)
+)
+(connector
+	(text "A[6]" (rect 322 480 343 490)(font "Arial" ))
+	(pt 312 488)
+	(pt 408 488)
+)
+(connector
+	(pt 408 488)
+	(pt 432 488)
+)
+(connector
+	(text "A[7]" (rect 322 512 343 522)(font "Arial" ))
+	(pt 312 520)
+	(pt 416 520)
+)
+(connector
+	(pt 416 520)
+	(pt 512 520)
+)
 (junction (pt 352 280))
 (junction (pt 352 312))
 (junction (pt 352 344))
@@ -1573,4 +1573,4 @@ applicable agreement for further details.
 (junction (pt 720 440))
 (junction (pt 720 472))
 (text "ROR - ROL" (rect 392 184 455 196)(font "Arial" (font_size 8)))
-(rectangle (rect 296 200 1016 728))
+(rectangle (rect 296 200 1016 776))
