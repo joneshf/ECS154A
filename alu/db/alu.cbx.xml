@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="alu">
-		<CBX_INST_ENTRY INSTANCE_NAME="|alu|8-to-1-mux:inst|BUSMUX:inst1|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|alu|8-to-1-mux:inst|BUSMUX:inst3|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|alu|8-to-1-mux:inst|BUSMUX:inst5|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|alu|8-to-1-mux:inst|BUSMUX:inst2|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|alu|8-to-1-mux:inst|BUSMUX:inst4|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|alu|8-to-1-mux:inst|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|alu|8-to-1-mux:inst|BUSMUX:inst|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|alu|EightToOneMux:inst12|BUSMUX:inst1|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|alu|EightToOneMux:inst12|BUSMUX:inst3|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|alu|EightToOneMux:inst12|BUSMUX:inst5|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|alu|EightToOneMux:inst12|BUSMUX:inst2|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|alu|EightToOneMux:inst12|BUSMUX:inst4|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|alu|EightToOneMux:inst12|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|alu|EightToOneMux:inst12|BUSMUX:inst|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
