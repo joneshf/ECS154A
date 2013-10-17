@@ -1,0 +1,10 @@
+Project 1
+ECS154A - Chris Nitta - Fall 2013
+16 October 2013
+
+Authors:
+Steven Avery - 997694781
+Hardy Jones - 999397426
+Brandon Tyler - 999403734
+
+This project implements a basic 8-bit ALU, a gray code converter, and a three bit unsigned comparator. The ALU took the majority of the time to implement. We took a modular approach, with each individual implementing a few of the required submodules, and then tying them together.
