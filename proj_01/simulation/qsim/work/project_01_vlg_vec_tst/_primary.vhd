@@ -1,4 +1,0 @@
-library verilog;
-use verilog.vl_types.all;
-entity project_01_vlg_vec_tst is
-end project_01_vlg_vec_tst;
