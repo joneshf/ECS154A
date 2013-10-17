@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="EightToOneMux">
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightToOneMux|BUSMUX:inst2|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightToOneMux|BUSMUX:inst4|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightToOneMux|BUSMUX:inst6|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightToOneMux|BUSMUX:inst|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightToOneMux|BUSMUX:inst1|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightToOneMux|BUSMUX:inst3|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|EightToOneMux|BUSMUX:inst5|lpm_mux:$00000" CBX_FILE_NAME="mux_tnc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
