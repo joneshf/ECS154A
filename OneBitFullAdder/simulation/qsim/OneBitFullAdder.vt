@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "10/16/2013 18:45:53"
+// Generated on "10/16/2013 20:06:41"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    OneBitFullAdder
 // 
@@ -217,7 +217,7 @@ end
 // C_IN
 initial
 begin
-	C_IN = 1'b0;
+	C_IN = 1'b1;
 end 
 
 OneBitFullAdder_vlg_sample_tst tb_sample (

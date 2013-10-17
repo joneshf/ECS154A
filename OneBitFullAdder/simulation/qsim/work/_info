@@ -4,82 +4,82 @@ K3
 cModel Technology
 Z0 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\OneBitFullAdder\simulation\qsim
 vOneBitFullAdder
-Z1 IZTPL0@<OU0QK12E;U4jWC3
-Z2 V2D>T3Sf4_W_cj=MF>Fg3F0
-Z3 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\OneBitFullAdder\simulation\qsim
-Z4 w1381974355
-Z5 8OneBitFullAdder.vo
-Z6 FOneBitFullAdder.vo
+Z1 !s100 zfHW?i2ZW9@OHIQH=WdfC1
+Z2 IZTPL0@<OU0QK12E;U4jWC3
+Z3 V2D>T3Sf4_W_cj=MF>Fg3F0
+Z4 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\OneBitFullAdder\simulation\qsim
+Z5 w1381979202
+Z6 8OneBitFullAdder.vo
+Z7 FOneBitFullAdder.vo
 L0 31
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 o-work work -O0
-Z9 n@one@bit@full@adder
+Z9 !s90 -work|work|OneBitFullAdder.vo|
+Z10 o-work work -O0
+Z11 n@one@bit@full@adder
 !i10b 1
-Z10 !s100 zfHW?i2ZW9@OHIQH=WdfC1
 !s85 0
-Z11 !s108 1381974356.803000
-Z12 !s107 OneBitFullAdder.vo|
-Z13 !s90 -work|work|OneBitFullAdder.vo|
+Z12 !s108 1381979203.501000
+Z13 !s107 OneBitFullAdder.vo|
 !s101 -O0
 vOneBitFullAdder_vlg_check_tst
 !i10b 1
-!s100 N9d]16^F7YX`hKk7W]HGz1
-I[L6WcfPNDFIL@9eUIo@Sf1
-V]QUIQlkA^KGjBFK2Jk2Vi0
-R3
-Z14 w1381974354
-Z15 8OneBitFullAdder.vt
-Z16 FOneBitFullAdder.vt
+Z14 !s100 N9d]16^F7YX`hKk7W]HGz1
+Z15 I[L6WcfPNDFIL@9eUIo@Sf1
+Z16 V]QUIQlkA^KGjBFK2Jk2Vi0
+R4
+Z17 w1381979201
+Z18 8OneBitFullAdder.vt
+Z19 FOneBitFullAdder.vt
 L0 61
-R7
+R8
 r1
 !s85 0
 31
-Z17 !s108 1381974356.871000
-Z18 !s107 OneBitFullAdder.vt|
-Z19 !s90 -work|work|OneBitFullAdder.vt|
+Z20 !s108 1381979203.551000
+Z21 !s107 OneBitFullAdder.vt|
+Z22 !s90 -work|work|OneBitFullAdder.vt|
 !s101 -O0
-R8
-n@one@bit@full@adder_vlg_check_tst
+R10
+Z23 n@one@bit@full@adder_vlg_check_tst
 vOneBitFullAdder_vlg_sample_tst
 !i10b 1
-!s100 fg<fYV8C]eYBdLU8WJYzF0
-I_@iX7`P^;IMbOfTTlVK@Z3
-VbhTOA]a`_;FBIj4ZUagAd3
-R3
-R14
-R15
-R16
-L0 29
-R7
-r1
-!s85 0
-31
+Z24 !s100 fg<fYV8C]eYBdLU8WJYzF0
+Z25 I_@iX7`P^;IMbOfTTlVK@Z3
+Z26 VbhTOA]a`_;FBIj4ZUagAd3
+R4
 R17
 R18
 R19
-!s101 -O0
+L0 29
 R8
-n@one@bit@full@adder_vlg_sample_tst
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@one@bit@full@adder_vlg_sample_tst
 vOneBitFullAdder_vlg_vec_tst
 !i10b 1
-!s100 P24S1<?b[zVj0EV]Q54DE1
-IOG]Pej_YNJ@jILlk[L]nL2
-VnYH3=jm6W9EEXR;:9Y>BX2
-R3
-R14
-R15
-R16
-L0 183
-R7
-r1
-!s85 0
-31
+!s100 2?mabQRO61QLf?Uioc8[j0
+IG:8`[B7h1=`c?=`h^E8N@3
+Z28 VnYH3=jm6W9EEXR;:9Y>BX2
+R4
 R17
 R18
 R19
-!s101 -O0
+Z29 L0 183
 R8
-n@one@bit@full@adder_vlg_vec_tst
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@one@bit@full@adder_vlg_vec_tst

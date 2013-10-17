@@ -3,7 +3,7 @@ $comment
 		vcd file OneBitFullAdder.msim.vcd -direction
 $end
 $date
-	Wed Oct 16 18:45:57 2013
+	Wed Oct 16 20:06:43 2013
 $end
 $version
 	ModelSim Version 10.1d
@@ -39,9 +39,9 @@ $enddefinitions $end
 $dumpvars
 0!
 0"
-0#
+1#
 0$
-0%
+1%
 x&
 0'
 1(
@@ -49,12 +49,12 @@ x)
 1*
 1+
 1,
-0-
+1-
 0.
-0/
+1/
 00
 01
-02
+12
 03
 $end
 #1000000
