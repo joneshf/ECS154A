@@ -8,7 +8,7 @@ Z1 !s100 hUG`nFUI:i`;mmgWeC<412
 Z2 I1c@EmUWRZPeQ:=`X3LPOT0
 Z3 VG19cE0Njj1I5P8^3:C3?g3
 Z4 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\compare\simulation\qsim
-Z5 w1381976286
+Z5 w1381982598
 Z6 8compare.vo
 Z7 Fcompare.vo
 L0 31
@@ -19,7 +19,7 @@ Z9 !s90 -work|work|compare.vo|
 Z10 o-work work -O0
 !i10b 1
 !s85 0
-Z11 !s108 1381976287.342000
+Z11 !s108 1381982599.151000
 Z12 !s107 compare.vo|
 !s101 -O0
 vcompare_vlg_check_tst
@@ -28,7 +28,7 @@ Z13 !s100 5GmZ:N7bBV6EJ?dC`MAZ=1
 Z14 IcbEAOgl?Q?zX0aDNS[G2D2
 Z15 VjZB=UDUO>j0FVdzS?j[G22
 R4
-Z16 w1381976284
+Z16 w1381982596
 Z17 8compare.vt
 Z18 Fcompare.vt
 L0 59
@@ -36,7 +36,7 @@ R8
 r1
 !s85 0
 31
-Z19 !s108 1381976287.568000
+Z19 !s108 1381982599.200000
 Z20 !s107 compare.vt|
 Z21 !s90 -work|work|compare.vt|
 !s101 -O0

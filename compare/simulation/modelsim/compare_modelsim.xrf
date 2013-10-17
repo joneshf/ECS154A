@@ -1,6 +1,9 @@
 vendor_name = ModelSim
 source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/compare/compare.bdf
 source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/compare/Waveformcompare.vwf
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/compare/WaveformCompareXOneYZero.vwf
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/compare/WaveformCompareXOneYOne.vwf
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/compare/WaveformCompareXZeroYZero.vwf
 source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/compare/db/compare.cbx.xml
 design_name = compare
 instance = comp, \E~output , E~output, compare, 1

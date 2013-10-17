@@ -53,4 +53,7 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformcompare.vwf
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformCompareXOneYZero.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformCompareXOneYOne.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformCompareXZeroYZero.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/compare/Waveformcompare.vwf"
