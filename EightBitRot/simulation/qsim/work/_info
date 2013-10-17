@@ -4,82 +4,82 @@ K3
 cModel Technology
 Z0 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\EightBitRot\simulation\qsim
 vEightBitRot
-Z1 I7KTNL3fLXYQnnT1>FR];z2
-Z2 Vea<UmoI`CYUeX:HK6^goA2
-Z3 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\EightBitRot\simulation\qsim
-Z4 w1381974584
-Z5 8EightBitRot.vo
-Z6 FEightBitRot.vo
+Z1 !s100 JD]@6jW9;]1hNVGTcZ_bI2
+Z2 I:N??E]B:MdZI2XlK^o2K91
+Z3 Vh`^lnDnIoXL09V_nf6@7d1
+Z4 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\EightBitRot\simulation\qsim
+Z5 w1381978154
+Z6 8EightBitRot.vo
+Z7 FEightBitRot.vo
 L0 31
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 o-work work -O0
-Z9 n@eight@bit@rot
+Z9 !s90 -work|work|EightBitRot.vo|
+Z10 o-work work -O0
+Z11 n@eight@bit@rot
 !i10b 1
-Z10 !s100 73iWT:l=aN`67CXnHonVj1
 !s85 0
-Z11 !s108 1381974585.820000
-Z12 !s107 EightBitRot.vo|
-Z13 !s90 -work|work|EightBitRot.vo|
+Z12 !s108 1381978155.373000
+Z13 !s107 EightBitRot.vo|
 !s101 -O0
 vEightBitRot_vlg_check_tst
 !i10b 1
-!s100 OgM5V3dmg6g1O<A=M>z0:3
-IFEWWKQI^UEeTOH;O?Z>aR1
-V^1LJY2AnZDSh8Kmg9Sn943
-R3
-Z14 w1381974583
-Z15 8EightBitRot.vt
-Z16 FEightBitRot.vt
+Z14 !s100 OgM5V3dmg6g1O<A=M>z0:3
+Z15 IFEWWKQI^UEeTOH;O?Z>aR1
+Z16 V^1LJY2AnZDSh8Kmg9Sn943
+R4
+Z17 w1381978153
+Z18 8EightBitRot.vt
+Z19 FEightBitRot.vt
 L0 61
-R7
+R8
 r1
 !s85 0
 31
-Z17 !s108 1381974585.913000
-Z18 !s107 EightBitRot.vt|
-Z19 !s90 -work|work|EightBitRot.vt|
+Z20 !s108 1381978155.422000
+Z21 !s107 EightBitRot.vt|
+Z22 !s90 -work|work|EightBitRot.vt|
 !s101 -O0
-R8
-n@eight@bit@rot_vlg_check_tst
+R10
+Z23 n@eight@bit@rot_vlg_check_tst
 vEightBitRot_vlg_sample_tst
 !i10b 1
-!s100 M_kh:9NZL@HF<:TXJ[Gi42
-I<nD;S21z@JY`H[ETahKGm3
-VXdZfOSJXgIHznK8T[Wo[63
-R3
-R14
-R15
-R16
-L0 29
-R7
-r1
-!s85 0
-31
+Z24 !s100 M_kh:9NZL@HF<:TXJ[Gi42
+Z25 I<nD;S21z@JY`H[ETahKGm3
+Z26 VXdZfOSJXgIHznK8T[Wo[63
+R4
 R17
 R18
 R19
-!s101 -O0
+L0 29
 R8
-n@eight@bit@rot_vlg_sample_tst
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@eight@bit@rot_vlg_sample_tst
 vEightBitRot_vlg_vec_tst
 !i10b 1
-!s100 zB[68IO@Nln;_h;lG64nB3
-IPY06LlJdTj=G[@4AzYzbg1
-V7[3NoR0;iG4BI^na887b21
-R3
-R14
-R15
-R16
-L0 281
-R7
-r1
-!s85 0
-31
+!s100 BiJGgF=ZDUJl=mcY_bm`I0
+Iboj2l8<1aNX9Q>BR<5E0=2
+Z28 V7[3NoR0;iG4BI^na887b21
+R4
 R17
 R18
 R19
-!s101 -O0
+Z29 L0 281
 R8
-n@eight@bit@rot_vlg_vec_tst
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@eight@bit@rot_vlg_vec_tst
