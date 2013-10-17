@@ -1,0 +1,11 @@
+|OneBitFullAdder
+S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst3.IN1
+B => inst.IN1
+B => inst3.IN0
+C_IN => inst1.IN1
+C_IN => inst2.IN1
+C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+

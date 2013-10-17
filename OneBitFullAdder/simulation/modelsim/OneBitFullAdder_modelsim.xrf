@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/WaveformFA.vwf
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/onebitfulladder.bdf
+source_file = 1, C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/db/OneBitFullAdder.cbx.xml
+design_name = OneBitFullAdder
+instance = comp, \S~output , S~output, OneBitFullAdder, 1
+instance = comp, \C_OUT~output , C_OUT~output, OneBitFullAdder, 1
+instance = comp, \C_IN~input , C_IN~input, OneBitFullAdder, 1
+instance = comp, \A~input , A~input, OneBitFullAdder, 1
+instance = comp, \B~input , B~input, OneBitFullAdder, 1
+instance = comp, \inst4~0 , inst4~0, OneBitFullAdder, 1
