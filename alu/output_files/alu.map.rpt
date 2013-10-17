@@ -1,6 +1,6 @@
 Analysis & Synthesis report for alu
-Wed Oct 16 20:58:48 2013
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Oct 16 21:06:17 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -9,21 +9,20 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst6
- 11. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst4
- 12. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst
- 13. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst1
- 14. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst5
- 15. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst2
- 16. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst3
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst6
+ 10. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst4
+ 11. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst
+ 12. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst1
+ 13. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst5
+ 14. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst2
+ 15. Parameter Settings for User Entity Instance: EightToOneMux:inst12|BUSMUX:inst3
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -49,8 +48,8 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status       ; Successful - Wed Oct 16 20:58:48 2013           ;
-; Quartus II 32-bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status       ; Successful - Wed Oct 16 21:06:17 2013           ;
+; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                     ; alu                                             ;
 ; Top-level Entity Name             ; alu                                             ;
 ; Family                            ; Arria II GX                                     ;
@@ -159,42 +158,31 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                               ;
-+--------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                             ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                         ; Library ;
-+--------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; ../EightBitInv/EightBitInv.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/EightBitInv/EightBitInv.bdf                               ;         ;
-; ../EightBitNot/EightBitNot.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/EightBitNot/EightBitNot.bdf                               ;         ;
-; ../EightBitAnd/EightBitAnd.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/EightBitAnd/EightBitAnd.bdf                               ;         ;
-; ../EightBitRot/EightBitRot.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/EightBitRot/EightBitRot.bdf                               ;         ;
-; ../EightToOneMux/EightToOneMux.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/EightToOneMux/EightToOneMux.bdf                           ;         ;
-; ../EightBitAdd/EightBitAdd.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/EightBitAdd/EightBitAdd.bdf                               ;         ;
-; ../FourBitCarryLookaheadAdder/FourBitCarryLookaheadAdder.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/FourBitCarryLookaheadAdder/FourBitCarryLookaheadAdder.bdf ;         ;
-; ../OneBitFullAdder/OneBitFullAdder.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/OneBitFullAdder/OneBitFullAdder.bdf                       ;         ;
-; ../EightBitXor/EightBitXor.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/EightBitXor/EightBitXor.bdf                               ;         ;
-; ../EightBitOr/EightBitOr.bdf                                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/EightBitOr/EightBitOr.bdf                                 ;         ;
-; alu.bdf                                                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/alu/alu.bdf                                               ;         ;
-; busmux.tdf                                                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/busmux.tdf                                         ;         ;
-; lpm_mux.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
-; lpm_mux.tdf                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                        ;         ;
-; aglobal130.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                     ;         ;
-; muxlut.inc                                                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                         ;         ;
-; bypassff.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                       ;         ;
-; altshift.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                       ;         ;
-; db/mux_tnc.tdf                                               ; yes             ; Auto-Generated Megafunction        ; C:/Users/bootcamp/Documents/GitHub/ECS154A/alu/db/mux_tnc.tdf                                        ;         ;
-+--------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                    ;
++--------------------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                             ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                              ; Library ;
++--------------------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; ../EightBitInv/EightBitInv.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitInv/EightBitInv.bdf                               ;         ;
+; ../EightBitNot/EightBitNot.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitNot/EightBitNot.bdf                               ;         ;
+; ../EightBitAnd/EightBitAnd.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitAnd/EightBitAnd.bdf                               ;         ;
+; ../EightBitRot/EightBitRot.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitRot/EightBitRot.bdf                               ;         ;
+; ../EightToOneMux/EightToOneMux.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightToOneMux/EightToOneMux.bdf                           ;         ;
+; ../EightBitAdd/EightBitAdd.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitAdd/EightBitAdd.bdf                               ;         ;
+; ../FourBitCarryLookaheadAdder/FourBitCarryLookaheadAdder.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/FourBitCarryLookaheadAdder/FourBitCarryLookaheadAdder.bdf ;         ;
+; ../OneBitFullAdder/OneBitFullAdder.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/OneBitFullAdder/OneBitFullAdder.bdf                       ;         ;
+; ../EightBitXor/EightBitXor.bdf                               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitXor/EightBitXor.bdf                               ;         ;
+; ../EightBitOr/EightBitOr.bdf                                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitOr/EightBitOr.bdf                                 ;         ;
+; alu.bdf                                                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/alu/alu.bdf                                               ;         ;
+; busmux.tdf                                                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/busmux.tdf                                              ;         ;
+; lpm_mux.inc                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                             ;         ;
+; lpm_mux.tdf                                                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                             ;         ;
+; aglobal130.inc                                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                          ;         ;
+; muxlut.inc                                                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                              ;         ;
+; bypassff.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                            ;         ;
+; altshift.inc                                                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                            ;         ;
+; db/mux_tnc.tdf                                               ; yes             ; Auto-Generated Megafunction        ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/alu/db/mux_tnc.tdf                                        ;         ;
++--------------------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -250,12 +238,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+------------------------------------------------------------------------------+--------------+
 ; |alu                                        ; 34 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 28   ; 0            ; |alu                                                                         ; work         ;
 ;    |EightBitAdd:inst6|                      ; 6 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitAdd:inst6                                                       ; work         ;
-;       |FourBitCarryLookaheadAdder:inst1|    ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst1                      ; work         ;
-;       |FourBitCarryLookaheadAdder:inst|     ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst                       ; work         ;
+;       |FourBitcarryLookaheadAdder:inst1|    ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst1                      ; work         ;
+;       |FourBitcarryLookaheadAdder:inst|     ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst                       ; work         ;
 ;    |EightBitInv:inst17|                     ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitInv:inst17                                                      ; work         ;
 ;       |EightBitAdd:inst2|                   ; 3 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitInv:inst17|EightBitAdd:inst2                                    ; work         ;
-;          |FourBitCarryLookaheadAdder:inst1| ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst1   ; work         ;
-;          |FourBitCarryLookaheadAdder:inst|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst    ; work         ;
+;          |FourBitcarryLookaheadAdder:inst1| ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst1   ; work         ;
+;          |FourBitcarryLookaheadAdder:inst|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst    ; work         ;
 ;    |EightBitXor:inst|                       ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightBitXor:inst                                                        ; work         ;
 ;    |EightToOneMux:inst12|                   ; 23 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightToOneMux:inst12                                                    ; work         ;
 ;       |busmux:inst3|                        ; 2 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |alu|EightToOneMux:inst12|busmux:inst3                                       ; work         ;
@@ -367,7 +355,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -375,30 +363,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Oct 16 20:58:46 2013
+    Info: Processing started: Wed Oct 16 21:06:13 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/eightbitinv/eightbitinv.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/eightbitinv/eightbitinv.bdf
     Info (12023): Found entity 1: EightBitInv
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/eightbitnot/eightbitnot.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/eightbitnot/eightbitnot.bdf
     Info (12023): Found entity 1: EightBitNot
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/eightbitand/eightbitand.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/eightbitand/eightbitand.bdf
     Info (12023): Found entity 1: EightBitAnd
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/eightbitrot/eightbitrot.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/eightbitrot/eightbitrot.bdf
     Info (12023): Found entity 1: EightBitRot
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/eighttoonemux/eighttoonemux.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/eighttoonemux/eighttoonemux.bdf
     Info (12023): Found entity 1: EightToOneMux
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/eightbitadd/eightbitadd.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/eightbitadd/eightbitadd.bdf
     Info (12023): Found entity 1: EightBitAdd
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/fourbitcarrylookaheadadder/fourbitcarrylookaheadadder.bdf
-    Info (12023): Found entity 1: FourBitCarryLookaheadAdder
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/onebitfulladder/onebitfulladder.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/fourbitcarrylookaheadadder/fourbitcarrylookaheadadder.bdf
+    Info (12023): Found entity 1: FourBitcarryLookaheadAdder
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/onebitfulladder/onebitfulladder.bdf
     Info (12023): Found entity 1: OneBitFullAdder
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/eightbitxor/eightbitxor.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/eightbitxor/eightbitxor.bdf
     Info (12023): Found entity 1: EightBitXor
-Info (12021): Found 1 design units, including 1 entities, in source file /users/bootcamp/documents/github/ecs154a/eightbitor/eightbitor.bdf
+Info (12021): Found 1 design units, including 1 entities, in source file /users/brandon tyler/documents/github/ecs154a/eightbitor/eightbitor.bdf
     Info (12023): Found entity 1: EightBitOr
 Info (12021): Found 1 design units, including 1 entities, in source file alu.bdf
     Info (12023): Found entity 1: alu
@@ -414,8 +402,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_tnc
 Info (12128): Elaborating entity "mux_tnc" for hierarchy "EightToOneMux:inst12|BUSMUX:inst6|lpm_mux:$00000|mux_tnc:auto_generated"
 Info (12128): Elaborating entity "EightBitAdd" for hierarchy "EightBitAdd:inst6"
-Info (12128): Elaborating entity "FourBitCarryLookaheadAdder" for hierarchy "EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst1"
-Info (12128): Elaborating entity "OneBitFullAdder" for hierarchy "EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst1|OneBitFullAdder:inst"
+Info (12128): Elaborating entity "FourBitcarryLookaheadAdder" for hierarchy "EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst1"
+Info (12128): Elaborating entity "OneBitFullAdder" for hierarchy "EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst1|OneBitFullAdder:inst"
 Info (12128): Elaborating entity "EightBitXor" for hierarchy "EightBitXor:inst"
 Info (12128): Elaborating entity "EightBitAnd" for hierarchy "EightBitAnd:inst13"
 Info (12128): Elaborating entity "EightBitOr" for hierarchy "EightBitOr:inst11"
@@ -429,10 +417,10 @@ Info (21057): Implemented 62 device resources after synthesis - the final resour
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 34 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 388 megabytes
-    Info: Processing ended: Wed Oct 16 20:58:48 2013
-    Info: Elapsed time: 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 509 megabytes
+    Info: Processing ended: Wed Oct 16 21:06:17 2013
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 

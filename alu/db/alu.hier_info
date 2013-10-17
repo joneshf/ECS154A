@@ -934,7 +934,7 @@ S[6] <= S_HIGH[2].DB_MAX_OUTPUT_PORT_TYPE
 S[7] <= S_HIGH[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst1
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst1
 C_OUT <= inst42.DB_MAX_OUTPUT_PORT_TYPE
 B[0] => inst31.IN0
 B[0] => inst28.IN1
@@ -995,7 +995,7 @@ S[2] <= OneBitFullAdder:inst3.S
 S[3] <= OneBitFullAdder:inst44.S
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst1|OneBitFullAdder:inst
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst1|OneBitFullAdder:inst
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1006,7 +1006,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst1|OneBitFullAdder:inst2
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst1|OneBitFullAdder:inst2
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1017,7 +1017,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst1|OneBitFullAdder:inst3
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst1|OneBitFullAdder:inst3
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1028,7 +1028,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst1|OneBitFullAdder:inst44
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst1|OneBitFullAdder:inst44
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1039,7 +1039,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst
 C_OUT <= inst42.DB_MAX_OUTPUT_PORT_TYPE
 B[0] => inst31.IN0
 B[0] => inst28.IN1
@@ -1100,7 +1100,7 @@ S[2] <= OneBitFullAdder:inst3.S
 S[3] <= OneBitFullAdder:inst44.S
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst|OneBitFullAdder:inst
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst|OneBitFullAdder:inst
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1111,7 +1111,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst|OneBitFullAdder:inst2
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst|OneBitFullAdder:inst2
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1122,7 +1122,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst|OneBitFullAdder:inst3
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst|OneBitFullAdder:inst3
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1133,7 +1133,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitAdd:inst6|FourBitCarryLookaheadAdder:inst|OneBitFullAdder:inst44
+|alu|EightBitAdd:inst6|FourBitcarryLookaheadAdder:inst|OneBitFullAdder:inst44
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1292,7 +1292,7 @@ S[6] <= S_HIGH[2].DB_MAX_OUTPUT_PORT_TYPE
 S[7] <= S_HIGH[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst1
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst1
 C_OUT <= inst42.DB_MAX_OUTPUT_PORT_TYPE
 B[0] => inst31.IN0
 B[0] => inst28.IN1
@@ -1353,7 +1353,7 @@ S[2] <= OneBitFullAdder:inst3.S
 S[3] <= OneBitFullAdder:inst44.S
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst1|OneBitFullAdder:inst
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst1|OneBitFullAdder:inst
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1364,7 +1364,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst1|OneBitFullAdder:inst2
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst1|OneBitFullAdder:inst2
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1375,7 +1375,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst1|OneBitFullAdder:inst3
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst1|OneBitFullAdder:inst3
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1386,7 +1386,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst1|OneBitFullAdder:inst44
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst1|OneBitFullAdder:inst44
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1397,7 +1397,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst
 C_OUT <= inst42.DB_MAX_OUTPUT_PORT_TYPE
 B[0] => inst31.IN0
 B[0] => inst28.IN1
@@ -1458,7 +1458,7 @@ S[2] <= OneBitFullAdder:inst3.S
 S[3] <= OneBitFullAdder:inst44.S
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst|OneBitFullAdder:inst
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst|OneBitFullAdder:inst
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1469,7 +1469,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst|OneBitFullAdder:inst2
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst|OneBitFullAdder:inst2
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1480,7 +1480,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst|OneBitFullAdder:inst3
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst|OneBitFullAdder:inst3
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
@@ -1491,7 +1491,7 @@ C_IN => inst2.IN1
 C_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitCarryLookaheadAdder:inst|OneBitFullAdder:inst44
+|alu|EightBitInv:inst17|EightBitAdd:inst2|FourBitcarryLookaheadAdder:inst|OneBitFullAdder:inst44
 S <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 A => inst.IN0
 A => inst3.IN1
