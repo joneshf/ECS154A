@@ -4,22 +4,22 @@ K3
 cModel Technology
 Z0 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\alu\simulation\qsim
 valu
-Z1 !s100 h6:9CFIHd@aFdFYMPf9`e3
-Z2 I4<Nak@kK8Mao8A8U=2n:T3
-Z3 VPd11U>jK533;d3;jSa>bB1
-Z4 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\alu\simulation\qsim
-Z5 w1381983478
-Z6 8alu.vo
-Z7 Falu.vo
+Z1 I^19;ei_[M`8^6lCLP[ah21
+Z2 VPd11U>jK533;d3;jSa>bB1
+Z3 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\alu\simulation\qsim
+Z4 w1381984285
+Z5 8alu.vo
+Z6 Falu.vo
 L0 31
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -work|work|alu.vo|
-Z10 o-work work -O0
+Z8 !s90 -work|work|alu.vo|
+Z9 o-work work -O0
 !i10b 1
+Z10 !s100 i`EOlTn`BRFaD]PlAliE?1
 !s85 0
-Z11 !s108 1381983479.474000
+Z11 !s108 1381984285.850000
 Z12 !s107 alu.vo|
 !s101 -O0
 valu_vlg_check_tst
@@ -27,31 +27,31 @@ valu_vlg_check_tst
 Z13 !s100 T=fdR6IM;1W<YRPi4G?U:1
 Z14 IKgI:NEm<m9zl3Kmm[e_fZ3
 Z15 V@XD;JazU^TPPCAkFhQe2S0
-R4
-Z16 w1381983476
+R3
+Z16 w1381984284
 Z17 8alu.vt
 Z18 Falu.vt
 L0 63
-R8
+R7
 r1
 !s85 0
 31
-Z19 !s108 1381983479.704000
+Z19 !s108 1381984286.011000
 Z20 !s107 alu.vt|
 Z21 !s90 -work|work|alu.vt|
 !s101 -O0
-R10
+R9
 valu_vlg_sample_tst
 !i10b 1
 Z22 !s100 k=nd>3Nn?_AfKDoTA^U9a1
 Z23 InPO52fl9zB0ib[9Ho_@]_3
 Z24 Vc>jY12XLT`X?0LTedGMC73
-R4
+R3
 R16
 R17
 R18
 L0 29
-R8
+R7
 r1
 !s85 0
 31
@@ -59,18 +59,18 @@ R19
 R20
 R21
 !s101 -O0
-R10
+R9
 valu_vlg_vec_tst
 !i10b 1
-!s100 N4KV6VA:n;gaYCKU=Y04S2
-IOVLjeoQhflVCS5B:VS2zB1
+!s100 ]ob8ZHgSWKbKink1AVN;O2
+IhD@G]XOlG0_ZjWM@L=c_K0
 Z25 VKh<<g<fN<83>nOE>KA>;A3
-R4
+R3
 R16
 R17
 R18
 Z26 L0 283
-R8
+R7
 r1
 !s85 0
 31
@@ -78,4 +78,4 @@ R19
 R20
 R21
 !s101 -O0
-R10
+R9

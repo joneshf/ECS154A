@@ -134,7 +134,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 168 288 184 320)
+	(rect 432 224 448 256)
 	(text "VCC" (rect 0 5 10 25)(font "Arial" (font_size 6))(vertical))
 	(text "inst3" (rect 5 6 17 29)(font "Arial" )(vertical)(invisible))
 	(port
@@ -155,24 +155,23 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "ZERO[6..0],ONE" (rect 386 216 469 228)(font "Arial" ))
-	(pt 376 224)
-	(pt 480 224)
-	(bus)
-)
-(connector
 	(pt 136 288)
 	(pt 136 272)
 	(bus)
 )
 (connector
-	(text "ZERO[6..0]" (rect 146 256 202 268)(font "Arial" ))
+	(text "ZERO[7..0]" (rect 146 256 202 268)(font "Arial" ))
 	(pt 136 272)
 	(pt 192 272)
 	(bus)
 )
 (connector
-	(text "ONE" (rect 194 288 217 300)(font "Arial" ))
-	(pt 184 304)
-	(pt 216 304)
+	(text "ZERO[7..0]" (rect 386 216 442 228)(font "Arial" ))
+	(pt 376 224)
+	(pt 480 224)
+	(bus)
+)
+(connector
+	(pt 448 240)
+	(pt 480 240)
 )

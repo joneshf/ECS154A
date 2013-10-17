@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "10/16/2013 21:17:58"
+// DATE "10/16/2013 21:31:25"
 
 // 
 // Device: Altera EP2AGX45CU17I3 Package UFBGA358
@@ -52,9 +52,9 @@ tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
 wire \inst6|inst|inst42~0_combout ;
-wire \inst17|inst2|inst1|inst23~combout ;
 wire \inst17|inst2|inst1|inst17~combout ;
 wire \inst17|inst2|inst|inst41~combout ;
+wire \inst17|inst2|inst|inst37~combout ;
 wire \C[7]~output_o ;
 wire \C[6]~output_o ;
 wire \C[5]~output_o ;
@@ -86,9 +86,9 @@ wire \S[1]~input_o ;
 wire \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout ;
 wire \S[0]~input_o ;
 wire \A[6]~input_o ;
+wire \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2_combout ;
-wire \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout ;
 wire \inst|inst[6]~0_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~0_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~1_combout ;
@@ -99,16 +99,16 @@ wire \inst12|inst6|$00000|auto_generated|l1_w5_n0_mux_dataout~2_combout ;
 wire \inst6|inst|inst42~2_combout ;
 wire \inst|inst[4]~1_combout ;
 wire \A[3]~input_o ;
-wire \A[1]~input_o ;
-wire \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout ;
+wire \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout ;
+wire \A[1]~input_o ;
+wire \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1_combout ;
-wire \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~2_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1_combout ;
-wire \inst12|inst3|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ;
+wire \inst6|inst|inst30~0_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ;
 wire \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1_combout ;
 wire \inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0_combout ;
@@ -138,38 +138,15 @@ defparam \inst6|inst|inst42~0 .lut_mask = 64'h0115011501150115;
 defparam \inst6|inst|inst42~0 .shared_arith = "off";
 // synopsys translate_on
 
-arriaii_lcell_comb \inst17|inst2|inst1|inst23 (
-// Equation(s):
-// \inst17|inst2|inst1|inst23~combout  = ( !\A[4]~input_o  & ( (!\A[5]~input_o  & (!\A[3]~input_o  & (!\A[2]~input_o  & !\A[1]~input_o ))) ) )
-
-	.dataa(!\A[5]~input_o ),
-	.datab(!\A[3]~input_o ),
-	.datac(!\A[2]~input_o ),
-	.datad(!\A[1]~input_o ),
-	.datae(!\A[4]~input_o ),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst17|inst2|inst1|inst23~combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst17|inst2|inst1|inst23 .extended_lut = "off";
-defparam \inst17|inst2|inst1|inst23 .lut_mask = 64'h8000000080000000;
-defparam \inst17|inst2|inst1|inst23 .shared_arith = "off";
-// synopsys translate_on
-
 arriaii_lcell_comb \inst17|inst2|inst1|inst17 (
 // Equation(s):
-// \inst17|inst2|inst1|inst17~combout  = (!\A[3]~input_o  & (!\A[2]~input_o  & (!\A[1]~input_o  & !\A[4]~input_o )))
+// \inst17|inst2|inst1|inst17~combout  = ( \A[4]~input_o  ) # ( !\A[4]~input_o  & ( (((\A[0]~input_o ) # (\A[1]~input_o )) # (\A[2]~input_o )) # (\A[3]~input_o ) ) )
 
 	.dataa(!\A[3]~input_o ),
 	.datab(!\A[2]~input_o ),
 	.datac(!\A[1]~input_o ),
-	.datad(!\A[4]~input_o ),
-	.datae(gnd),
+	.datad(!\A[0]~input_o ),
+	.datae(!\A[4]~input_o ),
 	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
@@ -180,18 +157,18 @@ arriaii_lcell_comb \inst17|inst2|inst1|inst17 (
 	.shareout());
 // synopsys translate_off
 defparam \inst17|inst2|inst1|inst17 .extended_lut = "off";
-defparam \inst17|inst2|inst1|inst17 .lut_mask = 64'h8000800080008000;
+defparam \inst17|inst2|inst1|inst17 .lut_mask = 64'h7FFFFFFF7FFFFFFF;
 defparam \inst17|inst2|inst1|inst17 .shared_arith = "off";
 // synopsys translate_on
 
 arriaii_lcell_comb \inst17|inst2|inst|inst41 (
 // Equation(s):
-// \inst17|inst2|inst|inst41~combout  = (!\A[3]~input_o  & (!\A[2]~input_o  & !\A[1]~input_o ))
+// \inst17|inst2|inst|inst41~combout  = (!\A[3]~input_o  & (!\A[2]~input_o  & (!\A[1]~input_o  & !\A[0]~input_o )))
 
 	.dataa(!\A[3]~input_o ),
 	.datab(!\A[2]~input_o ),
 	.datac(!\A[1]~input_o ),
-	.datad(gnd),
+	.datad(!\A[0]~input_o ),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -203,12 +180,35 @@ arriaii_lcell_comb \inst17|inst2|inst|inst41 (
 	.shareout());
 // synopsys translate_off
 defparam \inst17|inst2|inst|inst41 .extended_lut = "off";
-defparam \inst17|inst2|inst|inst41 .lut_mask = 64'h8080808080808080;
+defparam \inst17|inst2|inst|inst41 .lut_mask = 64'h8000800080008000;
 defparam \inst17|inst2|inst|inst41 .shared_arith = "off";
 // synopsys translate_on
 
+arriaii_lcell_comb \inst17|inst2|inst|inst37 (
+// Equation(s):
+// \inst17|inst2|inst|inst37~combout  = (!\A[2]~input_o  & (!\A[1]~input_o  & !\A[0]~input_o ))
+
+	.dataa(!\A[2]~input_o ),
+	.datab(!\A[1]~input_o ),
+	.datac(!\A[0]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst17|inst2|inst|inst37~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst17|inst2|inst|inst37 .extended_lut = "off";
+defparam \inst17|inst2|inst|inst37 .lut_mask = 64'h8080808080808080;
+defparam \inst17|inst2|inst|inst37 .shared_arith = "off";
+// synopsys translate_on
+
 arriaii_io_obuf \C[7]~output (
-	.i(\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout ),
+	.i(\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -244,7 +244,7 @@ defparam \C[5]~output .open_drain_output = "false";
 // synopsys translate_on
 
 arriaii_io_obuf \C[4]~output (
-	.i(\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout ),
+	.i(\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -256,7 +256,7 @@ defparam \C[4]~output .open_drain_output = "false";
 // synopsys translate_on
 
 arriaii_io_obuf \C[3]~output (
-	.i(\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~2_combout ),
+	.i(\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -582,18 +582,43 @@ defparam \A[6]~input .bus_hold = "false";
 defparam \A[6]~input .simulate_z_as = "z";
 // synopsys translate_on
 
+arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3 (
+// Equation(s):
+// \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout  = ( !\S[0]~input_o  & ( (((!\S[1]~input_o  & ((!\A[7]~input_o ))) # (\S[1]~input_o  & (\A[0]~input_o )))) ) ) # ( \S[0]~input_o  & ( (!\S[1]~input_o  & (!\A[7]~input_o  $ 
+// (((!\inst17|inst2|inst1|inst17~combout  & (!\A[5]~input_o  & !\A[6]~input_o )))))) # (\S[1]~input_o  & ((((\A[6]~input_o ))))) ) )
+
+	.dataa(!\inst17|inst2|inst1|inst17~combout ),
+	.datab(!\A[5]~input_o ),
+	.datac(!\A[6]~input_o ),
+	.datad(!\A[7]~input_o ),
+	.datae(!\S[0]~input_o ),
+	.dataf(!\S[1]~input_o ),
+	.datag(!\A[0]~input_o ),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3 .extended_lut = "on";
+defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3 .lut_mask = 64'hFF007F800F0F0F0F;
+defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3 .shared_arith = "off";
+// synopsys translate_on
+
 arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout  = ( \A[6]~input_o  & ( \A[7]~input_o  & ( (\S[1]~input_o  & ((!\S[0]~input_o ) # (\A[0]~input_o ))) ) ) ) # ( !\A[6]~input_o  & ( \A[7]~input_o  & ( (\S[0]~input_o  & ((!\S[1]~input_o  & 
-// (\inst17|inst2|inst1|inst23~combout )) # (\S[1]~input_o  & ((\A[0]~input_o ))))) ) ) ) # ( \A[6]~input_o  & ( !\A[7]~input_o  & ( (!\S[1]~input_o ) # ((!\S[0]~input_o ) # (\A[0]~input_o )) ) ) ) # ( !\A[6]~input_o  & ( !\A[7]~input_o  & ( (!\S[1]~input_o  
-// & ((!\inst17|inst2|inst1|inst23~combout ) # ((!\S[0]~input_o )))) # (\S[1]~input_o  & (((\S[0]~input_o  & \A[0]~input_o )))) ) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout  = ( \S[1]~input_o  & ( \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout  & ( ((!\A[7]~input_o  & (\B[7]~input_o  & \S[0]~input_o )) # (\A[7]~input_o  & ((\S[0]~input_o ) 
+// # (\B[7]~input_o )))) # (\S[2]~input_o ) ) ) ) # ( !\S[1]~input_o  & ( \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout  & ( ((\S[0]~input_o  & (!\A[7]~input_o  $ (!\B[7]~input_o )))) # (\S[2]~input_o ) ) ) ) # ( \S[1]~input_o  & ( 
+// !\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout  & ( (!\S[2]~input_o  & ((!\A[7]~input_o  & (\B[7]~input_o  & \S[0]~input_o )) # (\A[7]~input_o  & ((\S[0]~input_o ) # (\B[7]~input_o ))))) ) ) ) # ( !\S[1]~input_o  & ( 
+// !\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout  & ( (\S[0]~input_o  & (!\S[2]~input_o  & (!\A[7]~input_o  $ (!\B[7]~input_o )))) ) ) )
 
-	.dataa(!\inst17|inst2|inst1|inst23~combout ),
-	.datab(!\S[1]~input_o ),
+	.dataa(!\A[7]~input_o ),
+	.datab(!\B[7]~input_o ),
 	.datac(!\S[0]~input_o ),
-	.datad(!\A[0]~input_o ),
-	.datae(!\A[6]~input_o ),
-	.dataf(!\A[7]~input_o ),
+	.datad(!\S[2]~input_o ),
+	.datae(!\S[1]~input_o ),
+	.dataf(!\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -603,23 +628,21 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1 .lut_mask = 64'hC8CBFCFF04073033;
+defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1 .lut_mask = 64'h0600170006FF17FF;
 defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1 .shared_arith = "off";
 // synopsys translate_on
 
 arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2_combout  = ( \S[1]~input_o  & ( \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout  & ( ((!\A[7]~input_o  & (\B[7]~input_o  & \S[0]~input_o )) # (\A[7]~input_o  & ((\S[0]~input_o ) 
-// # (\B[7]~input_o )))) # (\S[2]~input_o ) ) ) ) # ( !\S[1]~input_o  & ( \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout  & ( ((\S[0]~input_o  & (!\A[7]~input_o  $ (!\B[7]~input_o )))) # (\S[2]~input_o ) ) ) ) # ( \S[1]~input_o  & ( 
-// !\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout  & ( (!\S[2]~input_o  & ((!\A[7]~input_o  & (\B[7]~input_o  & \S[0]~input_o )) # (\A[7]~input_o  & ((\S[0]~input_o ) # (\B[7]~input_o ))))) ) ) ) # ( !\S[1]~input_o  & ( 
-// !\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout  & ( (\S[0]~input_o  & (!\S[2]~input_o  & (!\A[7]~input_o  $ (!\B[7]~input_o )))) ) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2_combout  = ( \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout  ) # ( !\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout  & ( 
+// (\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout  & (!\inst6|inst1|inst26~0_combout  $ (!\A[7]~input_o  $ (\B[7]~input_o )))) ) )
 
-	.dataa(!\A[7]~input_o ),
-	.datab(!\B[7]~input_o ),
-	.datac(!\S[0]~input_o ),
-	.datad(!\S[2]~input_o ),
-	.datae(!\S[1]~input_o ),
-	.dataf(!\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout ),
+	.dataa(!\inst6|inst1|inst26~0_combout ),
+	.datab(!\A[7]~input_o ),
+	.datac(!\B[7]~input_o ),
+	.datad(!\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout ),
+	.datae(!\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~1_combout ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -629,32 +652,8 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2 .lut_mask = 64'h0600170006FF17FF;
+defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2 .lut_mask = 64'h0069FFFF0069FFFF;
 defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2 .shared_arith = "off";
-// synopsys translate_on
-
-arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3 (
-// Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout  = ( \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2_combout  ) # ( !\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2_combout  & ( 
-// (\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout  & (!\inst6|inst1|inst26~0_combout  $ (!\A[7]~input_o  $ (\B[7]~input_o )))) ) )
-
-	.dataa(!\inst6|inst1|inst26~0_combout ),
-	.datab(!\A[7]~input_o ),
-	.datac(!\B[7]~input_o ),
-	.datad(!\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout ),
-	.datae(!\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~2_combout ),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3 .lut_mask = 64'h0069FFFF0069FFFF;
-defparam \inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~3 .shared_arith = "off";
 // synopsys translate_on
 
 arriaii_lcell_comb \inst|inst[6]~0 (
@@ -682,15 +681,16 @@ defparam \inst|inst[6]~0 .shared_arith = "off";
 
 arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~0 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~0_combout  = ( \A[5]~input_o  & ( \A[6]~input_o  & ( (\S[1]~input_o  & ((!\S[0]~input_o ) # (\A[7]~input_o ))) ) ) ) # ( !\A[5]~input_o  & ( \A[6]~input_o  & ( (\S[0]~input_o  & ((!\S[1]~input_o  & 
-// (\inst17|inst2|inst1|inst17~combout )) # (\S[1]~input_o  & ((\A[7]~input_o ))))) ) ) ) # ( \A[5]~input_o  & ( !\A[6]~input_o  & ( (!\S[1]~input_o ) # ((!\S[0]~input_o ) # (\A[7]~input_o )) ) ) ) # ( !\A[5]~input_o  & ( !\A[6]~input_o  & ( (!\S[1]~input_o  
-// & ((!\inst17|inst2|inst1|inst17~combout ) # ((!\S[0]~input_o )))) # (\S[1]~input_o  & (((\S[0]~input_o  & \A[7]~input_o )))) ) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~0_combout  = ( \A[7]~input_o  & ( \A[6]~input_o  & ( (!\S[1]~input_o  & (!\inst17|inst2|inst1|inst17~combout  & (\S[0]~input_o  & !\A[5]~input_o ))) # (\S[1]~input_o  & (((!\S[0]~input_o ) # 
+// (\A[5]~input_o )))) ) ) ) # ( !\A[7]~input_o  & ( \A[6]~input_o  & ( (\S[0]~input_o  & ((!\S[1]~input_o  & (!\inst17|inst2|inst1|inst17~combout  & !\A[5]~input_o )) # (\S[1]~input_o  & ((\A[5]~input_o ))))) ) ) ) # ( \A[7]~input_o  & ( !\A[6]~input_o  & ( 
+// (!\S[0]~input_o ) # (((\inst17|inst2|inst1|inst17~combout  & !\S[1]~input_o )) # (\A[5]~input_o )) ) ) ) # ( !\A[7]~input_o  & ( !\A[6]~input_o  & ( (!\S[0]~input_o  & (((!\S[1]~input_o )))) # (\S[0]~input_o  & (((\inst17|inst2|inst1|inst17~combout  & 
+// !\S[1]~input_o )) # (\A[5]~input_o ))) ) ) )
 
 	.dataa(!\inst17|inst2|inst1|inst17~combout ),
 	.datab(!\S[1]~input_o ),
 	.datac(!\S[0]~input_o ),
-	.datad(!\A[7]~input_o ),
-	.datae(!\A[5]~input_o ),
+	.datad(!\A[5]~input_o ),
+	.datae(!\A[7]~input_o ),
 	.dataf(!\A[6]~input_o ),
 	.datag(gnd),
 	.cin(gnd),
@@ -701,7 +701,7 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~0 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~0 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~0 .lut_mask = 64'hC8CBFCFF04073033;
+defparam \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~0 .lut_mask = 64'hC4CFF4FF08033833;
 defparam \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~0 .shared_arith = "off";
 // synopsys translate_on
 
@@ -760,15 +760,16 @@ defparam \inst12|inst6|$00000|auto_generated|l1_w6_n0_mux_dataout~2 .shared_arit
 
 arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w5_n0_mux_dataout~0 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w5_n0_mux_dataout~0_combout  = ( \A[4]~input_o  & ( \A[5]~input_o  & ( (\S[1]~input_o  & ((!\S[0]~input_o ) # (\A[6]~input_o ))) ) ) ) # ( !\A[4]~input_o  & ( \A[5]~input_o  & ( (\S[0]~input_o  & ((!\S[1]~input_o  & 
-// (\inst17|inst2|inst|inst41~combout )) # (\S[1]~input_o  & ((\A[6]~input_o ))))) ) ) ) # ( \A[4]~input_o  & ( !\A[5]~input_o  & ( (!\S[1]~input_o ) # ((!\S[0]~input_o ) # (\A[6]~input_o )) ) ) ) # ( !\A[4]~input_o  & ( !\A[5]~input_o  & ( (!\S[1]~input_o  
-// & ((!\inst17|inst2|inst|inst41~combout ) # ((!\S[0]~input_o )))) # (\S[1]~input_o  & (((\S[0]~input_o  & \A[6]~input_o )))) ) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w5_n0_mux_dataout~0_combout  = ( \A[6]~input_o  & ( \A[5]~input_o  & ( (!\S[1]~input_o  & (\inst17|inst2|inst|inst41~combout  & (\S[0]~input_o  & !\A[4]~input_o ))) # (\S[1]~input_o  & (((!\S[0]~input_o ) # 
+// (\A[4]~input_o )))) ) ) ) # ( !\A[6]~input_o  & ( \A[5]~input_o  & ( (\S[0]~input_o  & ((!\S[1]~input_o  & (\inst17|inst2|inst|inst41~combout  & !\A[4]~input_o )) # (\S[1]~input_o  & ((\A[4]~input_o ))))) ) ) ) # ( \A[6]~input_o  & ( !\A[5]~input_o  & ( 
+// (!\S[0]~input_o ) # (((!\inst17|inst2|inst|inst41~combout  & !\S[1]~input_o )) # (\A[4]~input_o )) ) ) ) # ( !\A[6]~input_o  & ( !\A[5]~input_o  & ( (!\S[0]~input_o  & (((!\S[1]~input_o )))) # (\S[0]~input_o  & (((!\inst17|inst2|inst|inst41~combout  & 
+// !\S[1]~input_o )) # (\A[4]~input_o ))) ) ) )
 
 	.dataa(!\inst17|inst2|inst|inst41~combout ),
 	.datab(!\S[1]~input_o ),
 	.datac(!\S[0]~input_o ),
-	.datad(!\A[6]~input_o ),
-	.datae(!\A[4]~input_o ),
+	.datad(!\A[4]~input_o ),
+	.datae(!\A[6]~input_o ),
 	.dataf(!\A[5]~input_o ),
 	.datag(gnd),
 	.cin(gnd),
@@ -779,7 +780,7 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w5_n0_mux_dataout~0 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w5_n0_mux_dataout~0 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w5_n0_mux_dataout~0 .lut_mask = 64'hC8CBFCFF04073033;
+defparam \inst12|inst6|$00000|auto_generated|l1_w5_n0_mux_dataout~0 .lut_mask = 64'hC8CFF8FF04033433;
 defparam \inst12|inst6|$00000|auto_generated|l1_w5_n0_mux_dataout~0 .shared_arith = "off";
 // synopsys translate_on
 
@@ -889,42 +890,35 @@ defparam \A[3]~input .bus_hold = "false";
 defparam \A[3]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-arriaii_io_ibuf \A[1]~input (
-	.i(A[1]),
-	.ibar(gnd),
-	.o(\A[1]~input_o ));
-// synopsys translate_off
-defparam \A[1]~input .bus_hold = "false";
-defparam \A[1]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2 (
+arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout  = ( !\S[1]~input_o  & ( !\A[4]~input_o  $ (((!\A[2]~input_o  & (!\A[1]~input_o  & (!\A[3]~input_o  & \S[0]~input_o ))))) ) ) # ( \S[1]~input_o  & ( (((!\S[0]~input_o  & ((\A[3]~input_o 
-// ))) # (\S[0]~input_o  & (\A[5]~input_o )))) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  = ( \A[5]~input_o  & ( \A[4]~input_o  & ( (!\S[1]~input_o  & (\inst17|inst2|inst|inst37~combout  & (\S[0]~input_o  & !\A[3]~input_o ))) # (\S[1]~input_o  & (((!\S[0]~input_o ) # 
+// (\A[3]~input_o )))) ) ) ) # ( !\A[5]~input_o  & ( \A[4]~input_o  & ( (\S[0]~input_o  & ((!\S[1]~input_o  & (\inst17|inst2|inst|inst37~combout  & !\A[3]~input_o )) # (\S[1]~input_o  & ((\A[3]~input_o ))))) ) ) ) # ( \A[5]~input_o  & ( !\A[4]~input_o  & ( 
+// (!\S[0]~input_o ) # (((!\inst17|inst2|inst|inst37~combout  & !\S[1]~input_o )) # (\A[3]~input_o )) ) ) ) # ( !\A[5]~input_o  & ( !\A[4]~input_o  & ( (!\S[0]~input_o  & (((!\S[1]~input_o )))) # (\S[0]~input_o  & (((!\inst17|inst2|inst|inst37~combout  & 
+// !\S[1]~input_o )) # (\A[3]~input_o ))) ) ) )
 
-	.dataa(!\A[2]~input_o ),
-	.datab(!\A[4]~input_o ),
-	.datac(!\A[5]~input_o ),
+	.dataa(!\inst17|inst2|inst|inst37~combout ),
+	.datab(!\S[1]~input_o ),
+	.datac(!\S[0]~input_o ),
 	.datad(!\A[3]~input_o ),
-	.datae(!\S[1]~input_o ),
-	.dataf(!\S[0]~input_o ),
-	.datag(!\A[1]~input_o ),
+	.datae(!\A[5]~input_o ),
+	.dataf(!\A[4]~input_o ),
+	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout ),
+	.combout(\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2 .extended_lut = "on";
-defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2 .lut_mask = 64'hCCCC00FF6CCC0F0F;
-defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2 .shared_arith = "off";
+defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0 .extended_lut = "off";
+defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0 .lut_mask = 64'hC8CFF8FF04033433;
+defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0 .shared_arith = "off";
 // synopsys translate_on
 
-arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0 (
+arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  = ( \S[1]~input_o  & ( (!\S[2]~input_o  & ((!\A[4]~input_o  & (\B[4]~input_o  & \S[0]~input_o )) # (\A[4]~input_o  & ((\S[0]~input_o ) # (\B[4]~input_o ))))) ) ) # ( !\S[1]~input_o  & ( 
+// \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout  = ( \S[1]~input_o  & ( (!\S[2]~input_o  & ((!\A[4]~input_o  & (\B[4]~input_o  & \S[0]~input_o )) # (\A[4]~input_o  & ((\S[0]~input_o ) # (\B[4]~input_o ))))) ) ) # ( !\S[1]~input_o  & ( 
 // (\S[0]~input_o  & (!\S[2]~input_o  & (!\A[4]~input_o  $ (!\B[4]~input_o )))) ) )
 
 	.dataa(!\A[4]~input_o ),
@@ -936,71 +930,79 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0 .lut_mask = 64'h0600170006001700;
-defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0 .shared_arith = "off";
-// synopsys translate_on
-
-arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1 (
-// Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout  = ( \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout  & ( \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  ) ) # ( 
-// !\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout  & ( \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  ) ) # ( \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout  & ( 
-// !\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  & ( ((\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout  & (!\inst6|inst|inst42~2_combout  $ (!\inst|inst[4]~1_combout )))) # (\S[2]~input_o ) ) ) ) # ( 
-// !\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout  & ( !\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  & ( (\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout  & (!\inst6|inst|inst42~2_combout  $ 
-// (!\inst|inst[4]~1_combout ))) ) ) )
-
-	.dataa(!\S[2]~input_o ),
-	.datab(!\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout ),
-	.datac(!\inst6|inst|inst42~2_combout ),
-	.datad(!\inst|inst[4]~1_combout ),
-	.datae(!\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout ),
-	.dataf(!\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
 	.combout(\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1 .lut_mask = 64'h03305775FFFFFFFF;
+defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1 .lut_mask = 64'h0600170006001700;
 defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1 .shared_arith = "off";
 // synopsys translate_on
 
-arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0 (
+arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout  = ( \A[2]~input_o  & ( \A[3]~input_o  & ( (\S[1]~input_o  & ((!\S[0]~input_o ) # (\A[4]~input_o ))) ) ) ) # ( !\A[2]~input_o  & ( \A[3]~input_o  & ( (\S[0]~input_o  & ((!\S[1]~input_o  & 
-// (!\A[1]~input_o )) # (\S[1]~input_o  & ((\A[4]~input_o ))))) ) ) ) # ( \A[2]~input_o  & ( !\A[3]~input_o  & ( (!\S[1]~input_o ) # ((!\S[0]~input_o ) # (\A[4]~input_o )) ) ) ) # ( !\A[2]~input_o  & ( !\A[3]~input_o  & ( (!\S[1]~input_o  & (((!\S[0]~input_o 
-// )) # (\A[1]~input_o ))) # (\S[1]~input_o  & (((\S[0]~input_o  & \A[4]~input_o )))) ) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout  = ( \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  & ( \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout  ) ) # ( 
+// !\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  & ( \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout  ) ) # ( \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  & ( 
+// !\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout  & ( ((\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout  & (!\inst6|inst|inst42~2_combout  $ (!\inst|inst[4]~1_combout )))) # (\S[2]~input_o ) ) ) ) # ( 
+// !\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout  & ( !\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout  & ( (\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout  & (!\inst6|inst|inst42~2_combout  $ 
+// (!\inst|inst[4]~1_combout ))) ) ) )
 
-	.dataa(!\A[1]~input_o ),
-	.datab(!\S[1]~input_o ),
-	.datac(!\S[0]~input_o ),
-	.datad(!\A[4]~input_o ),
-	.datae(!\A[2]~input_o ),
-	.dataf(!\A[3]~input_o ),
+	.dataa(!\S[2]~input_o ),
+	.datab(!\inst12|inst6|$00000|auto_generated|l1_w7_n0_mux_dataout~0_combout ),
+	.datac(!\inst6|inst|inst42~2_combout ),
+	.datad(!\inst|inst[4]~1_combout ),
+	.datae(!\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~0_combout ),
+	.dataf(!\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~1_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout ),
+	.combout(\inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0 .lut_mask = 64'hC4C7FCFF080B3033;
-defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0 .shared_arith = "off";
+defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2 .extended_lut = "off";
+defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2 .lut_mask = 64'h03305775FFFFFFFF;
+defparam \inst12|inst6|$00000|auto_generated|l1_w4_n0_mux_dataout~2 .shared_arith = "off";
 // synopsys translate_on
 
-arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1 (
+arriaii_io_ibuf \A[1]~input (
+	.i(A[1]),
+	.ibar(gnd),
+	.o(\A[1]~input_o ));
+// synopsys translate_off
+defparam \A[1]~input .bus_hold = "false";
+defparam \A[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1_combout  = ( \B[3]~input_o  & ( \S[0]~input_o  & ( !\A[3]~input_o  ) ) ) # ( !\B[3]~input_o  & ( \S[0]~input_o  & ( \A[3]~input_o  ) ) ) # ( \B[3]~input_o  & ( !\S[0]~input_o  & ( !\A[3]~input_o  
+// \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5_combout  = ( !\S[0]~input_o  & ( (((!\S[1]~input_o  & ((!\A[3]~input_o ))) # (\S[1]~input_o  & (\A[4]~input_o )))) ) ) # ( \S[0]~input_o  & ( (!\S[1]~input_o  & (!\A[3]~input_o  $ 
+// (((!\A[0]~input_o  & (!\A[1]~input_o  & !\A[2]~input_o )))))) # (\S[1]~input_o  & ((((\A[2]~input_o ))))) ) )
+
+	.dataa(!\A[0]~input_o ),
+	.datab(!\A[1]~input_o ),
+	.datac(!\A[2]~input_o ),
+	.datad(!\A[3]~input_o ),
+	.datae(!\S[0]~input_o ),
+	.dataf(!\S[1]~input_o ),
+	.datag(!\A[4]~input_o ),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5 .extended_lut = "on";
+defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5 .lut_mask = 64'hFF007F800F0F0F0F;
+defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5 .shared_arith = "off";
+// synopsys translate_on
+
+arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0 (
+// Equation(s):
+// \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout  = ( \B[3]~input_o  & ( \S[0]~input_o  & ( !\A[3]~input_o  ) ) ) # ( !\B[3]~input_o  & ( \S[0]~input_o  & ( \A[3]~input_o  ) ) ) # ( \B[3]~input_o  & ( !\S[0]~input_o  & ( !\A[3]~input_o  
 // $ (((!\A[2]~input_o  & (\B[2]~input_o  & \inst6|inst|inst33~0_combout )) # (\A[2]~input_o  & ((\inst6|inst|inst33~0_combout ) # (\B[2]~input_o ))))) ) ) ) # ( !\B[3]~input_o  & ( !\S[0]~input_o  & ( !\A[3]~input_o  $ (((!\A[2]~input_o  & ((!\B[2]~input_o 
 // ) # (!\inst6|inst|inst33~0_combout ))) # (\A[2]~input_o  & (!\B[2]~input_o  & !\inst6|inst|inst33~0_combout )))) ) ) )
 
@@ -1013,52 +1015,53 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
+	.combout(\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0 .extended_lut = "off";
+defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0 .lut_mask = 64'h566AA9955555AAAA;
+defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0 .shared_arith = "off";
+// synopsys translate_on
+
+arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1 (
+// Equation(s):
+// \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1_combout  = ( !\S[1]~input_o  & ( (((!\S[2]~input_o  & (\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout )) # (\S[2]~input_o  & 
+// ((\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5_combout ))))) ) ) # ( \S[1]~input_o  & ( (!\S[2]~input_o  & ((!\B[3]~input_o  & (\A[3]~input_o  & (\S[0]~input_o ))) # (\B[3]~input_o  & (((\S[0]~input_o )) # (\A[3]~input_o ))))) # 
+// (\S[2]~input_o  & ((((\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5_combout ))))) ) )
+
+	.dataa(!\B[3]~input_o ),
+	.datab(!\A[3]~input_o ),
+	.datac(!\S[0]~input_o ),
+	.datad(!\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~5_combout ),
+	.datae(!\S[1]~input_o ),
+	.dataf(!\S[2]~input_o ),
+	.datag(!\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout ),
+	.cin(gnd),
+	.sharein(gnd),
 	.combout(\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1 .lut_mask = 64'h566AA9955555AAAA;
+defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1 .extended_lut = "on";
+defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1 .lut_mask = 64'h0F0F171700FF00FF;
 defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1 .shared_arith = "off";
-// synopsys translate_on
-
-arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~2 (
-// Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~2_combout  = ( !\S[1]~input_o  & ( (((!\S[2]~input_o  & (\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1_combout )) # (\S[2]~input_o  & 
-// ((\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout ))))) ) ) # ( \S[1]~input_o  & ( (!\S[2]~input_o  & ((!\B[3]~input_o  & (\A[3]~input_o  & (\S[0]~input_o ))) # (\B[3]~input_o  & (((\S[0]~input_o )) # (\A[3]~input_o ))))) # 
-// (\S[2]~input_o  & ((((\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout ))))) ) )
-
-	.dataa(!\B[3]~input_o ),
-	.datab(!\A[3]~input_o ),
-	.datac(!\S[0]~input_o ),
-	.datad(!\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout ),
-	.datae(!\S[1]~input_o ),
-	.dataf(!\S[2]~input_o ),
-	.datag(!\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~1_combout ),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~2_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~2 .extended_lut = "on";
-defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~2 .lut_mask = 64'h0F0F171700FF00FF;
-defparam \inst12|inst6|$00000|auto_generated|l1_w3_n0_mux_dataout~2 .shared_arith = "off";
 // synopsys translate_on
 
 arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0_combout  = ( \S[1]~input_o  & ( (!\A[2]~input_o  & (\B[2]~input_o  & \S[0]~input_o )) # (\A[2]~input_o  & ((\S[0]~input_o ) # (\B[2]~input_o ))) ) ) # ( !\S[1]~input_o  & ( !\A[2]~input_o  $ 
-// (!\B[2]~input_o  $ (((\inst6|inst|inst33~0_combout  & !\S[0]~input_o )))) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0_combout  = ( \A[3]~input_o  & ( \A[2]~input_o  & ( (!\S[1]~input_o  & (!\A[0]~input_o  & (\S[0]~input_o  & !\A[1]~input_o ))) # (\S[1]~input_o  & (((!\S[0]~input_o ) # (\A[1]~input_o )))) ) ) ) # 
+// ( !\A[3]~input_o  & ( \A[2]~input_o  & ( (\S[0]~input_o  & ((!\S[1]~input_o  & (!\A[0]~input_o  & !\A[1]~input_o )) # (\S[1]~input_o  & ((\A[1]~input_o ))))) ) ) ) # ( \A[3]~input_o  & ( !\A[2]~input_o  & ( (!\S[0]~input_o ) # (((\A[0]~input_o  & 
+// !\S[1]~input_o )) # (\A[1]~input_o )) ) ) ) # ( !\A[3]~input_o  & ( !\A[2]~input_o  & ( (!\S[0]~input_o  & (((!\S[1]~input_o )))) # (\S[0]~input_o  & (((\A[0]~input_o  & !\S[1]~input_o )) # (\A[1]~input_o ))) ) ) )
 
-	.dataa(!\A[2]~input_o ),
-	.datab(!\B[2]~input_o ),
-	.datac(!\inst6|inst|inst33~0_combout ),
-	.datad(!\S[0]~input_o ),
-	.datae(!\S[1]~input_o ),
-	.dataf(gnd),
+	.dataa(!\A[0]~input_o ),
+	.datab(!\S[1]~input_o ),
+	.datac(!\S[0]~input_o ),
+	.datad(!\A[1]~input_o ),
+	.datae(!\A[3]~input_o ),
+	.dataf(!\A[2]~input_o ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1068,22 +1071,22 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0 .lut_mask = 64'h6966117769661177;
+defparam \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0 .lut_mask = 64'hC4CFF4FF08033833;
 defparam \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0 .shared_arith = "off";
 // synopsys translate_on
 
 arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1_combout  = ( !\S[1]~input_o  & ( (!\S[2]~input_o  & ((((\inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0_combout ))))) # (\S[2]~input_o  & (!\A[2]~input_o  $ (((!\A[1]~input_o  & 
-// (\S[0]~input_o )))))) ) ) # ( \S[1]~input_o  & ( (!\S[2]~input_o  & ((((\inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0_combout ))))) # (\S[2]~input_o  & ((!\S[0]~input_o  & (\A[1]~input_o )) # (\S[0]~input_o  & (((\A[3]~input_o )))))) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1_combout  = ( !\S[2]~input_o  & ( (!\S[1]~input_o  & (!\B[2]~input_o  $ (!\A[2]~input_o  $ (((\inst6|inst|inst33~0_combout  & !\S[0]~input_o )))))) # (\S[1]~input_o  & ((!\B[2]~input_o  & 
+// (\A[2]~input_o  & ((\S[0]~input_o )))) # (\B[2]~input_o  & (((\S[0]~input_o )) # (\A[2]~input_o ))))) ) ) # ( \S[2]~input_o  & ( (((\inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0_combout ))) ) )
 
-	.dataa(!\A[1]~input_o ),
-	.datab(!\S[0]~input_o ),
-	.datac(!\A[3]~input_o ),
-	.datad(!\inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0_combout ),
-	.datae(!\S[1]~input_o ),
-	.dataf(!\S[2]~input_o ),
-	.datag(!\A[2]~input_o ),
+	.dataa(!\B[2]~input_o ),
+	.datab(!\A[2]~input_o ),
+	.datac(!\inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~0_combout ),
+	.datad(!\S[0]~input_o ),
+	.datae(!\S[2]~input_o ),
+	.dataf(!\S[1]~input_o ),
+	.datag(!\inst6|inst|inst33~0_combout ),
 	.cin(gnd),
 	.sharein(gnd),
 	.combout(\inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1_combout ),
@@ -1092,44 +1095,44 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1 .extended_lut = "on";
-defparam \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1 .lut_mask = 64'h00FF00FFD2D24747;
+defparam \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1 .lut_mask = 64'h69660F0F11770F0F;
 defparam \inst12|inst6|$00000|auto_generated|l1_w2_n0_mux_dataout~1 .shared_arith = "off";
 // synopsys translate_on
 
-arriaii_lcell_comb \inst12|inst3|$00000|auto_generated|l1_w1_n0_mux_dataout~0 (
+arriaii_lcell_comb \inst6|inst|inst30~0 (
 // Equation(s):
-// \inst12|inst3|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout  = (!\S[0]~input_o  & ((\A[0]~input_o ))) # (\S[0]~input_o  & (\A[2]~input_o ))
+// \inst6|inst|inst30~0_combout  = (!\A[0]~input_o  & (\B[0]~input_o  & \CIN~input_o )) # (\A[0]~input_o  & ((\CIN~input_o ) # (\B[0]~input_o )))
 
-	.dataa(!\A[2]~input_o ),
-	.datab(!\A[0]~input_o ),
-	.datac(!\S[0]~input_o ),
+	.dataa(!\A[0]~input_o ),
+	.datab(!\B[0]~input_o ),
+	.datac(!\CIN~input_o ),
 	.datad(gnd),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\inst12|inst3|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ),
+	.combout(\inst6|inst|inst30~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \inst12|inst3|$00000|auto_generated|l1_w1_n0_mux_dataout~0 .extended_lut = "off";
-defparam \inst12|inst3|$00000|auto_generated|l1_w1_n0_mux_dataout~0 .lut_mask = 64'h3535353535353535;
-defparam \inst12|inst3|$00000|auto_generated|l1_w1_n0_mux_dataout~0 .shared_arith = "off";
+defparam \inst6|inst|inst30~0 .extended_lut = "off";
+defparam \inst6|inst|inst30~0 .lut_mask = 64'h1717171717171717;
+defparam \inst6|inst|inst30~0 .shared_arith = "off";
 // synopsys translate_on
 
 arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout  = ( \CIN~input_o  & ( \S[0]~input_o  & ( !\A[1]~input_o  $ (!\B[1]~input_o ) ) ) ) # ( !\CIN~input_o  & ( \S[0]~input_o  & ( !\A[1]~input_o  $ (!\B[1]~input_o ) ) ) ) # ( \CIN~input_o  & 
-// ( !\S[0]~input_o  & ( !\A[1]~input_o  $ (!\B[1]~input_o  $ (((\B[0]~input_o ) # (\A[0]~input_o )))) ) ) ) # ( !\CIN~input_o  & ( !\S[0]~input_o  & ( !\A[1]~input_o  $ (!\B[1]~input_o  $ (((\A[0]~input_o  & \B[0]~input_o )))) ) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout  = ( \S[1]~input_o  & ( (!\A[1]~input_o  & (\B[1]~input_o  & \S[0]~input_o )) # (\A[1]~input_o  & ((\S[0]~input_o ) # (\B[1]~input_o ))) ) ) # ( !\S[1]~input_o  & ( !\A[1]~input_o  $ 
+// (!\B[1]~input_o  $ (((\inst6|inst|inst30~0_combout  & !\S[0]~input_o )))) ) )
 
 	.dataa(!\A[1]~input_o ),
 	.datab(!\B[1]~input_o ),
-	.datac(!\A[0]~input_o ),
-	.datad(!\B[0]~input_o ),
-	.datae(!\CIN~input_o ),
-	.dataf(!\S[0]~input_o ),
+	.datac(!\inst6|inst|inst30~0_combout ),
+	.datad(!\S[0]~input_o ),
+	.datae(!\S[1]~input_o ),
+	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1139,23 +1142,22 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0 .extended_lut = "off";
-defparam \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0 .lut_mask = 64'h6669699966666666;
+defparam \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0 .lut_mask = 64'h6966117769661177;
 defparam \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0 .shared_arith = "off";
 // synopsys translate_on
 
 arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1 (
 // Equation(s):
-// \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1_combout  = ( !\S[2]~input_o  & ( (!\S[1]~input_o  & ((((\inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ))))) # (\S[1]~input_o  & ((!\S[0]~input_o  & (\A[1]~input_o  & 
-// (\B[1]~input_o ))) # (\S[0]~input_o  & (((\B[1]~input_o )) # (\A[1]~input_o ))))) ) ) # ( \S[2]~input_o  & ( (!\S[1]~input_o  & (!\S[0]~input_o  $ ((\A[1]~input_o )))) # (\S[1]~input_o  & 
-// ((((\inst12|inst3|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ))))) ) )
+// \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1_combout  = ( !\S[0]~input_o  & ( (!\S[2]~input_o  & ((((\inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ))))) # (\S[2]~input_o  & ((!\S[1]~input_o  & (!\A[1]~input_o )) # 
+// (\S[1]~input_o  & (((\A[2]~input_o )))))) ) ) # ( \S[0]~input_o  & ( (!\S[2]~input_o  & ((((\inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ))))) # (\S[2]~input_o  & (!\A[0]~input_o  $ (((!\A[1]~input_o ) # ((\S[1]~input_o )))))) ) )
 
-	.dataa(!\S[0]~input_o ),
-	.datab(!\A[1]~input_o ),
-	.datac(!\inst12|inst3|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ),
-	.datad(!\S[1]~input_o ),
-	.datae(!\S[2]~input_o ),
-	.dataf(!\inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ),
-	.datag(!\B[1]~input_o ),
+	.dataa(!\A[1]~input_o ),
+	.datab(!\S[1]~input_o ),
+	.datac(!\A[0]~input_o ),
+	.datad(!\inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout ),
+	.datae(!\S[0]~input_o ),
+	.dataf(!\S[2]~input_o ),
+	.datag(!\A[2]~input_o ),
 	.cin(gnd),
 	.sharein(gnd),
 	.combout(\inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1_combout ),
@@ -1164,13 +1166,13 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1 .extended_lut = "on";
-defparam \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1 .lut_mask = 64'h0017990FFF17990F;
+defparam \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1 .lut_mask = 64'h00FF00FF8B8B4B4B;
 defparam \inst12|inst6|$00000|auto_generated|l1_w1_n0_mux_dataout~1 .shared_arith = "off";
 // synopsys translate_on
 
 arriaii_lcell_comb \inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0 (
 // Equation(s):
-// \inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0_combout  = (!\S[0]~input_o  & ((\A[7]~input_o ))) # (\S[0]~input_o  & (\A[1]~input_o ))
+// \inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0_combout  = (!\S[0]~input_o  & (\A[1]~input_o )) # (\S[0]~input_o  & ((\A[7]~input_o )))
 
 	.dataa(!\A[1]~input_o ),
 	.datab(!\A[7]~input_o ),
@@ -1187,21 +1189,22 @@ arriaii_lcell_comb \inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0 .extended_lut = "off";
-defparam \inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0 .lut_mask = 64'h3535353535353535;
+defparam \inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0 .lut_mask = 64'h5353535353535353;
 defparam \inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0 .shared_arith = "off";
 // synopsys translate_on
 
 arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w0_n0_mux_dataout~0 (
 // Equation(s):
 // \inst12|inst6|$00000|auto_generated|l1_w0_n0_mux_dataout~0_combout  = ( !\S[2]~input_o  & ( (!\S[1]~input_o  & (!\B[0]~input_o  $ (!\A[0]~input_o  $ (((!\S[0]~input_o  & \CIN~input_o )))))) # (\S[1]~input_o  & ((!\S[0]~input_o  & (((\B[0]~input_o  & 
-// \A[0]~input_o )))) # (\S[0]~input_o  & (((\A[0]~input_o ) # (\B[0]~input_o )))))) ) ) # ( \S[2]~input_o  & ( (((!\S[1]~input_o  & ((!\A[0]~input_o ))) # (\S[1]~input_o  & (\inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0_combout )))) ) )
+// \A[0]~input_o )))) # (\S[0]~input_o  & (((\A[0]~input_o ) # (\B[0]~input_o )))))) ) ) # ( \S[2]~input_o  & ( ((!\S[1]~input_o  & (!\S[0]~input_o  $ (((\A[0]~input_o ))))) # (\S[1]~input_o  & 
+// (((\inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0_combout ))))) ) )
 
 	.dataa(!\S[0]~input_o ),
 	.datab(!\CIN~input_o ),
 	.datac(!\inst12|inst3|$00000|auto_generated|l1_w0_n0_mux_dataout~0_combout ),
-	.datad(!\S[1]~input_o ),
+	.datad(!\A[0]~input_o ),
 	.datae(!\S[2]~input_o ),
-	.dataf(!\A[0]~input_o ),
+	.dataf(!\S[1]~input_o ),
 	.datag(!\B[0]~input_o ),
 	.cin(gnd),
 	.sharein(gnd),
@@ -1211,7 +1214,7 @@ arriaii_lcell_comb \inst12|inst6|$00000|auto_generated|l1_w0_n0_mux_dataout~0 (
 	.shareout());
 // synopsys translate_off
 defparam \inst12|inst6|$00000|auto_generated|l1_w0_n0_mux_dataout~0 .extended_lut = "on";
-defparam \inst12|inst6|$00000|auto_generated|l1_w0_n0_mux_dataout~0 .lut_mask = 64'h2D05FF0FD25F000F;
+defparam \inst12|inst6|$00000|auto_generated|l1_w0_n0_mux_dataout~0 .lut_mask = 64'h2DD2AA55055F0F0F;
 defparam \inst12|inst6|$00000|auto_generated|l1_w0_n0_mux_dataout~0 .shared_arith = "off";
 // synopsys translate_on
 
