@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\EightBitAdd\simulation\qsim
+vEightBitAdd
+Z1 !s100 [7Xhk8DVPn[;KG=4dYfmB1
+Z2 I<U808oZ_42@GHX9MJkC1R0
+Z3 VcL_lOlKcgXb2NX`ZD:M`10
+Z4 dC:\Users\Brandon Tyler\Documents\GitHub\ECS154A\EightBitAdd\simulation\qsim
+Z5 w1381982267
+Z6 8EightBitAdd.vo
+Z7 FEightBitAdd.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|EightBitAdd.vo|
+Z10 o-work work -O0
+Z11 n@eight@bit@add
+!i10b 1
+!s85 0
+Z12 !s108 1381982268.410000
+Z13 !s107 EightBitAdd.vo|
+!s101 -O0
+vEightBitAdd_vlg_check_tst
+!i10b 1
+Z14 !s100 YB]zh0mLYDfEe?AAzVk_W2
+Z15 I6C6=z_9>K8_I4jBJKIYC@3
+Z16 V1mPD84][K5BUZI8H5hAG<3
+R4
+Z17 w1381982265
+Z18 8EightBitAdd.vt
+Z19 FEightBitAdd.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1381982268.495000
+Z21 !s107 EightBitAdd.vt|
+Z22 !s90 -work|work|EightBitAdd.vt|
+!s101 -O0
+R10
+Z23 n@eight@bit@add_vlg_check_tst
+vEightBitAdd_vlg_sample_tst
+!i10b 1
+Z24 !s100 L0J[zmPb`kbVnR_LK99j@2
+Z25 Ik7X_ijZOJaO5KF[4bBJNL0
+Z26 V9[oZY>]GR@lz^[lE9lFn`2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@eight@bit@add_vlg_sample_tst
+vEightBitAdd_vlg_vec_tst
+!i10b 1
+!s100 fBEo4nT5C:cmW4HPL=ONX3
+IL@`ke7i]1I4@jkeUW^IOb3
+Z28 Vg`4H:4NRzKSCb9L4X[lb[0
+R4
+R17
+R18
+R19
+Z29 L0 308
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@eight@bit@add_vlg_vec_tst
