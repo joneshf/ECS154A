@@ -1,6 +1,6 @@
 Flow report for EightBitNot
-Wed Oct 16 19:09:51 2013
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Oct 16 19:58:50 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -40,8 +40,8 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +-----------------------------------+-------------------------------------------------+
-; Flow Status                       ; Successful - Wed Oct 16 19:09:51 2013           ;
-; Quartus II 32-bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Flow Status                       ; Successful - Wed Oct 16 19:58:50 2013           ;
+; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                     ; EightBitNot                                     ;
 ; Top-level Entity Name             ; EightBitNot                                     ;
 ; Family                            ; Arria II GX                                     ;
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/16/2013 19:09:50 ;
+; Start date & time ; 10/16/2013 19:56:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EightBitNot         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 36051158638953.138197579005004  ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 52229847979.138197858003872     ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
@@ -94,8 +94,12 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 376 MB              ; 00:00:01                           ;
-; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 473 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 441 MB              ; 00:00:01                           ;
+; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -104,7 +108,11 @@ applicable agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; bootcamp-PC      ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; WIN-KLV5S2M6C7E  ; Windows 7 ; 6.1        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -112,6 +120,10 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off EightBitNot -c EightBitNot
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog EightBitNot -c EightBitNot --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitNot/Waveformnot.vwf" --testbench_file=./simulation/qsim/EightBitNot.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog EightBitNot -c EightBitNot
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog EightBitNot -c EightBitNot --vector_source="C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/EightBitNot/Waveformnot.vwf" --testbench_file=./simulation/qsim/EightBitNot.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog EightBitNot -c EightBitNot
 
 
 
