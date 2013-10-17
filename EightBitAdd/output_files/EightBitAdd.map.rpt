@@ -1,11 +1,6 @@
 Analysis & Synthesis report for EightBitAdd
-<<<<<<< HEAD
-Wed Oct 16 19:51:04 2013
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-=======
-Wed Oct 16 19:57:02 2013
+Wed Oct 16 20:37:18 2013
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
->>>>>>> f96a8f797571677adb0427634e527e9eeb12096b
 
 
 ---------------------
@@ -14,9 +9,6 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-<<<<<<< HEAD
-  4. Analysis & Synthesis Messages
-=======
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
@@ -24,7 +16,6 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. General Register Statistics
   9. Elapsed Time Per Partition
  10. Analysis & Synthesis Messages
->>>>>>> f96a8f797571677adb0427634e527e9eeb12096b
 
 
 
@@ -50,13 +41,8 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +-----------------------------------+-------------------------------------------------+
-<<<<<<< HEAD
-; Analysis & Synthesis Status       ; Failed - Wed Oct 16 19:51:04 2013               ;
-; Quartus II 64-Bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-=======
-; Analysis & Synthesis Status       ; Successful - Wed Oct 16 19:57:02 2013           ;
+; Analysis & Synthesis Status       ; Successful - Wed Oct 16 20:37:18 2013           ;
 ; Quartus II 32-bit Version         ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
->>>>>>> f96a8f797571677adb0427634e527e9eeb12096b
 ; Revision Name                     ; EightBitAdd                                     ;
 ; Top-level Entity Name             ; EightBitAdd                                     ;
 ; Family                            ; Arria II GX                                     ;
@@ -165,8 +151,6 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-<<<<<<< HEAD
-=======
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
 +-------------------------------------+
 ; Parallel Compilation                ;
@@ -279,29 +263,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 
 
->>>>>>> f96a8f797571677adb0427634e527e9eeb12096b
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-<<<<<<< HEAD
-    Info: Processing started: Wed Oct 16 19:51:04 2013
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EightBitAdd -c EightBitAdd
-Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file eightbitadd.bdf
-    Info (12023): Found entity 1: EightBitAdd
-Info (12127): Elaborating entity "EightBitAdd" for the top level hierarchy
-Error (12006): Node instance "inst1" instantiates undefined entity "4-bit-carry-lookahead-adder"
-Error (12006): Node instance "inst" instantiates undefined entity "4-bit-carry-lookahead-adder"
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 472 megabytes
-    Error: Processing ended: Wed Oct 16 19:51:04 2013
-    Error: Elapsed time: 00:00:00
-    Error: Total CPU time (on all processors): 00:00:01
-=======
-    Info: Processing started: Wed Oct 16 19:57:00 2013
+    Info: Processing started: Wed Oct 16 20:37:16 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EightBitAdd -c EightBitAdd
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file /home/joneshf/school/group/ECS154A/OneBitFullAdder/OneBitFullAdder.bdf
@@ -322,9 +290,8 @@ Info (21057): Implemented 41 device resources after synthesis - the final resour
     Info (21061): Implemented 15 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 376 megabytes
-    Info: Processing ended: Wed Oct 16 19:57:02 2013
+    Info: Processing ended: Wed Oct 16 20:37:18 2013
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
->>>>>>> f96a8f797571677adb0427634e527e9eeb12096b
 
 

@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 152 112)
-	(text "FourBitCarryLookaheadAdder" (rect 5 0 176 12)(font "Arial" (font_size 8)))
+	(text "FourBitcarryLookaheadAdder" (rect 5 0 174 12)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 82 26 92)(font "Arial" ))
 	(port
 		(pt 0 32)
