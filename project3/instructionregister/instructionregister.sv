@@ -1,7 +1,12 @@
 module instructionregister(input logic clk,
-									input logic re,  					//read enable
-									input logic [15:0]curr_addr,	//current address from program counter
-									output logic [15:0]curr_instr); //outputs current instruction
-							 
-	flopen instreg(clk, re, curr_addr, curr_instr);
+									input logic [15:0] curr_instr, // data from memory
+									output logic [15:0] curr_instr_out);
+	logic en = 1'b0;
+	flopen instreg(clk, en, curr_instr, curr_instr_out);
+	
+	always@(curr_instr)
+		begin
+			en <= 1'b1;
+		end
+
 endmodule
