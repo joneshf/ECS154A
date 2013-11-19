@@ -1,9 +1,0 @@
-module flopenr(input logic clk,
-				input logic reset,
-				input logic en,
-				input logic [15:0]d,
-				output logic [15:0]q);
-	always_ff@(posedge_clk, posedge reset)
-		if (reset)	q<=16'b0;
-		elseif(en)	q<=d;
-endmodule
