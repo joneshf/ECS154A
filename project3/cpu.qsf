@@ -48,6 +48,29 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE alu/xor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/shr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/shl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/ror.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/rol.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/or.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/not.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/fulladder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/cla.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/and.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/addfour.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu/add.sv
+set_global_assignment -name SYSTEMVERILOG_FILE signextension.sv
+set_global_assignment -name SYSTEMVERILOG_FILE instructionregister/flopen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE programcounter/flopen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE registers/flopen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE registers/registers.sv
+set_global_assignment -name SYSTEMVERILOG_FILE programcounter/programcounter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE memory/memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE instructionregister/instructionregister.sv
+set_global_assignment -name SYSTEMVERILOG_FILE flagregister/flopen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE flagregister/flagregister.sv
 set_global_assignment -name BDF_FILE registers/RegistersBlock.bdf
 set_global_assignment -name BDF_FILE programcounter/ProgramCounterBlock.bdf
 set_global_assignment -name BDF_FILE flagregister/FlagRegisterBlock.bdf
