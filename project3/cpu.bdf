@@ -370,7 +370,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 792 24 976 104)
+	(rect 616 304 800 384)
 	(text "demux" (rect 5 0 38 12)(font "Arial" ))
 	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
 	(port
@@ -507,5 +507,35 @@ applicable agreement for further details.
 	(text "instr[14..11]" (rect 976 192 1035 204)(font "Arial" ))
 	(pt 1032 200)
 	(pt 1056 200)
+	(bus)
+)
+(connector
+	(text "aout[15..0]" (rect 840 160 893 172)(font "Arial" ))
+	(pt 800 168)
+	(pt 824 168)
+	(bus)
+)
+(connector
+	(text "aout[15..0]" (rect 528 328 581 340)(font "Arial" ))
+	(pt 616 336)
+	(pt 584 336)
+	(bus)
+)
+(connector
+	(text "memdata[15..0]" (rect 840 328 917 340)(font "Arial" ))
+	(pt 824 336)
+	(pt 800 336)
+	(bus)
+)
+(connector
+	(text "aalu[15..0]" (rect 976 160 1027 172)(font "Arial" ))
+	(pt 1056 168)
+	(pt 1032 168)
+	(bus)
+)
+(connector
+	(text "aalu[15..0]" (rect 840 344 891 356)(font "Arial" ))
+	(pt 800 352)
+	(pt 824 352)
 	(bus)
 )
