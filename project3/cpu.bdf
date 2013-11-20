@@ -369,6 +369,42 @@ applicable agreement for further details.
 		(line (pt 0 0)(pt 0 0))
 	)
 )
+(symbol
+	(rect 792 24 976 104)
+	(text "demux" (rect 5 0 38 12)(font "Arial" ))
+	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "datain[15..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "datain[15..0]" (rect 21 27 82 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "select" (rect 0 0 29 12)(font "Arial" ))
+		(text "select" (rect 21 43 50 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "d0[15..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "d0[15..0]" (rect 127 27 170 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "d1[15..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "d1[15..0]" (rect 127 43 170 55)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 64))
+	)
+)
 (connector
 	(text "clock" (rect 128 -88 153 -76)(font "Arial" ))
 	(pt 160 -72)
