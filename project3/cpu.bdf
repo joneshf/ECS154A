@@ -440,48 +440,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 504 -280 704 -168)
-	(text "twotoonebusmux" (rect 5 0 87 12)(font "Arial" ))
-	(text "PCIncrement" (rect 8 96 72 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "d0[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "d0[width-1..0]" (rect 21 27 87 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "d1[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "d1[width-1..0]" (rect 21 43 87 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "s" (rect 0 0 5 12)(font "Arial" ))
-		(text "s" (rect 21 59 26 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 200 32)
-		(output)
-		(text "y[width-1..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "y[width-1..0]" (rect 128 27 189 39)(font "Arial" ))
-		(line (pt 200 32)(pt 184 32)(line_width 3))
-	)
-	(parameter
-		"width"
-		"16"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 184 96))
-	)
-	(annotation_block (parameter)(rect 704 -312 888 -280))
-)
-(symbol
 	(rect 352 -80 464 8)
 	(text "MUX" (rect 42 0 73 16)(font "Arial" (font_size 10)))
 	(text "FlagSel" (rect 3 77 39 89)(font "Arial" ))
@@ -1008,6 +966,169 @@ applicable agreement for further details.
 		(arc (pt 31 36)(pt 31 12)(rect 19 12 44 37))
 	)
 )
+(symbol
+	(rect -32 -224 32 -176)
+	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst7" (rect 3 37 26 49)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 16 16))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "IN2" (rect 2 15 19 27)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 15 19 27)(font "Courier New" (bold))(invisible))
+		(line (pt 0 24)(pt 16 24))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN3" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN3" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 43 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 16 12)(pt 31 12))
+		(line (pt 16 37)(pt 31 37))
+		(line (pt 16 12)(pt 16 37))
+		(arc (pt 31 36)(pt 31 12)(rect 19 12 44 37))
+	)
+)
+(symbol
+	(rect 504 -280 704 -168)
+	(text "twotoonebusmux" (rect 5 0 87 12)(font "Arial" ))
+	(text "PCIncrement" (rect 8 96 72 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "d0[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "d0[width-1..0]" (rect 21 27 87 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "d1[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "d1[width-1..0]" (rect 21 43 87 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "s" (rect 0 0 5 12)(font "Arial" ))
+		(text "s" (rect 21 59 26 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 200 32)
+		(output)
+		(text "y[width-1..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "y[width-1..0]" (rect 128 27 189 39)(font "Arial" ))
+		(line (pt 200 32)(pt 184 32)(line_width 3))
+	)
+	(parameter
+		"width"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 184 96))
+	)
+	(annotation_block (parameter)(rect 704 -312 888 -280))
+)
+(symbol
+	(rect 320 -224 384 -144)
+	(text "NOR4" (rect 1 0 26 10)(font "Arial" (font_size 6)))
+	(text "inst8" (rect 3 69 26 81)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "IN3" (rect 2 39 19 51)(font "Courier New" (bold))(invisible))
+		(text "IN3" (rect 2 39 19 51)(font "Courier New" (bold))(invisible))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "IN4" (rect 2 55 19 67)(font "Courier New" (bold))(invisible))
+		(text "IN4" (rect 2 55 19 67)(font "Courier New" (bold))(invisible))
+		(line (pt 0 64)(pt 14 64))
+	)
+	(port
+		(pt 64 40)
+		(output)
+		(text "OUT" (rect 48 31 65 43)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 31 65 43)(font "Courier New" (bold))(invisible))
+		(line (pt 56 40)(pt 64 40))
+	)
+	(drawing
+		(line (pt 14 29)(pt 25 29))
+		(line (pt 14 52)(pt 25 52))
+		(line (pt 14 29)(pt 14 13))
+		(line (pt 14 67)(pt 14 51))
+		(arc (pt 25 51)(pt 48 40)(rect -4 -7 55 52))
+		(arc (pt 48 40)(pt 25 29)(rect -4 29 55 88))
+		(arc (pt 8 45)(pt 8 35)(rect -13 24 20 57))
+		(circle (rect 48 36 56 44))
+	)
+)
+(symbol
+	(rect 424 -216 488 -168)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst9" (rect 3 37 26 49)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
 (connector
 	(text "clock" (rect 136 96 161 108)(font "Arial" ))
 	(pt 144 112)
@@ -1330,18 +1451,6 @@ applicable agreement for further details.
 	(pt 56 -24)
 )
 (connector
-	(text "ground[14..0],flagout[5]" (rect 376 -256 491 -244)(font "Arial" ))
-	(pt 504 -248)
-	(pt 480 -248)
-	(bus)
-)
-(connector
-	(text "ground[7..0],instr[7..0]" (rect 376 -240 485 -228)(font "Arial" ))
-	(pt 504 -232)
-	(pt 480 -232)
-	(bus)
-)
-(connector
 	(text "pcoffset[15..0]" (rect 736 -256 810 -244)(font "Arial" ))
 	(pt 704 -248)
 	(pt 728 -248)
@@ -1507,4 +1616,84 @@ applicable agreement for further details.
 	(text "instr[12]" (rect -80 304 -40 316)(font "Arial" ))
 	(pt -16 312)
 	(pt -32 312)
+)
+(connector
+	(text "instr[15]" (rect -96 -216 -56 -204)(font "Arial" ))
+	(pt -32 -208)
+	(pt -48 -208)
+)
+(connector
+	(text "instr[12]" (rect -96 -200 -56 -188)(font "Arial" ))
+	(pt -32 -192)
+	(pt -48 -192)
+)
+(connector
+	(text "instr[14]" (rect -96 -208 -56 -196)(font "Arial" ))
+	(pt -32 -200)
+	(pt -48 -200)
+)
+(connector
+	(pt 32 -200)
+	(pt 48 -200)
+)
+(connector
+	(pt 48 -200)
+	(pt 48 -224)
+)
+(connector
+	(pt 56 -224)
+	(pt 48 -224)
+)
+(connector
+	(text "ground[7..0],instr[7..0]" (rect 376 -256 485 -244)(font "Arial" ))
+	(pt 504 -248)
+	(pt 480 -248)
+	(bus)
+)
+(connector
+	(text "ground[14..0],flagout[5]" (rect 376 -240 491 -228)(font "Arial" ))
+	(pt 504 -232)
+	(pt 480 -232)
+	(bus)
+)
+(connector
+	(pt 504 -216)
+	(pt 496 -216)
+)
+(connector
+	(pt 496 -216)
+	(pt 496 -192)
+)
+(connector
+	(pt 496 -192)
+	(pt 488 -192)
+)
+(connector
+	(text "instr[15]" (rect 384 -216 424 -204)(font "Arial" ))
+	(pt 424 -200)
+	(pt 408 -200)
+)
+(connector
+	(pt 384 -184)
+	(pt 424 -184)
+)
+(connector
+	(text "instr[14]" (rect 264 -216 304 -204)(font "Arial" ))
+	(pt 320 -208)
+	(pt 304 -208)
+)
+(connector
+	(text "instr[13]" (rect 264 -200 304 -188)(font "Arial" ))
+	(pt 320 -192)
+	(pt 304 -192)
+)
+(connector
+	(text "instr[12]" (rect 264 -184 304 -172)(font "Arial" ))
+	(pt 320 -176)
+	(pt 304 -176)
+)
+(connector
+	(text "instr[11]" (rect 264 -168 304 -156)(font "Arial" ))
+	(pt 320 -160)
+	(pt 304 -160)
 )
