@@ -1,5 +1,5 @@
 module fourtoonebusmux(input logic [15:0] d0,d1,d2,d3,
-							  input logic s [1:0],
+							  input logic [1:0] s,
 							  output logic [15:0] y);
 							  
 	logic [15:0] low, high;

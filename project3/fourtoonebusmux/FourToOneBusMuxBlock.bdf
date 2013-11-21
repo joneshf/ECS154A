@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "graphic" (version "1.4"))
 (symbol
-	(rect 104 96 272 240)
+	(rect 160 80 328 224)
 	(text "fourtoonebusmux" (rect 5 0 91 12)(font "Arial" ))
 	(text "inst" (rect 8 128 25 140)(font "Arial" ))
 	(port
