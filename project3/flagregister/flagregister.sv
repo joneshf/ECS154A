@@ -4,6 +4,7 @@ module flagregister(input logic clk,
 						  input logic [2:0]s,	  //flag selector bits
 						  input logic val,		  //LSB for LDIF/MOVF
 						  output logic [7:0]q);	  //output flag bits
+
 	always_ff@(posedge clk)
 
 	begin
@@ -50,17 +51,19 @@ module flagregister(input logic clk,
 					q[3:2] = f[3:2];
 					q[0] = f[0];
 				end
-			5'h19:						// LDIF
+			5'h19:						// LDFI
 				case (s)
-					3'h0: q[0] = val;
-					3'h1: q[1] = val;
-					3'h2: q[2] = val;
-					3'h3: q[3] = val;
-					3'h4: q[4] = val;
-					3'h5: q[5] = val;
-					3'h6: q[6] = val;
+					3'h0: q[0] = val;	// Z
+					3'h1: q[1] = val;	// O
+					3'h2: q[2] = val;	// N
+					3'h3: q[3] = val;	// C
+					3'h4: q[4] = val;	// I
 				endcase
-			5'h1A: if(val == 1'b0) q = f; // MOVF
+			5'h1A: if(val == 1'b0) begin // MOVF
+					q = f;
+					// Reset the A flag just in case.
+					q[5] = 1'b1;
+				end
 		endcase
 	end
 endmodule
