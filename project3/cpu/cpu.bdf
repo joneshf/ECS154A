@@ -2030,6 +2030,70 @@ applicable agreement for further details.
 		(line (pt 8 8)(pt 24 8))
 	)
 )
+(symbol
+	(rect 40 80 104 128)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst38" (rect 3 37 32 49)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(symbol
+	(rect 392 288 456 336)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst39" (rect 3 37 32 49)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
 (connector
 	(text "clock" (rect 136 96 161 108)(font "Arial" ))
 	(pt 144 112)
@@ -3010,4 +3074,56 @@ applicable agreement for further details.
 (connector
 	(pt 112 600)
 	(pt 136 600)
+)
+(connector
+	(text "state[1]" (rect -16 88 21 100)(font "Arial" ))
+	(pt 24 96)
+	(pt 40 96)
+)
+(connector
+	(text "state[0]" (rect -16 104 21 116)(font "Arial" ))
+	(pt 24 112)
+	(pt 40 112)
+)
+(connector
+	(pt 120 104)
+	(pt 104 104)
+)
+(connector
+	(pt 120 104)
+	(pt 120 128)
+)
+(connector
+	(pt 120 128)
+	(pt 160 128)
+)
+(connector
+	(pt 480 296)
+	(pt 464 296)
+)
+(connector
+	(pt 464 296)
+	(pt 464 312)
+)
+(connector
+	(pt 464 312)
+	(pt 456 312)
+)
+(connector
+	(text "state[1]" (rect 336 296 373 308)(font "Arial" ))
+	(pt 392 304)
+	(pt 376 304)
+)
+(connector
+	(text "state[0]" (rect 336 312 373 324)(font "Arial" ))
+	(pt 392 320)
+	(pt 376 320)
+)
+(connector
+	(pt 480 296)
+	(pt 480 232)
+)
+(connector
+	(pt 480 232)
+	(pt 592 232)
 )
