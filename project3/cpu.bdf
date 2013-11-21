@@ -524,48 +524,6 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 704 -312 888 -280))
 )
 (symbol
-	(rect 1552 560 1752 672)
-	(text "twotoonebusmux" (rect 5 0 87 12)(font "Arial" ))
-	(text "inst9" (rect 8 96 31 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "d0[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "d0[width-1..0]" (rect 21 27 87 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "d1[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "d1[width-1..0]" (rect 21 43 87 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "s" (rect 0 0 5 12)(font "Arial" ))
-		(text "s" (rect 21 59 26 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 200 32)
-		(output)
-		(text "y[width-1..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "y[width-1..0]" (rect 128 27 189 39)(font "Arial" ))
-		(line (pt 200 32)(pt 184 32)(line_width 3))
-	)
-	(parameter
-		"width"
-		"16"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 184 96))
-	)
-	(annotation_block (parameter)(rect 1752 528 1936 560))
-)
-(symbol
 	(rect 80 240 280 352)
 	(text "twotoonebusmux" (rect 5 0 87 12)(font "Arial" ))
 	(text "PCInputSel" (rect 8 96 63 108)(font "Arial" ))
@@ -864,6 +822,48 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 152 192))
 	)
+)
+(symbol
+	(rect 1552 560 1752 672)
+	(text "twotoonebusmux" (rect 5 0 87 12)(font "Arial" ))
+	(text "ALUBDataSel" (rect 8 96 75 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "d0[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "d0[width-1..0]" (rect 21 27 87 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "d1[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
+		(text "d1[width-1..0]" (rect 21 43 87 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "s" (rect 0 0 5 12)(font "Arial" ))
+		(text "s" (rect 21 59 26 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 200 32)
+		(output)
+		(text "y[width-1..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "y[width-1..0]" (rect 128 27 189 39)(font "Arial" ))
+		(line (pt 200 32)(pt 184 32)(line_width 3))
+	)
+	(parameter
+		"width"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 184 96))
+	)
+	(annotation_block (parameter)(rect 1752 528 1936 560))
 )
 (connector
 	(text "clock" (rect 136 96 161 108)(font "Arial" ))

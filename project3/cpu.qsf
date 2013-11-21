@@ -48,7 +48,6 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name BDF_FILE fourtoonebusmux/FourToOneBusMuxBlock.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE fourtoonebusmux/fourtoonebusmux.sv
 set_global_assignment -name BDF_FILE signextension/SignExtensionBlock.bdf
@@ -81,7 +80,6 @@ set_global_assignment -name BDF_FILE programcounter/ProgramCounterBlock.bdf
 set_global_assignment -name BDF_FILE flagregister/FlagRegisterBlock.bdf
 set_global_assignment -name BDF_FILE alu/ALUBlock.bdf
 set_global_assignment -name BDF_FILE cpu.bdf
-set_global_assignment -name QIP_FILE lpm_decode0.qip
-set_global_assignment -name VERILOG_FILE lpm_decode0_bb.v
 set_global_assignment -name BDF_FILE eighttoonebusmux/EightToOneBusMuxBlock.bdf
 set_global_assignment -name SYSTEMVERILOG_FILE eighttoonebusmux/eighttoonebusmux.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
