@@ -424,48 +424,6 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 984 304 1166 332))
 )
 (symbol
-	(rect 1576 264 1776 376)
-	(text "twotoonebusmux" (rect 5 0 87 12)(font "Arial" ))
-	(text "ALUADataSel" (rect 8 96 75 108)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "d0[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "d0[width-1..0]" (rect 21 27 87 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "d1[width-1..0]" (rect 0 0 66 12)(font "Arial" ))
-		(text "d1[width-1..0]" (rect 21 43 87 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "s" (rect 0 0 5 12)(font "Arial" ))
-		(text "s" (rect 21 59 26 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 200 32)
-		(output)
-		(text "y[width-1..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "y[width-1..0]" (rect 128 27 189 39)(font "Arial" ))
-		(line (pt 200 32)(pt 184 32)(line_width 3))
-	)
-	(parameter
-		"width"
-		"16"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 184 96))
-	)
-	(annotation_block (parameter)(rect 1776 232 1960 264))
-)
-(symbol
 	(rect 448 328 616 472)
 	(text "fourtoonebusmux" (rect 5 0 91 12)(font "Arial" ))
 	(text "RegWriteSelect" (rect 8 128 84 140)(font "Arial" ))
@@ -580,9 +538,60 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 408 512 616 592)
+	(rect 1576 264 1744 408)
+	(text "fourtoonebusmux" (rect 5 0 91 12)(font "Arial" ))
+	(text "ALUADataSel" (rect 8 128 75 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "d0[15..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "d0[15..0]" (rect 21 27 64 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "d1[15..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "d1[15..0]" (rect 21 43 64 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "d2[15..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "d2[15..0]" (rect 21 59 64 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "d3[15..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "d3[15..0]" (rect 21 75 64 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+		(unused)
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "s[1..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "s[1..0]" (rect 21 91 52 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "y[15..0]" (rect 0 0 38 12)(font "Arial" ))
+		(text "y[15..0]" (rect 115 27 153 39)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 128))
+	)
+)
+(symbol
+	(rect 384 520 592 600)
 	(text "signextension" (rect 5 0 72 12)(font "Arial" ))
-	(text "inst" (rect 8 64 25 76)(font "Arial" ))
+	(text "SignExtension" (rect 8 64 77 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -834,12 +843,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "aalu[15..0]" (rect 1808 288 1859 300)(font "Arial" ))
-	(pt 1776 296)
-	(pt 1800 296)
-	(bus)
-)
-(connector
 	(text "ground[10..0],instr[4..0]" (rect 1472 280 1587 292)(font "Arial" ))
 	(pt 1576 296)
 	(pt 1552 296)
@@ -861,5 +864,29 @@ applicable agreement for further details.
 	(text "aout[15..0]" (rect 1392 -8 1445 4)(font "Arial" ))
 	(pt 1488 0)
 	(pt 1448 0)
+	(bus)
+)
+(connector
+	(text "aalu[15..0]" (rect 1776 288 1827 300)(font "Arial" ))
+	(pt 1744 296)
+	(pt 1768 296)
+	(bus)
+)
+(connector
+	(text "signext[15..0]" (rect 1488 320 1555 332)(font "Arial" ))
+	(pt 1576 328)
+	(pt 1552 328)
+	(bus)
+)
+(connector
+	(text "signext[15..0]" (rect 616 544 683 556)(font "Arial" ))
+	(pt 592 552)
+	(pt 608 552)
+	(bus)
+)
+(connector
+	(text "instr[4..0]" (rect 312 544 359 556)(font "Arial" ))
+	(pt 360 552)
+	(pt 384 552)
 	(bus)
 )
