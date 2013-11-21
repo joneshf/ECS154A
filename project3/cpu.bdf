@@ -888,12 +888,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "result[15..0]" (rect 1248 160 1307 172)(font "Arial" ))
-	(pt 1216 168)
-	(pt 1240 168)
-	(bus)
-)
-(connector
 	(text "instr[14..11]" (rect 976 192 1035 204)(font "Arial" ))
 	(pt 1032 200)
 	(pt 1056 200)
@@ -947,12 +941,6 @@ applicable agreement for further details.
 	(text "bindex[2..0]" (rect 504 192 561 204)(font "Arial" ))
 	(pt 566 200)
 	(pt 592 200)
-	(bus)
-)
-(connector
-	(text "result[15..0]" (rect 912 -56 971 -44)(font "Arial" ))
-	(pt 984 -48)
-	(pt 968 -48)
 	(bus)
 )
 (connector
@@ -1153,12 +1141,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "result[15..0]" (rect 544 352 603 364)(font "Arial" ))
-	(pt 608 360)
-	(pt 640 360)
-	(bus)
-)
-(connector
 	(text "instr[7..0],aout[7..0]" (rect 512 368 609 380)(font "Arial" ))
 	(pt 608 376)
 	(pt 640 376)
@@ -1186,12 +1168,6 @@ applicable agreement for further details.
 	(text "nextaddr[15..0]" (rect 64 136 138 148)(font "Arial" ))
 	(pt 160 144)
 	(pt 136 144)
-	(bus)
-)
-(connector
-	(text "result[15:0]" (rect 8 264 63 276)(font "Arial" ))
-	(pt 80 272)
-	(pt 64 272)
 	(bus)
 )
 (connector
@@ -1280,5 +1256,29 @@ applicable agreement for further details.
 	(text "aout[15..8],flagout[7..0]" (rect 496 432 612 444)(font "Arial" ))
 	(pt 640 440)
 	(pt 608 440)
+	(bus)
+)
+(connector
+	(text "aluout[15..0]" (rect 1248 160 1309 172)(font "Arial" ))
+	(pt 1216 168)
+	(pt 1240 168)
+	(bus)
+)
+(connector
+	(text "aluout[15..0]" (rect 544 352 605 364)(font "Arial" ))
+	(pt 608 360)
+	(pt 640 360)
+	(bus)
+)
+(connector
+	(text "aluout[15..0]" (rect 912 -56 973 -44)(font "Arial" ))
+	(pt 984 -48)
+	(pt 968 -48)
+	(bus)
+)
+(connector
+	(text "aluout[15..0]" (rect 0 264 61 276)(font "Arial" ))
+	(pt 80 272)
+	(pt 64 272)
 	(bus)
 )
