@@ -85,12 +85,14 @@ module flagregister(input logic clk,
 					3'h2: tflags[2] = val;	// N
 					3'h3: tflags[3] = val;	// C
 					3'h4: tflags[4] = val;	// I
+					default: ; // Don't do anything
 				endcase
 			5'h1A: if(val == 1'b0) begin 	// MOVF
 					tflags = f;
 					// Reset the A flag just in case.
 					tflags[5] = 1'b1;
 				end
+			default: ; // Don't do anything
 		endcase
 	end
 endmodule
