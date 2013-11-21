@@ -1130,7 +1130,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 88 536 248 616)
+	(rect 136 568 296 648)
 	(text "statemachine" (rect 5 0 71 12)(font "Arial" ))
 	(text "inst11" (rect 8 64 37 76)(font "Arial" ))
 	(port
@@ -1955,6 +1955,81 @@ applicable agreement for further details.
 		(circle (rect 31 12 39 20))
 	)
 )
+(symbol
+	(rect 0 504 64 616)
+	(text "AND6" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst36" (rect 3 101 32 113)(font "Arial" ))
+	(port
+		(pt 0 48)
+		(input)
+		(text "IN3" (rect 2 39 19 51)(font "Courier New" (bold))(invisible))
+		(text "IN3" (rect 2 39 19 51)(font "Courier New" (bold))(invisible))
+		(line (pt 0 48)(pt 18 48))
+	)
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 18 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 18 32))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "IN4" (rect 2 55 19 67)(font "Courier New" (bold))(invisible))
+		(text "IN4" (rect 2 55 19 67)(font "Courier New" (bold))(invisible))
+		(line (pt 0 64)(pt 18 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "IN5" (rect 2 71 19 83)(font "Courier New" (bold))(invisible))
+		(text "IN5" (rect 2 71 19 83)(font "Courier New" (bold))(invisible))
+		(line (pt 0 80)(pt 18 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "IN6" (rect 2 87 19 99)(font "Courier New" (bold))(invisible))
+		(text "IN6" (rect 2 87 19 99)(font "Courier New" (bold))(invisible))
+		(line (pt 0 96)(pt 18 96))
+	)
+	(port
+		(pt 64 56)
+		(output)
+		(text "OUT" (rect 48 47 65 59)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 47 65 59)(font "Courier New" (bold))(invisible))
+		(line (pt 46 56)(pt 64 56))
+	)
+	(drawing
+		(line (pt 18 43)(pt 33 43))
+		(line (pt 18 99)(pt 18 13))
+		(line (pt 18 70)(pt 34 70))
+		(arc (pt 34 69)(pt 33 43)(rect 20 43 47 70))
+	)
+)
+(symbol
+	(rect -88 672 -56 688)
+	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
+	(text "inst37" (rect 3 5 32 17)(font "Arial" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
 (connector
 	(text "clock" (rect 136 96 161 108)(font "Arial" ))
 	(pt 144 112)
@@ -2468,17 +2543,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "clock" (rect 40 576 65 588)(font "Arial" ))
-	(pt 88 584)
-	(pt 72 584)
-)
-(connector
-	(text "state[1..0]" (rect 280 560 330 572)(font "Arial" ))
-	(pt 248 568)
-	(pt 272 568)
-	(bus)
-)
-(connector
 	(pt 968 48)
 	(pt 976 48)
 )
@@ -2888,4 +2952,62 @@ applicable agreement for further details.
 	(text "aluasel[0]" (rect 1994 536 2041 548)(font "Arial" ))
 	(pt 1984 552)
 	(pt 2000 552)
+)
+(connector
+	(text "state[1..0]" (rect 328 592 378 604)(font "Arial" ))
+	(pt 296 600)
+	(pt 320 600)
+	(bus)
+)
+(connector
+	(text "clock" (rect 88 608 113 620)(font "Arial" ))
+	(pt 120 616)
+	(pt 136 616)
+)
+(connector
+	(text "instr[15]" (rect -48 504 -8 516)(font "Arial" ))
+	(pt 0 520)
+	(pt -16 520)
+)
+(connector
+	(text "instr[14]" (rect -48 520 -8 532)(font "Arial" ))
+	(pt 0 536)
+	(pt -16 536)
+)
+(connector
+	(text "instr[13]" (rect -48 536 -8 548)(font "Arial" ))
+	(pt 0 552)
+	(pt -16 552)
+)
+(connector
+	(text "instr[12]" (rect -48 552 -8 564)(font "Arial" ))
+	(pt 0 568)
+	(pt -16 568)
+)
+(connector
+	(text "instr[11]" (rect -48 568 -8 580)(font "Arial" ))
+	(pt 0 584)
+	(pt -16 584)
+)
+(connector
+	(text "v" (rect -88 696 -76 703)(font "Arial" )(vertical))
+	(pt -72 688)
+	(pt -72 704)
+)
+(connector
+	(text "v" (rect -30 592 -23 604)(font "Arial" ))
+	(pt 0 600)
+	(pt -16 600)
+)
+(connector
+	(pt 64 560)
+	(pt 112 560)
+)
+(connector
+	(pt 112 560)
+	(pt 112 600)
+)
+(connector
+	(pt 112 600)
+	(pt 136 600)
 )
