@@ -740,7 +740,7 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 1752 528 1936 560))
 )
 (symbol
-	(rect 976 320 1176 432)
+	(rect 1080 320 1280 432)
 	(text "twotoonebusmux" (rect 5 0 87 12)(font "Arial" ))
 	(text "RegDataSelA" (rect 8 96 75 108)(font "Arial" ))
 	(port
@@ -779,10 +779,10 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 184 96))
 	)
-	(annotation_block (parameter)(rect 1176 288 1358 316))
+	(annotation_block (parameter)(rect 1280 288 1462 316))
 )
 (symbol
-	(rect 744 664 808 712)
+	(rect 936 344 1000 392)
 	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "inst" (rect 3 37 20 49)(font "Arial" ))
 	(port
@@ -814,7 +814,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 744 712 808 760)
+	(rect 936 392 1000 440)
 	(text "AND3" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "inst4" (rect 3 37 26 49)(font "Arial" ))
 	(port
@@ -853,7 +853,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 824 688 888 736)
+	(rect 1008 368 1072 416)
 	(text "OR2" (rect 1 0 19 10)(font "Arial" (font_size 6)))
 	(text "inst5" (rect 3 37 26 49)(font "Arial" ))
 	(port
@@ -1351,12 +1351,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "dinput[15..0]" (rect 840 352 901 364)(font "Arial" ))
-	(pt 808 360)
-	(pt 832 360)
-	(bus)
-)
-(connector
 	(text "bindex[2..0]" (rect 1208 536 1265 548)(font "Arial" ))
 	(pt 1176 544)
 	(pt 1200 544)
@@ -1378,12 +1372,6 @@ applicable agreement for further details.
 	(text "instr[4..2]" (rect 912 552 959 564)(font "Arial" ))
 	(pt 960 560)
 	(pt 976 560)
-	(bus)
-)
-(connector
-	(text "instr[7..5]" (rect 912 360 959 372)(font "Arial" ))
-	(pt 960 368)
-	(pt 976 368)
 	(bus)
 )
 (connector
@@ -1516,69 +1504,6 @@ applicable agreement for further details.
 	(pt 960 576)
 )
 (connector
-	(text "instr[10..8]" (rect 904 344 957 356)(font "Arial" ))
-	(pt 960 352)
-	(pt 976 352)
-	(bus)
-)
-(connector
-	(text "aindex[2..0]" (rect 1208 344 1265 356)(font "Arial" ))
-	(pt 1176 352)
-	(pt 1200 352)
-	(bus)
-)
-(connector
-	(text "RegASelector" (rect 896 376 963 388)(font "Arial" ))
-	(pt 976 384)
-	(pt 960 384)
-)
-(connector
-	(pt 824 704)
-	(pt 824 688)
-)
-(connector
-	(pt 824 688)
-	(pt 808 688)
-)
-(connector
-	(pt 824 720)
-	(pt 808 720)
-)
-(connector
-	(pt 808 720)
-	(pt 808 736)
-)
-(connector
-	(text "instr[15]" (rect 664 672 704 684)(font "Arial" ))
-	(pt 744 680)
-	(pt 712 680)
-)
-(connector
-	(text "instr[14]" (rect 712 680 752 692)(font "Arial" ))
-	(pt 744 696)
-	(pt 712 696)
-)
-(connector
-	(text "instr[15]" (rect 664 720 704 732)(font "Arial" ))
-	(pt 744 728)
-	(pt 712 728)
-)
-(connector
-	(text "instr[13]" (rect 664 728 704 740)(font "Arial" ))
-	(pt 744 736)
-	(pt 712 736)
-)
-(connector
-	(text "instr[12]" (rect 664 736 704 748)(font "Arial" ))
-	(pt 744 744)
-	(pt 712 744)
-)
-(connector
-	(text "RegASelector" (rect 928 704 995 716)(font "Arial" ))
-	(pt 888 712)
-	(pt 920 712)
-)
-(connector
 	(text "aout[15..0]" (rect 8 248 61 260)(font "Arial" ))
 	(pt 80 256)
 	(pt 64 256)
@@ -1696,4 +1621,77 @@ applicable agreement for further details.
 	(text "instr[11]" (rect 264 -168 304 -156)(font "Arial" ))
 	(pt 320 -160)
 	(pt 304 -160)
+)
+(connector
+	(text "aindex[2..0]" (rect 1312 344 1369 356)(font "Arial" ))
+	(pt 1280 352)
+	(pt 1304 352)
+	(bus)
+)
+(connector
+	(text "instr[10..8]" (rect 1016 336 1069 348)(font "Arial" ))
+	(pt 1064 352)
+	(pt 1080 352)
+	(bus)
+)
+(connector
+	(text "dinput[15..0]" (rect 816 336 877 348)(font "Arial" ))
+	(pt 808 360)
+	(pt 840 360)
+	(bus)
+)
+(connector
+	(pt 1072 384)
+	(pt 1072 392)
+)
+(connector
+	(pt 1080 384)
+	(pt 1072 384)
+)
+(connector
+	(pt 1008 400)
+	(pt 1000 400)
+)
+(connector
+	(pt 1000 368)
+	(pt 1008 368)
+)
+(connector
+	(text "instr[15]" (rect 864 352 904 364)(font "Arial" ))
+	(pt 912 360)
+	(pt 936 360)
+)
+(connector
+	(text "instr[14]" (rect 864 368 904 380)(font "Arial" ))
+	(pt 912 376)
+	(pt 936 376)
+)
+(connector
+	(text "instr[15]" (rect 864 400 904 412)(font "Arial" ))
+	(pt 912 408)
+	(pt 936 408)
+)
+(connector
+	(text "instr[13]" (rect 864 408 904 420)(font "Arial" ))
+	(pt 912 416)
+	(pt 936 416)
+)
+(connector
+	(text "instr[12]" (rect 864 416 904 428)(font "Arial" ))
+	(pt 912 424)
+	(pt 936 424)
+)
+(connector
+	(pt 1000 400)
+	(pt 1000 416)
+)
+(connector
+	(pt 1008 368)
+	(pt 1008 384)
+)
+(connector
+	(text "instr[7..5]" (rect 1016 352 1063 364)(font "Arial" ))
+	(pt 1080 368)
+	(pt 1064 368)
+	(bus)
 )
