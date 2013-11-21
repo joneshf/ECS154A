@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 168 128)
+	(rect 16 16 168 160)
 	(text "flagregister" (rect 5 0 48 12)(font "Arial" ))
-	(text "inst" (rect 8 96 20 108)(font "Arial" ))
+	(text "inst" (rect 8 128 20 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -40,9 +40,23 @@ applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "s[2..0]" (rect 0 0 24 12)(font "Arial" ))
-		(text "s[2..0]" (rect 21 59 45 71)(font "Arial" ))
+		(text "i[4..0]" (rect 0 0 22 12)(font "Arial" ))
+		(text "i[4..0]" (rect 21 59 43 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "s[2..0]" (rect 0 0 24 12)(font "Arial" ))
+		(text "s[2..0]" (rect 21 75 45 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "val" (rect 0 0 11 12)(font "Arial" ))
+		(text "val" (rect 21 91 32 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port
 		(pt 152 32)
@@ -52,6 +66,6 @@ applicable agreement for further details.
 		(line (pt 152 32)(pt 136 32)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 136 96)(line_width 1))
+		(rectangle (rect 16 16 136 128)(line_width 1))
 	)
 )
