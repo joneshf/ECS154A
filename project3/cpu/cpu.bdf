@@ -1129,6 +1129,35 @@ applicable agreement for further details.
 		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
 	)
 )
+(symbol
+	(rect 88 536 248 616)
+	(text "statemachine" (rect 5 0 71 12)(font "Arial" ))
+	(text "inst11" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 27 45 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 43 35 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "state[1..0]" (rect 0 0 50 12)(font "Arial" ))
+		(text "state[1..0]" (rect 97 27 147 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+)
 (connector
 	(text "clock" (rect 136 96 161 108)(font "Arial" ))
 	(pt 144 112)
@@ -1694,4 +1723,9 @@ applicable agreement for further details.
 	(pt 1080 368)
 	(pt 1064 368)
 	(bus)
+)
+(connector
+	(text "clock" (rect 40 576 65 588)(font "Arial" ))
+	(pt 88 584)
+	(pt 72 584)
 )
