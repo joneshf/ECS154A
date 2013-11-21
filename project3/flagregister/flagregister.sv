@@ -1,3 +1,22 @@
+/*
+	This is the flag register.
+	It requires a clock, 8-bits for the flags, 5-bits for the instruction,
+	2-bits for the selector on LDFI, and a value for LDIF/MOVF instructions.
+	The output is 8-bits of the flags.
+
+	The flags are:
+	flag | bit | description
+	--------------
+	Z    - 0   - Zero
+	O    - 1   - Overflow
+	N    - 2   - Negative
+	C    - 3   - Carry
+	I    - 4   - Interrupt
+	A    - 5   - Always
+	x    - 6   - empty
+	x    - 7   - empty
+*/
+
 module flagregister(input logic clk,
 						  input logic [7:0]f,	  //flag bits
 						  input logic [4:0]i,	  //instruction bits
