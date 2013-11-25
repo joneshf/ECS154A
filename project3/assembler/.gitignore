@@ -1,4 +1,6 @@
 *.hi
 *.o
+*.exe
+*.bin
 Main
 .hdevtools.sock
