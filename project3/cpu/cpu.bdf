@@ -19,7 +19,6 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 (header "graphic" (version "1.4"))
-(alias "<<__$DEF_ALIAS672>>""r7[15..0];r6[15..0];r5[15..0];r4[15..0];r3[15..0];r2[15..0];r1[15..0];r0[15..0]")
 (pin
 	(input)
 	(rect 80 440 248 456)
@@ -265,6 +264,22 @@ applicable agreement for further details.
 	(rect 896 832 1072 848)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "FLAGS[7..0]" (rect 90 0 151 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 896 1120 1072 1136)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "instr[15..0]" (rect 90 0 143 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -2053,7 +2068,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 0 504 64 616)
+	(rect -8 504 56 616)
 	(text "AND6" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "inst36" (rect 3 101 32 113)(font "Arial" ))
 	(port
@@ -2724,70 +2739,70 @@ applicable agreement for further details.
 		(pt 208 32)
 		(output)
 		(text "a_output[15..0]" (rect 0 0 74 12)(font "Arial" ))
-		(text "a_output[15..0]" (rect 125 27 187 39)(font "Arial" ))
+		(text "a_output[15..0]" (rect 125 27 199 39)(font "Arial" ))
 		(line (pt 208 32)(pt 192 32)(line_width 3))
 	)
 	(port
 		(pt 208 48)
 		(output)
 		(text "b_output[15..0]" (rect 0 0 74 12)(font "Arial" ))
-		(text "b_output[15..0]" (rect 125 43 187 55)(font "Arial" ))
+		(text "b_output[15..0]" (rect 125 43 199 55)(font "Arial" ))
 		(line (pt 208 48)(pt 192 48)(line_width 3))
 	)
 	(port
 		(pt 208 64)
 		(output)
 		(text "r0[15..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "r0[15..0]" (rect 153 59 187 71)(font "Arial" ))
+		(text "r0[15..0]" (rect 153 59 194 71)(font "Arial" ))
 		(line (pt 208 64)(pt 192 64)(line_width 3))
 	)
 	(port
 		(pt 208 80)
 		(output)
 		(text "r1[15..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "r1[15..0]" (rect 153 75 187 87)(font "Arial" ))
+		(text "r1[15..0]" (rect 153 75 194 87)(font "Arial" ))
 		(line (pt 208 80)(pt 192 80)(line_width 3))
 	)
 	(port
 		(pt 208 96)
 		(output)
 		(text "r2[15..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "r2[15..0]" (rect 153 91 187 103)(font "Arial" ))
+		(text "r2[15..0]" (rect 153 91 194 103)(font "Arial" ))
 		(line (pt 208 96)(pt 192 96)(line_width 3))
 	)
 	(port
 		(pt 208 112)
 		(output)
 		(text "r3[15..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "r3[15..0]" (rect 153 107 187 119)(font "Arial" ))
+		(text "r3[15..0]" (rect 153 107 194 119)(font "Arial" ))
 		(line (pt 208 112)(pt 192 112)(line_width 3))
 	)
 	(port
 		(pt 208 128)
 		(output)
 		(text "r4[15..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "r4[15..0]" (rect 153 123 187 135)(font "Arial" ))
+		(text "r4[15..0]" (rect 153 123 194 135)(font "Arial" ))
 		(line (pt 208 128)(pt 192 128)(line_width 3))
 	)
 	(port
 		(pt 208 144)
 		(output)
 		(text "r5[15..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "r5[15..0]" (rect 153 139 187 151)(font "Arial" ))
+		(text "r5[15..0]" (rect 153 139 194 151)(font "Arial" ))
 		(line (pt 208 144)(pt 192 144)(line_width 3))
 	)
 	(port
 		(pt 208 160)
 		(output)
 		(text "r6[15..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "r6[15..0]" (rect 153 155 187 167)(font "Arial" ))
+		(text "r6[15..0]" (rect 153 155 194 167)(font "Arial" ))
 		(line (pt 208 160)(pt 192 160)(line_width 3))
 	)
 	(port
 		(pt 208 176)
 		(output)
 		(text "r7[15..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "r7[15..0]" (rect 153 171 187 183)(font "Arial" ))
+		(text "r7[15..0]" (rect 153 171 194 183)(font "Arial" ))
 		(line (pt 208 176)(pt 192 176)(line_width 3))
 	)
 	(drawing
@@ -3677,62 +3692,9 @@ applicable agreement for further details.
 	(pt 2000 552)
 )
 (connector
-	(text "state[1..0]" (rect 328 592 378 604)(font "Arial" ))
-	(pt 296 600)
-	(pt 320 600)
-	(bus)
-)
-(connector
-	(text "clock" (rect 88 608 113 620)(font "Arial" ))
-	(pt 120 616)
-	(pt 136 616)
-)
-(connector
-	(text "instr[15]" (rect -48 504 -8 516)(font "Arial" ))
-	(pt 0 520)
-	(pt -16 520)
-)
-(connector
-	(text "instr[14]" (rect -48 520 -8 532)(font "Arial" ))
-	(pt 0 536)
-	(pt -16 536)
-)
-(connector
-	(text "instr[13]" (rect -48 536 -8 548)(font "Arial" ))
-	(pt 0 552)
-	(pt -16 552)
-)
-(connector
-	(text "instr[12]" (rect -48 552 -8 564)(font "Arial" ))
-	(pt 0 568)
-	(pt -16 568)
-)
-(connector
-	(text "instr[11]" (rect -48 568 -8 580)(font "Arial" ))
-	(pt 0 584)
-	(pt -16 584)
-)
-(connector
 	(text "v" (rect -88 696 -76 703)(font "Arial" )(vertical))
 	(pt -72 688)
 	(pt -72 704)
-)
-(connector
-	(text "v" (rect -30 592 -23 604)(font "Arial" ))
-	(pt 0 600)
-	(pt -16 600)
-)
-(connector
-	(pt 64 560)
-	(pt 112 560)
-)
-(connector
-	(pt 112 560)
-	(pt 112 600)
-)
-(connector
-	(pt 112 600)
-	(pt 136 600)
 )
 (connector
 	(text "state[1]" (rect -16 88 21 100)(font "Arial" ))
@@ -4157,4 +4119,57 @@ applicable agreement for further details.
 	(pt 864 840)
 	(pt 896 840)
 	(bus)
+)
+(connector
+	(text "instr[13]" (rect -56 536 -16 548)(font "Arial" ))
+	(pt -24 552)
+	(pt -8 552)
+)
+(connector
+	(text "instr[15]" (rect -56 504 -16 516)(font "Arial" ))
+	(pt -24 520)
+	(pt -8 520)
+)
+(connector
+	(text "instr[14]" (rect -56 520 -16 532)(font "Arial" ))
+	(pt -24 536)
+	(pt -8 536)
+)
+(connector
+	(text "instr[12]" (rect -56 552 -16 564)(font "Arial" ))
+	(pt -24 568)
+	(pt -8 568)
+)
+(connector
+	(text "instr[11]" (rect -56 568 -16 580)(font "Arial" ))
+	(pt -24 584)
+	(pt -8 584)
+)
+(connector
+	(text "v" (rect -38 592 -31 604)(font "Arial" ))
+	(pt -24 600)
+	(pt -8 600)
+)
+(connector
+	(pt 56 560)
+	(pt 112 560)
+)
+(connector
+	(text "state[1..0]" (rect 328 592 378 604)(font "Arial" ))
+	(pt 296 600)
+	(pt 320 600)
+	(bus)
+)
+(connector
+	(text "clock" (rect 88 608 113 620)(font "Arial" ))
+	(pt 120 616)
+	(pt 136 616)
+)
+(connector
+	(pt 112 600)
+	(pt 136 600)
+)
+(connector
+	(pt 112 560)
+	(pt 112 600)
 )

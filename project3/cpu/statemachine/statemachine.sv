@@ -14,12 +14,12 @@ module statemachine(	input logic reset,
 			fetch:
 				begin
 					next <= decode;
-					statevalue <= 2'b0;
+					statevalue <= 2'b00;
 				end
 			decode:
 				begin
 					next <= execute;
-					statevalue <= 2'b1;
+					statevalue <= 2'b01;
 				end
 			execute:
 				begin
