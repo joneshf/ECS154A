@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project4
-Mon Dec 02 19:13:12 2013
+Mon Dec 02 21:23:12 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -42,13 +42,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 02 19:13:12 2013           ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 02 21:23:12 2013           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; project4                                        ;
 ; Top-level Entity Name              ; project4                                        ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 40                                              ;
-;     Total combinational functions  ; 40                                              ;
+; Total logic elements               ; 44                                              ;
+;     Total combinational functions  ; 14                                              ;
 ;     Dedicated logic registers      ; 32                                              ;
 ; Total registers                    ; 32                                              ;
 ; Total pins                         ; 49                                              ;
@@ -171,26 +171,25 @@ applicable agreement for further details.
 +--------------------------+------------------+
 ; I/O pins                 ; 49               ;
 ; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; ADDR[1]~input    ;
+; Maximum fan-out node     ; CLK~input        ;
 ; Maximum fan-out          ; 32               ;
-; Total fan-out            ; 345              ;
-; Average fan-out          ; 1.94             ;
+; Total fan-out            ; 236              ;
+; Average fan-out          ; 1.55             ;
 +--------------------------+------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Library Name ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------+--------------+
-; |project4                    ; 40 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 49   ; 0            ; |project4                         ; work         ;
-;    |baudratedivisor:brd|     ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|baudratedivisor:brd     ; work         ;
-;    |interruptlogic:il|       ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|interruptlogic:il       ; work         ;
-;    |onefourbusdecode:busdmx| ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|onefourbusdecode:busdmx ; work         ;
-;    |regoneinterrupt:im|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regoneinterrupt:im      ; work         ;
-;    |regtwodata:datareg|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regtwodata:datareg      ; work         ;
-;    |statusregister:sr|       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|statusregister:sr       ; work         ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+--------------+
+; |project4                  ; 14 (3)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 49   ; 0            ; |project4                     ; work         ;
+;    |baudratedivisor:brd|   ; 6 (6)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|baudratedivisor:brd ; work         ;
+;    |interruptlogic:il|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|interruptlogic:il   ; work         ;
+;    |regoneinterrupt:im|    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regoneinterrupt:im  ; work         ;
+;    |regtwodata:datareg|    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regtwodata:datareg  ; work         ;
+;    |statusregister:sr|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|statusregister:sr   ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 02 19:13:10 2013
+    Info: Processing started: Mon Dec 02 21:23:10 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project4 -c project4
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file baudratedivisor/baudratedivisor.sv
@@ -271,39 +270,6 @@ Warning (13039): The following bidir pins have no drivers
     Warning (13040): Bidir "DATA[5]" has no driver
     Warning (13040): Bidir "DATA[6]" has no driver
     Warning (13040): Bidir "DATA[7]" has no driver
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[1]" to the node "statusregister:sr|out[1]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[2]" to the node "statusregister:sr|out[2]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[3]" to the node "statusregister:sr|out[3]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[4]" to the node "statusregister:sr|out[4]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[5]" to the node "statusregister:sr|out[5]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[6]" to the node "statusregister:sr|out[6]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[7]" to the node "statusregister:sr|out[7]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[1]" to the node "regoneinterrupt:im|odata[1]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[2]" to the node "regoneinterrupt:im|odata[2]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[3]" to the node "regoneinterrupt:im|odata[3]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[4]" to the node "regoneinterrupt:im|odata[4]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[5]" to the node "regoneinterrupt:im|odata[5]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[6]" to the node "regoneinterrupt:im|odata[6]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[7]" to the node "regoneinterrupt:im|odata[7]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[0]" to the node "statusregister:sr|out[0]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[0]" to the node "regoneinterrupt:im|odata[0]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[0]" to the node "regtwodata:datareg|odata[0]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[1]" to the node "regtwodata:datareg|odata[1]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[2]" to the node "regtwodata:datareg|odata[2]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[3]" to the node "regtwodata:datareg|odata[3]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[4]" to the node "regtwodata:datareg|odata[4]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[5]" to the node "regtwodata:datareg|odata[5]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[6]" to the node "regtwodata:datareg|odata[6]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[7]" to the node "regtwodata:datareg|odata[7]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[0]" to the node "baudratedivisor:brd|always0" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[2]" to the node "baudratedivisor:brd|always0" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[3]" to the node "baudratedivisor:brd|always0" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[4]" to the node "baudratedivisor:brd|always0" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[5]" to the node "baudratedivisor:brd|always0" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[6]" to the node "baudratedivisor:brd|always0" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[7]" to the node "baudratedivisor:brd|always0" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[1]" to the node "baudratedivisor:brd|always0" into an OR gate
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "TX" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
@@ -313,14 +279,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "NO"
     Warning (15610): No output dependent on input pin "RX"
-Info (21057): Implemented 97 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 34 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 48 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 487 megabytes
-    Info: Processing ended: Mon Dec 02 19:13:12 2013
+    Info (21061): Implemented 44 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Mon Dec 02 21:23:12 2013
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
