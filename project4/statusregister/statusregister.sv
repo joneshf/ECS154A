@@ -1,4 +1,5 @@
 module statusregister(	input logic clk,
+								input logic wrien,
 								input logic [7:0] in,
 								output logic [7:0] out);
 	/*
@@ -13,7 +14,8 @@ module statusregister(	input logic clk,
 	0 - ENA
 	*/
 	always_ff@(posedge clk)
-		out <= in;
+		if(wrien)
+			out <= in;
 	
 endmodule
 	
