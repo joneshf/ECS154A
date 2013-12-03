@@ -1,5 +1,5 @@
-module regoneinterrupt(input logic[7:0] idata,
-							  input logic clk,
+module regoneinterrupt(input logic clk,
+							  input logic[7:0] idata,
 							  output logic[7:0] odata);
 	
 	always_ff@(posedge clk)
