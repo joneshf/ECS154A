@@ -11,14 +11,14 @@ module project4( // the cpu interface
 				output logic TX); // transmit
 
 		logic statin, intin, dataregin, baudin;
-		logic [7:0] statout, intout, dataregout, baudout, dataoutput;
+		logic [7:0] internalstatus, statout, intout, dataregout, baudout, dataoutput;
 		
 		tristate ts(dataoutput, ~NO, DATA);
 		
 		onefourbusdecode 	busdmx(ADDR, ~NCS, statin, intin, dataregin, baudin);
 		fouronebusmux 		readbus(statout, intout, dataregout, baudout, ADDR, dataoutput);
 		
-		statusregister sr(CLK, statin & ~NW, DATA, statout);
+		statusregister sr(CLK, statin & ~NW, DATA, internalstatus, statout);
 		regoneinterrupt im(CLK, intin & ~NW, DATA, intout);
 		regtwodata datareg(CLK, dataregin & ~NW, DATA, dataregout);
 		baudratedivisor brd(CLK, ~statout[0], baudin & ~NW, DATA, baudout);
