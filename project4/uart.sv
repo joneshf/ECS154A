@@ -31,7 +31,6 @@ module uart( // the cpu interface
 	/*
 		submodules:
 		crc - calculate the checksum of incoming or outgoing data
-		baudrateupdate - prevent the update of the baud register if less than 5
 		.... more?
 	*/
 		
