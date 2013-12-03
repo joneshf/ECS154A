@@ -16,6 +16,7 @@ module uart( // the cpu interface
 			set by cpu through the data bus. But some conditions
 			within the module will cause status flags to change.
 	*/
+	
 		logic [7:0] statout;
 		statusregister sr(clk, DATA, statout);
 	
