@@ -1,4 +1,4 @@
-module uart( // the cpu interface
+module project4( // the cpu interface
 				input logic CLK,
 				input logic [1:0] ADDR, // register address
 				input logic NCS, // negative chip select

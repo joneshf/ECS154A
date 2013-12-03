@@ -1,6 +1,6 @@
-Analysis & Synthesis report for uart
-Mon Dec 02 19:03:47 2013
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Analysis & Synthesis report for project4
+Mon Dec 02 19:13:12 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -9,15 +9,14 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Inverted Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
+ 11. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,10 +42,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 02 19:03:47 2013           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; uart                                            ;
-; Top-level Entity Name              ; uart                                            ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 02 19:13:12 2013           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; project4                                        ;
+; Top-level Entity Name              ; project4                                        ;
 ; Family                             ; Cyclone IV GX                                   ;
 ; Total logic elements               ; 40                                              ;
 ;     Total combinational functions  ; 40                                              ;
@@ -69,7 +68,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; uart               ; uart               ;
+; Top-level entity name                                                      ; project4           ; project4           ;
 ; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -150,30 +149,19 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
-+------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
-+------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; statusregister/statusregister.sv   ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/statusregister/statusregister.sv   ;         ;
-; regtwodata/regtwodata.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/regtwodata/regtwodata.sv           ;         ;
-; regoneinterrupt/regoneinterrupt.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/regoneinterrupt/regoneinterrupt.sv ;         ;
-; baudratedivisor/baudratedivisor.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/baudratedivisor/baudratedivisor.sv ;         ;
-; uart.sv                            ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/uart.sv                            ;         ;
-; onefourbusdecode.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/onefourbusdecode.sv                ;         ;
-; interruptlogic.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/interruptlogic.sv                  ;         ;
-+------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ; Library ;
++------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; baudratedivisor/baudratedivisor.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/baudratedivisor/baudratedivisor.sv ;         ;
+; regoneinterrupt/regoneinterrupt.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/regoneinterrupt/regoneinterrupt.sv ;         ;
+; regtwodata/regtwodata.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/regtwodata/regtwodata.sv           ;         ;
+; statusregister/statusregister.sv   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/statusregister/statusregister.sv   ;         ;
+; project4.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.sv                        ;         ;
+; onefourbusdecode.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/onefourbusdecode.sv                ;         ;
+; interruptlogic.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/interruptlogic.sv                  ;         ;
++------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -190,19 +178,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                 ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+--------------+
-; |uart                        ; 40 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 49   ; 0            ; |uart                         ; work         ;
-;    |baudratedivisor:brd|     ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |uart|baudratedivisor:brd     ; work         ;
-;    |interruptlogic:il|       ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |uart|interruptlogic:il       ; work         ;
-;    |onefourbusdecode:busdmx| ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |uart|onefourbusdecode:busdmx ; work         ;
-;    |regoneinterrupt:im|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |uart|regoneinterrupt:im      ; work         ;
-;    |regtwodata:datareg|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |uart|regtwodata:datareg      ; work         ;
-;    |statusregister:sr|       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |uart|statusregister:sr       ; work         ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------+--------------+
+; |project4                    ; 40 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 49   ; 0            ; |project4                         ; work         ;
+;    |baudratedivisor:brd|     ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|baudratedivisor:brd     ; work         ;
+;    |interruptlogic:il|       ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|interruptlogic:il       ; work         ;
+;    |onefourbusdecode:busdmx| ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|onefourbusdecode:busdmx ; work         ;
+;    |regoneinterrupt:im|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regoneinterrupt:im      ; work         ;
+;    |regtwodata:datareg|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regtwodata:datareg      ; work         ;
+;    |statusregister:sr|       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|statusregister:sr       ; work         ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -245,29 +233,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 02 19:03:46 2013
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project4 -c uart
+    Info: Processing started: Mon Dec 02 19:13:10 2013
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project4 -c project4
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file statusregister/statusregister.sv
-    Info (12023): Found entity 1: statusregister
-Info (12021): Found 1 design units, including 1 entities, in source file regtwodata/regtwodata.sv
-    Info (12023): Found entity 1: regtwodata
-Info (12021): Found 1 design units, including 1 entities, in source file regoneinterrupt/regoneinterrupt.sv
-    Info (12023): Found entity 1: regoneinterrupt
 Info (12021): Found 1 design units, including 1 entities, in source file baudratedivisor/baudratedivisor.sv
     Info (12023): Found entity 1: baudratedivisor
-Info (12021): Found 1 design units, including 1 entities, in source file uart.sv
-    Info (12023): Found entity 1: uart
+Info (12021): Found 1 design units, including 1 entities, in source file regoneinterrupt/regoneinterrupt.sv
+    Info (12023): Found entity 1: regoneinterrupt
+Info (12021): Found 1 design units, including 1 entities, in source file regtwodata/regtwodata.sv
+    Info (12023): Found entity 1: regtwodata
+Info (12021): Found 1 design units, including 1 entities, in source file statusregister/statusregister.sv
+    Info (12023): Found entity 1: statusregister
 Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
     Info (12023): Found entity 1: tristate
+Info (12021): Found 1 design units, including 1 entities, in source file project4.sv
+    Info (12023): Found entity 1: project4
 Info (12021): Found 1 design units, including 1 entities, in source file onefourbusdecode.sv
     Info (12023): Found entity 1: onefourbusdecode
 Info (12021): Found 1 design units, including 1 entities, in source file interruptlogic.sv
     Info (12023): Found entity 1: interruptlogic
-Info (12127): Elaborating entity "uart" for the top level hierarchy
-Warning (10034): Output port "TX" at uart.sv(12) has no driver
+Info (12127): Elaborating entity "project4" for the top level hierarchy
+Warning (10034): Output port "TX" at project4.sv(12) has no driver
 Info (12128): Elaborating entity "onefourbusdecode" for hierarchy "onefourbusdecode:busdmx"
 Info (12128): Elaborating entity "statusregister" for hierarchy "statusregister:sr"
 Info (12128): Elaborating entity "regoneinterrupt" for hierarchy "regoneinterrupt:im"
@@ -319,7 +307,7 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "TX" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/uart.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
@@ -330,16 +318,16 @@ Info (21057): Implemented 97 device resources after synthesis - the final resour
     Info (21059): Implemented 34 output pins
     Info (21060): Implemented 8 bidirectional pins
     Info (21061): Implemented 48 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 371 megabytes
-    Info: Processing ended: Mon Dec 02 19:03:47 2013
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 49 warnings
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Mon Dec 02 19:13:12 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/uart.map.smsg.
+The suppressed messages can be found in C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.map.smsg.
 
 
