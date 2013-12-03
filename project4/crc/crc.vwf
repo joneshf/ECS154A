@@ -267,8 +267,7 @@ TRANSITION_LIST("datain[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 39.0;
-		LEVEL 0 FOR 961.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -277,8 +276,7 @@ TRANSITION_LIST("datain[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 39.0;
-		LEVEL 0 FOR 961.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -296,8 +294,7 @@ TRANSITION_LIST("datain[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 39.0;
-		LEVEL 0 FOR 961.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -409,8 +406,7 @@ TRANSITION_LIST("clk")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 19.0;
-		LEVEL 0 FOR 961.0;
+		LEVEL 1 FOR 980.0;
 	}
 }
 
