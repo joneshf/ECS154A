@@ -1,0 +1,333 @@
+Analysis & Synthesis report for project4
+Mon Dec 02 19:13:12 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Inverted Register Statistics
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
+ 11. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Dec 02 19:13:12 2013           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; project4                                        ;
+; Top-level Entity Name              ; project4                                        ;
+; Family                             ; Cyclone IV GX                                   ;
+; Total logic elements               ; 40                                              ;
+;     Total combinational functions  ; 40                                              ;
+;     Dedicated logic registers      ; 32                                              ;
+; Total registers                    ; 32                                              ;
+; Total pins                         ; 49                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total GXB Receiver Channel PCS     ; 0                                               ;
+; Total GXB Receiver Channel PMA     ; 0                                               ;
+; Total GXB Transmitter Channel PCS  ; 0                                               ;
+; Total GXB Transmitter Channel PMA  ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; project4           ; project4           ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ; Library ;
++------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; baudratedivisor/baudratedivisor.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/baudratedivisor/baudratedivisor.sv ;         ;
+; regoneinterrupt/regoneinterrupt.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/regoneinterrupt/regoneinterrupt.sv ;         ;
+; regtwodata/regtwodata.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/regtwodata/regtwodata.sv           ;         ;
+; statusregister/statusregister.sv   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/statusregister/statusregister.sv   ;         ;
+; project4.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.sv                        ;         ;
+; onefourbusdecode.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/onefourbusdecode.sv                ;         ;
+; interruptlogic.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/interruptlogic.sv                  ;         ;
++------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 49               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; ADDR[1]~input    ;
+; Maximum fan-out          ; 32               ;
+; Total fan-out            ; 345              ;
+; Average fan-out          ; 1.94             ;
++--------------------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------+--------------+
+; |project4                    ; 40 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 49   ; 0            ; |project4                         ; work         ;
+;    |baudratedivisor:brd|     ; 3 (3)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|baudratedivisor:brd     ; work         ;
+;    |interruptlogic:il|       ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|interruptlogic:il       ; work         ;
+;    |onefourbusdecode:busdmx| ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|onefourbusdecode:busdmx ; work         ;
+;    |regoneinterrupt:im|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regoneinterrupt:im      ; work         ;
+;    |regtwodata:datareg|      ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regtwodata:datareg      ; work         ;
+;    |statusregister:sr|       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|statusregister:sr       ; work         ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; baudratedivisor:brd|out[0]             ; 1       ;
+; baudratedivisor:brd|out[2]             ; 1       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Dec 02 19:13:10 2013
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project4 -c project4
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file baudratedivisor/baudratedivisor.sv
+    Info (12023): Found entity 1: baudratedivisor
+Info (12021): Found 1 design units, including 1 entities, in source file regoneinterrupt/regoneinterrupt.sv
+    Info (12023): Found entity 1: regoneinterrupt
+Info (12021): Found 1 design units, including 1 entities, in source file regtwodata/regtwodata.sv
+    Info (12023): Found entity 1: regtwodata
+Info (12021): Found 1 design units, including 1 entities, in source file statusregister/statusregister.sv
+    Info (12023): Found entity 1: statusregister
+Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
+    Info (12023): Found entity 1: tristate
+Info (12021): Found 1 design units, including 1 entities, in source file project4.sv
+    Info (12023): Found entity 1: project4
+Info (12021): Found 1 design units, including 1 entities, in source file onefourbusdecode.sv
+    Info (12023): Found entity 1: onefourbusdecode
+Info (12021): Found 1 design units, including 1 entities, in source file interruptlogic.sv
+    Info (12023): Found entity 1: interruptlogic
+Info (12127): Elaborating entity "project4" for the top level hierarchy
+Warning (10034): Output port "TX" at project4.sv(12) has no driver
+Info (12128): Elaborating entity "onefourbusdecode" for hierarchy "onefourbusdecode:busdmx"
+Info (12128): Elaborating entity "statusregister" for hierarchy "statusregister:sr"
+Info (12128): Elaborating entity "regoneinterrupt" for hierarchy "regoneinterrupt:im"
+Info (12128): Elaborating entity "regtwodata" for hierarchy "regtwodata:datareg"
+Info (12128): Elaborating entity "baudratedivisor" for hierarchy "baudratedivisor:brd"
+Info (12128): Elaborating entity "interruptlogic" for hierarchy "interruptlogic:il"
+Warning (13039): The following bidir pins have no drivers
+    Warning (13040): Bidir "DATA[0]" has no driver
+    Warning (13040): Bidir "DATA[1]" has no driver
+    Warning (13040): Bidir "DATA[2]" has no driver
+    Warning (13040): Bidir "DATA[3]" has no driver
+    Warning (13040): Bidir "DATA[4]" has no driver
+    Warning (13040): Bidir "DATA[5]" has no driver
+    Warning (13040): Bidir "DATA[6]" has no driver
+    Warning (13040): Bidir "DATA[7]" has no driver
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[1]" to the node "statusregister:sr|out[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[2]" to the node "statusregister:sr|out[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[3]" to the node "statusregister:sr|out[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[4]" to the node "statusregister:sr|out[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[5]" to the node "statusregister:sr|out[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[6]" to the node "statusregister:sr|out[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[7]" to the node "statusregister:sr|out[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[1]" to the node "regoneinterrupt:im|odata[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[2]" to the node "regoneinterrupt:im|odata[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[3]" to the node "regoneinterrupt:im|odata[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[4]" to the node "regoneinterrupt:im|odata[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[5]" to the node "regoneinterrupt:im|odata[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[6]" to the node "regoneinterrupt:im|odata[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[7]" to the node "regoneinterrupt:im|odata[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|status[0]" to the node "statusregister:sr|out[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|intmask[0]" to the node "regoneinterrupt:im|odata[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[0]" to the node "regtwodata:datareg|odata[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[1]" to the node "regtwodata:datareg|odata[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[2]" to the node "regtwodata:datareg|odata[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[3]" to the node "regtwodata:datareg|odata[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[4]" to the node "regtwodata:datareg|odata[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[5]" to the node "regtwodata:datareg|odata[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[6]" to the node "regtwodata:datareg|odata[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|data[7]" to the node "regtwodata:datareg|odata[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[0]" to the node "baudratedivisor:brd|always0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[2]" to the node "baudratedivisor:brd|always0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[3]" to the node "baudratedivisor:brd|always0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[4]" to the node "baudratedivisor:brd|always0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[5]" to the node "baudratedivisor:brd|always0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[6]" to the node "baudratedivisor:brd|always0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[7]" to the node "baudratedivisor:brd|always0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "onefourbusdecode:busdmx|baudratedivisor[1]" to the node "baudratedivisor:brd|always0" into an OR gate
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "TX" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "NO"
+    Warning (15610): No output dependent on input pin "RX"
+Info (21057): Implemented 97 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 34 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 48 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 49 warnings
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Mon Dec 02 19:13:12 2013
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.map.smsg.
+
+
