@@ -6,17 +6,17 @@ module project4( // the cpu interface
 				input logic NW, // negative write enable
 				inout logic [7:0] DATA, // to the cpu
 				output logic NINT, // negative interrupt
-				output logic [7:0] statout, intout, dataregout, baudout,
 				 // the serial interface
 				input logic RX, // receive
 				output logic TX); // transmit
 
 		logic statin, intin, dataregin, baudin;
-		//logic statout, intout, dataregout, baudout;
+		logic [7:0] statout, intout, dataregout, baudout, dataoutput;
 		
-		//tristate ts(somekindofmuxofregouts, ~NO, DATA);
+		tristate ts(dataoutput, ~NO, DATA);
 		
-		onefourbusdecode busdmx(ADDR, ~NCS, statin, intin, dataregin, baudin);
+		onefourbusdecode 	busdmx(ADDR, ~NCS, statin, intin, dataregin, baudin);
+		fouronebusmux 		readbus(statout, intout, dataregout, baudout, ADDR, dataoutput);
 		
 		statusregister sr(CLK, statin & ~NW, DATA, statout);
 		regoneinterrupt im(CLK, intin & ~NW, DATA, intout);

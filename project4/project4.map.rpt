@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project4
-Mon Dec 02 21:23:12 2013
+Mon Dec 02 21:42:45 2013
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,9 +14,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
   8. Inverted Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
- 11. Analysis & Synthesis Suppressed Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -42,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 02 21:23:12 2013           ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 02 21:42:45 2013           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; project4                                        ;
 ; Top-level Entity Name              ; project4                                        ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 44                                              ;
-;     Total combinational functions  ; 14                                              ;
+; Total logic elements               ; 60                                              ;
+;     Total combinational functions  ; 30                                              ;
 ;     Dedicated logic registers      ; 32                                              ;
 ; Total registers                    ; 32                                              ;
-; Total pins                         ; 49                                              ;
+; Total pins                         ; 17                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -158,9 +159,11 @@ applicable agreement for further details.
 ; regoneinterrupt/regoneinterrupt.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/regoneinterrupt/regoneinterrupt.sv ;         ;
 ; regtwodata/regtwodata.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/regtwodata/regtwodata.sv           ;         ;
 ; statusregister/statusregister.sv   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/statusregister/statusregister.sv   ;         ;
+; tristate.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/tristate.sv                        ;         ;
 ; project4.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.sv                        ;         ;
 ; onefourbusdecode.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/onefourbusdecode.sv                ;         ;
 ; interruptlogic.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/interruptlogic.sv                  ;         ;
+; fouronebusmux.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/fouronebusmux.sv                   ;         ;
 +------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
@@ -169,27 +172,28 @@ applicable agreement for further details.
 +--------------------------+------------------+
 ; Resource                 ; Usage            ;
 +--------------------------+------------------+
-; I/O pins                 ; 49               ;
+; I/O pins                 ; 17               ;
 ; DSP block 9-bit elements ; 0                ;
 ; Maximum fan-out node     ; CLK~input        ;
 ; Maximum fan-out          ; 32               ;
-; Total fan-out            ; 236              ;
-; Average fan-out          ; 1.55             ;
+; Total fan-out            ; 252              ;
+; Average fan-out          ; 2.42             ;
 +--------------------------+------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                               ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+--------------+
-; |project4                  ; 14 (3)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 49   ; 0            ; |project4                     ; work         ;
-;    |baudratedivisor:brd|   ; 6 (6)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|baudratedivisor:brd ; work         ;
-;    |interruptlogic:il|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|interruptlogic:il   ; work         ;
-;    |regoneinterrupt:im|    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regoneinterrupt:im  ; work         ;
-;    |regtwodata:datareg|    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regtwodata:datareg  ; work         ;
-;    |statusregister:sr|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|statusregister:sr   ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                 ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------+--------------+
+; |project4                  ; 30 (3)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 17   ; 0            ; |project4                       ; work         ;
+;    |baudratedivisor:brd|   ; 6 (6)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|baudratedivisor:brd   ; work         ;
+;    |fouronebusmux:readbus| ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|fouronebusmux:readbus ; work         ;
+;    |interruptlogic:il|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|interruptlogic:il     ; work         ;
+;    |regoneinterrupt:im|    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regoneinterrupt:im    ; work         ;
+;    |regtwodata:datareg|    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regtwodata:datareg    ; work         ;
+;    |statusregister:sr|     ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|statusregister:sr     ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -219,6 +223,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |project4|fouronebusmux:readbus|Mux7 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -234,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 02 21:23:10 2013
+    Info: Processing started: Mon Dec 02 21:42:43 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project4 -c project4
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file baudratedivisor/baudratedivisor.sv
@@ -253,40 +266,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file onefour
     Info (12023): Found entity 1: onefourbusdecode
 Info (12021): Found 1 design units, including 1 entities, in source file interruptlogic.sv
     Info (12023): Found entity 1: interruptlogic
+Info (12021): Found 1 design units, including 1 entities, in source file fouronebusmux.sv
+    Info (12023): Found entity 1: fouronebusmux
 Info (12127): Elaborating entity "project4" for the top level hierarchy
-Warning (10034): Output port "TX" at project4.sv(12) has no driver
+Warning (10034): Output port "TX" at project4.sv(11) has no driver
+Info (12128): Elaborating entity "tristate" for hierarchy "tristate:ts"
 Info (12128): Elaborating entity "onefourbusdecode" for hierarchy "onefourbusdecode:busdmx"
+Info (12128): Elaborating entity "fouronebusmux" for hierarchy "fouronebusmux:readbus"
 Info (12128): Elaborating entity "statusregister" for hierarchy "statusregister:sr"
 Info (12128): Elaborating entity "regoneinterrupt" for hierarchy "regoneinterrupt:im"
 Info (12128): Elaborating entity "regtwodata" for hierarchy "regtwodata:datareg"
 Info (12128): Elaborating entity "baudratedivisor" for hierarchy "baudratedivisor:brd"
 Info (12128): Elaborating entity "interruptlogic" for hierarchy "interruptlogic:il"
-Warning (13039): The following bidir pins have no drivers
-    Warning (13040): Bidir "DATA[0]" has no driver
-    Warning (13040): Bidir "DATA[1]" has no driver
-    Warning (13040): Bidir "DATA[2]" has no driver
-    Warning (13040): Bidir "DATA[3]" has no driver
-    Warning (13040): Bidir "DATA[4]" has no driver
-    Warning (13040): Bidir "DATA[5]" has no driver
-    Warning (13040): Bidir "DATA[6]" has no driver
-    Warning (13040): Bidir "DATA[7]" has no driver
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "TX" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "NO"
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "RX"
-Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 77 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 34 output pins
+    Info (21059): Implemented 2 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 44 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info (21061): Implemented 60 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 483 megabytes
-    Info: Processing ended: Mon Dec 02 21:23:12 2013
+    Info: Processing ended: Mon Dec 02 21:42:45 2013
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
