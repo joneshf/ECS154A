@@ -15,10 +15,11 @@ module statusregister(	input logic clk,
 	0 - ENA / ENA
 	*/
 	always_ff@(posedge clk) begin
-		out <= internalin;
-		if(wrien)
+		if(wrien) begin
 			if(~in[0])
 				out <= 8'b0;
+			else if(in[0])
+				out <= 1'b1;
 			else if(in[7])
 				out[7] <= 1'b0;
 			else if(in[6])
@@ -27,6 +28,29 @@ module statusregister(	input logic clk,
 				out[5] <= 1'b0;
 			else if(in[4])
 				out[4] <= 1'b0;
+		end
+
+		if(internalin[7])
+			out[7] <= 1'b1;
+		if(internalin[6])
+			out[6] <= 1'b1;
+		if(internalin[5])
+			out[5] <= 1'b1;
+		if(internalin[4])
+			out[4] <= 1'b1;
+		if(internalin[3])
+			out[3] <= 1'b1;
+		
+		// these two need to be able to zero
+		if(internalin[2])
+			out[2] <= 1'b1;
+		else
+			out[2] <= 1'b0;
+			
+		if(internalin[1])
+			out[1] <= 1'b1;
+		else
+			out[1] <= 1'b0;
 	end
 endmodule
 	

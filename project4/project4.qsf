@@ -48,7 +48,6 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE regwrites.vwf
 set_global_assignment -name SYSTEMVERILOG_FILE baudratedivisor/baudratedivisor.sv
 set_global_assignment -name SYSTEMVERILOG_FILE regoneinterrupt/regoneinterrupt.sv
-set_global_assignment -name SYSTEMVERILOG_FILE regtwodata/regtwodata.sv
 set_global_assignment -name SYSTEMVERILOG_FILE statusregister/statusregister.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tristate.sv
 set_global_assignment -name SYSTEMVERILOG_FILE project4.sv
@@ -60,6 +59,8 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name SYSTEMVERILOG_FILE fouronebusmux.sv
 set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformWriteRead.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/WaveformWriteRead.vwf"
 set_global_assignment -name SYSTEMVERILOG_FILE transmit.sv
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformtxfifowrite.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformstatreg.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/Waveformstatreg.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
