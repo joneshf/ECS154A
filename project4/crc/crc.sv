@@ -1,22 +1,24 @@
-module crc (
+module crc(
+        input logic nextbit,
         input logic clk,
-        input logic [11:0] datain,
+        input logic reset,
         output logic [7:0] dataout
     );
+    logic inv;
+    assign inv = nextbit ^ dataout[7];
 
-    // Our polynomial is x^8 + x^4 + x^3 + x^2 + 1
-    // This algorithm is borrowed from
-    // http://en.wikipedia.org/wiki/Computation_of_CRC#Implementation
-    logic [8:0] polynomial = 9'b100011101;
-    logic [8:0] remainder = 9'b0;
-    always_ff@(posedge clk) begin
-        for (int i = 11; i > 0; --i) begin
-            remainder = remainder ^ (datain[i] << 8);
-            if(remainder[8] == 1'b1)
-                remainder = (remainder << 1) ^ polynomial;
-            else
-                remainder = remainder << 1;
+    always@(posedge clk or posedge reset) begin
+        if (reset)
+            dataout = 0;
+        else begin
+            dataout[7] = dataout[6];
+            dataout[6] = dataout[5];
+            dataout[5] = dataout[4];
+            dataout[4] = dataout[3] ^ inv;
+            dataout[3] = dataout[2] ^ inv;
+            dataout[2] = dataout[1] ^ inv;
+            dataout[1] = dataout[0];
+            dataout[0] = inv;
         end
-        dataout = remainder[7:0];
     end
 endmodule
