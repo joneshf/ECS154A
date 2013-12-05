@@ -1,6 +1,6 @@
 Analysis & Synthesis report for project4
-Wed Dec 04 21:33:24 2013
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Wed Dec 04 21:58:33 2013
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -9,18 +9,17 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "transmit:txfifo"
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "transmit:txfifo"
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,8 +45,8 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 04 21:33:24 2013           ;
-; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 04 21:58:33 2013           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; project4                                        ;
 ; Top-level Entity Name              ; project4                                        ;
 ; Family                             ; Cyclone IV GX                                   ;
@@ -153,32 +152,21 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
-+------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
-+------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
-; baudratedivisor/baudratedivisor.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/baudratedivisor/baudratedivisor.sv ;         ;
-; regoneinterrupt/regoneinterrupt.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/regoneinterrupt/regoneinterrupt.sv ;         ;
-; statusregister/statusregister.sv   ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/statusregister/statusregister.sv   ;         ;
-; tristate.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/tristate.sv                        ;         ;
-; project4.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/project4.sv                        ;         ;
-; onefourbusdecode.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/onefourbusdecode.sv                ;         ;
-; interruptlogic.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/interruptlogic.sv                  ;         ;
-; fouronebusmux.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/fouronebusmux.sv                   ;         ;
-; transmit.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/transmit.sv                        ;         ;
-+------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
++------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ; Library ;
++------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; baudratedivisor/baudratedivisor.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/baudratedivisor/baudratedivisor.sv ;         ;
+; regoneinterrupt/regoneinterrupt.sv ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/regoneinterrupt/regoneinterrupt.sv ;         ;
+; statusregister/statusregister.sv   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/statusregister/statusregister.sv   ;         ;
+; tristate.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/tristate.sv                        ;         ;
+; project4.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.sv                        ;         ;
+; onefourbusdecode.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/onefourbusdecode.sv                ;         ;
+; interruptlogic.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/interruptlogic.sv                  ;         ;
+; fouronebusmux.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/fouronebusmux.sv                   ;         ;
+; transmit.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/transmit.sv                        ;         ;
++------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -270,7 +258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -278,9 +266,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit Analysis & Synthesis
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Dec 04 21:33:23 2013
+    Info: Processing started: Wed Dec 04 21:58:29 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project4 -c project4
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file baudratedivisor/baudratedivisor.sv
@@ -309,13 +297,14 @@ Info (12128): Elaborating entity "fouronebusmux" for hierarchy "fouronebusmux:re
 Info (12128): Elaborating entity "statusregister" for hierarchy "statusregister:sr"
 Info (12128): Elaborating entity "regoneinterrupt" for hierarchy "regoneinterrupt:im"
 Info (12128): Elaborating entity "transmit" for hierarchy "transmit:txfifo"
+Critical Warning (10237): Verilog HDL warning at transmit.sv(13): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
 Info (12128): Elaborating entity "baudratedivisor" for hierarchy "baudratedivisor:brd"
 Info (12128): Elaborating entity "interruptlogic" for hierarchy "interruptlogic:il"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "NINT" is stuck at VCC
     Warning (13410): Pin "TX" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/project4.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
@@ -325,16 +314,16 @@ Info (21057): Implemented 61 device resources after synthesis - the final resour
     Info (21059): Implemented 6 output pins
     Info (21060): Implemented 8 bidirectional pins
     Info (21061): Implemented 40 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 371 megabytes
-    Info: Processing ended: Wed Dec 04 21:33:24 2013
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 475 megabytes
+    Info: Processing ended: Wed Dec 04 21:58:33 2013
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/project4.map.smsg.
+The suppressed messages can be found in C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/project4.map.smsg.
 
 
