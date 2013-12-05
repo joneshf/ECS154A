@@ -8,20 +8,24 @@ module project4( // the cpu interface
 				output logic NINT, // negative interrupt
 				 // the serial interface
 				input logic RX, // receive
-				output logic TX); // transmit
+				output logic TX,
+				output logic tbnf,
+				output logic [127:0] txfifoout); // transmit
 
 		logic statin, intin, dataregin, baudin;
-		logic [7:0] internalstatus, statout, intout, dataregout, baudout, dataoutput;
+		logic [7:0] internalstatus, statout, intout, datarxout, baudout, dataoutput;
+		logic [3:0] countout;
+		//logic [127:0] txfifoout;
 		
 		tristate ts(dataoutput, ~NO, DATA);
-		
 		onefourbusdecode 	busdmx(ADDR, ~NCS, statin, intin, dataregin, baudin);
-		fouronebusmux 		readbus(statout, intout, dataregout, baudout, ADDR, dataoutput);
+		fouronebusmux 		readbus(statout, intout, datarxout, baudout, ADDR, dataoutput);
 		
 		statusregister sr(CLK, statin & ~NW, DATA, internalstatus, statout);
-		regoneinterrupt im(CLK, intin & ~NW, DATA, intout);
-		regtwodata datareg(CLK, dataregin & ~NW, DATA, dataregout);
-		baudratedivisor brd(CLK, ~statout[0], baudin & ~NW, DATA, baudout);
+		regoneinterrupt im(CLK, intin & ~NW & statout[0], DATA, intout);
+		
+		transmit txfifo(DATA, dataregin & ~NW & statout[0], statout[1], txfifoout, tbnf, countout);
+		baudratedivisor brd(CLK, ~statout[0], baudin & ~NW & ~statout[0], DATA, baudout);
 		
 		interruptlogic il(statout, intout, NINT);
 		
