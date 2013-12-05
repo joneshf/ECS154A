@@ -8,105 +8,141 @@ module transmitter(	input logic clk,
 
 	logic startbit = 1'b1;
 	logic stopbit = 1'b0;
-	logic [7:0] baudcounter = 8'b0;
-	logic [1:0] framesizecounter = 2'b11;
-	logic [3:0] framecounter = 4'b0;
-	logic [2:0] bytecounter = 3'b111;
-	logic [2:0] statemachine = 3'b0;
+	
+	logic [7:0] baudcounter;
+	logic [3:0] framecounter;
+	logic [2:0] bytecounter, statemachine;
+	logic [1:0] framesizecounter;
+	
 	logic en, reset = 1'b0;
 	logic crcin;
 	logic [7:0] crcout;
-	crc crccalc(en, clk, reset, crcin, crcout);
-
+	
+	logic initializer;
+	
 	initial begin
 		TXI = 1'b1;
+		TX = 1'b0;
+		initializer = 1'b1;
 	end
-
-	always@(posedge clk, posedge tf) begin
-		if(tf)
-			if (framesize != 4'b0) begin
-				case (statemachine)
-				3'b000: begin // Start state.
-					// Reset the CRC.
+	
+	crc crccalc(en, clk, reset, crcin, crcout);
+	
+	always_ff@(posedge clk) begin
+	if(tf)
+		if(framesize > 4'b0) begin
+			TXI <= 1'b0;
+			if(initializer) begin
+				baudcounter <= 8'd2;
+				framesizecounter <= 2'b11;
+				statemachine <= 3'b0;
+				framecounter <= 4'b0;
+				bytecounter <= 3'b111;
+				initializer <= 1'b0;
+			end
+			case(statemachine)
+			
+				3'b000: begin
 					reset <= 1'b1;
-					// Ship down the start bit.
-					if (baudcounter < baudrate) begin
-						TXI <= 1'b0;
+					if(baudcounter < baudrate) begin
 						TX <= startbit;
-						baudcounter += 1'b1;
+						baudcounter <= baudcounter + 1'b1;
 					end
-					else begin
-						baudcounter = 8'b0;
-						statemachine = 3'b001;
+					else begin	
+						statemachine <= 3'b001;
+						baudcounter <= 8'd2;
 					end
 				end
-				3'b001: begin // Framesize state.
-					// Turn off the reset and turn on the enable.
+				
+				3'b001: begin
 					reset <= 1'b0;
 					en <= 1'b1;
-					if (framesizecounter >= 0)
-						if (baudcounter < baudrate) begin
-							// Send the framesize and start calculating the crc.
+					crcin <= framesize[framesizecounter];
+					if(framesizecounter >= 2'b00) begin
+						if(baudcounter < baudrate) begin
 							TX <= framesize[framesizecounter];
-							crcin <= framesize[framesizecounter];
-							baudcounter += 1'b1;
+							baudcounter <= baudcounter + 1'b1;
 						end
-						else
-							baudcounter = 8'b0;
-					else begin
-						baudcounter = 8'b0;
-						framesizecounter = 2'b11;
-						statemachine = 3'b010;
-					end
-				end
-				3'b010: begin // Framedata state.
-					// Keep the CRC enable on.
-					en <= 1'b1;
-					// Go over each frame.
-					if (framecounter < framesize)
-						// Go over each byte, starting at MSB.
-						if (bytecounter >= 0)
-							// Do this `baud` times.
-							if (baudcounter < baudrate) begin
-								// Dish out the bit and keep calculating the CRC.
-								// The current byte = FS * 8 + b.
-								TX <= framebits[(framecounter * 8) + bytecounter];
-								crcin <= framebits[(framecounter * 8) + bytecounter];
+						else begin
+							if(framesizecounter - 1'b1 == 2'b11) begin
+								baudcounter <= 8'd2;
+								statemachine <= 3'b010;
 							end
-							else
-								baudcounter = 8'b0;
-						else
-							bytecounter = 3'b111;
-					else begin
-						framecounter = 4'b0;
-						statemachine = 3'b011;
+							else begin	
+								baudcounter <= 8'b1;
+								framesizecounter <= framesizecounter - 1'b1;
+							end
+						end
 					end
 				end
-				3'b011: begin // CRC state.
-					// Disable the CRC.
-					en <= 1'b0;
-					if (bytecounter >= 0)
-						if (baudcounter < baudrate)
-							// Dish out the CRC.
+				
+				3'b010: begin
+					crcin <= framebits[(framecounter * 8) + bytecounter];
+					if(framecounter < framesize) begin
+						if(bytecounter >= 3'b0) begin
+							if(baudcounter < baudrate) begin
+								TX <= framebits[(framecounter * 8) + bytecounter];
+								baudcounter <= baudcounter + 1'b1;
+							end
+							else begin
+								if(bytecounter - 1'b1 == 3'b111) begin
+									if(framecounter + 1'b1 == framesize) begin
+										bytecounter <= bytecounter - 1'b1;
+										baudcounter <= 8'd2;
+										en <= 1'b0;
+										statemachine <= 3'b011;
+									end
+									else begin
+										baudcounter <= 8'b1;
+										bytecounter <= bytecounter - 1'b1;
+										framecounter <= framecounter + 1'b1;
+									end
+								end
+								else begin
+									baudcounter <= 8'b1;
+									bytecounter <= bytecounter - 1'b1;
+								end
+							end
+						end
+					end
+				end
+				
+				3'b011: begin
+					if(bytecounter >= 3'b0) begin
+						if(baudcounter < baudrate) begin
 							TX <= crcout[bytecounter];
-						else
-							baudcounter = 8'b0;
-					else begin
-						bytecounter = 3'b111;
-						statemachine = 3'b100;
+							baudcounter <= baudcounter + 1'b1;
+						end
+						else begin
+							if(bytecounter - 1'b1 == 3'b111) begin
+								statemachine <= 3'b100;
+								baudcounter <= 8'b1;
+							end
+							else begin
+								bytecounter <= bytecounter - 1'b1;
+								baudcounter <= 8'b1;
+							end
+						end
 					end
 				end
-				3'b100: begin // Stop state.
-					if (baudcounter < baudrate)
+				
+				3'b100: begin
+					if(baudcounter < baudrate) begin
 						TX <= stopbit;
+						baudcounter <= baudcounter + 1'b1;
+					end
 					else begin
-						baudcounter = 8'b0;
-						statemachine = 3'b000;
 						TXI <= 1'b1;
 					end
 				end
-				endcase
+				
+				default: TX <= 1'b0;
+			endcase
+		end
+		else begin // else tf
+			initializer <= 1'b1;
 		end
 	end
+
 endmodule
 
