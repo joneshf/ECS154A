@@ -6,14 +6,13 @@ module project4( // the cpu interface
 				input logic NW, // negative write enable
 				inout logic [7:0] DATA, // to the cpu
 				output logic NINT, // negative interrupt
-				 // the serial interface
-				output logic [3:0] countout,
+				 // the serial interfaces
 				input logic RX, // receive
 				output logic TX); // transmit
 
 		logic statin, intin, dataregin, baudin;
 		logic [7:0] internalstatus, statout, intout, datarxout, baudout, dataoutput;
-		//logic [3:0] countout;
+		logic [3:0] countout;
 		logic [127:0] txfifoout;
 		
 		tristate ts(dataoutput, ~NO, DATA);
