@@ -6,17 +6,17 @@ the Block Editor! File corruption is VERY likely to occur.
 
 /*
 Copyright (C) 1991-2013 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions
-and other software and tools, and its AMPP partner logic
-functions, and any output files from any of the foregoing
-(including device programming or simulation files), and any
-associated documentation or information are expressly subject
-to the terms and conditions of the Altera Program License
-Subscription Agreement, Altera MegaCore Function License
-Agreement, or other applicable license agreement, including,
-without limitation, that your use is for the sole purpose of
-programming logic devices manufactured by Altera and sold by
-Altera or its authorized distributors.  Please refer to the
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
 applicable agreement for further details.
 */
 
@@ -32,6 +32,26 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
+SIGNAL("clk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("datain")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
 SIGNAL("dataout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -40,36 +60,6 @@ SIGNAL("dataout")
 	LSB_INDEX = 0;
 	DIRECTION = OUTPUT;
 	PARENT = "";
-}
-
-SIGNAL("dataout[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "dataout";
-}
-
-SIGNAL("dataout[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "dataout";
-}
-
-SIGNAL("dataout[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "dataout";
 }
 
 SIGNAL("dataout[7]")
@@ -122,17 +112,37 @@ SIGNAL("dataout[3]")
 	PARENT = "dataout";
 }
 
-SIGNAL("clk")
+SIGNAL("dataout[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
+	DIRECTION = OUTPUT;
+	PARENT = "dataout";
 }
 
-SIGNAL("nextbit")
+SIGNAL("dataout[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "dataout";
+}
+
+SIGNAL("dataout[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "dataout";
+}
+
+SIGNAL("en")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -152,33 +162,30 @@ SIGNAL("reset")
 	PARENT = "";
 }
 
-TRANSITION_LIST("dataout[2]")
+TRANSITION_LIST("clk")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 39.0;
-		LEVEL 0 FOR 961.0;
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 40.0;
+		}
+		LEVEL 0 FOR 40.0;
 	}
 }
 
-TRANSITION_LIST("dataout[1]")
+TRANSITION_LIST("datain")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 39.0;
-		LEVEL 0 FOR 961.0;
-	}
-}
-
-TRANSITION_LIST("dataout[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 39.0;
-		LEVEL 0 FOR 961.0;
+		LEVEL 1 FOR 160.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 680.0;
 	}
 }
 
@@ -227,45 +234,40 @@ TRANSITION_LIST("dataout[3]")
 	}
 }
 
-TRANSITION_LIST("clk")
+TRANSITION_LIST("dataout[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 8;
-			LEVEL 0 FOR 50.0;
-			LEVEL 1 FOR 50.0;
-		}
+		LEVEL X FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("nextbit")
+TRANSITION_LIST("dataout[1]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 1 FOR 100.0;
-		}
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 100.0;
-		}
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 1 FOR 100.0;
-		}
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 100.0;
-		}
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("dataout[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("en")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 640.0;
+		LEVEL 0 FOR 360.0;
 	}
 }
 
@@ -274,12 +276,9 @@ TRANSITION_LIST("reset")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
-		}
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 970.0;
 	}
 }
 
@@ -294,12 +293,21 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dataout";
+	CHANNEL = "datain";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
 	TREE_LEVEL = 0;
-	CHILDREN = 2, 3, 4, 5, 6, 7, 8, 9;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "dataout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+	CHILDREN = 3, 4, 5, 6, 7, 8, 9, 10;
 }
 
 DISPLAY_LINE
@@ -307,9 +315,9 @@ DISPLAY_LINE
 	CHANNEL = "dataout[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 2;
+	TREE_INDEX = 3;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -317,9 +325,9 @@ DISPLAY_LINE
 	CHANNEL = "dataout[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 3;
+	TREE_INDEX = 4;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -327,9 +335,9 @@ DISPLAY_LINE
 	CHANNEL = "dataout[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 4;
+	TREE_INDEX = 5;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -337,9 +345,9 @@ DISPLAY_LINE
 	CHANNEL = "dataout[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 5;
+	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -347,9 +355,9 @@ DISPLAY_LINE
 	CHANNEL = "dataout[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 6;
+	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -357,9 +365,9 @@ DISPLAY_LINE
 	CHANNEL = "dataout[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 7;
+	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -367,9 +375,9 @@ DISPLAY_LINE
 	CHANNEL = "dataout[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 8;
+	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
@@ -377,17 +385,17 @@ DISPLAY_LINE
 	CHANNEL = "dataout[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 9;
+	TREE_INDEX = 10;
 	TREE_LEVEL = 1;
-	PARENT = 1;
+	PARENT = 2;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "nextbit";
+	CHANNEL = "en";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 10;
+	TREE_INDEX = 11;
 	TREE_LEVEL = 0;
 }
 
@@ -396,7 +404,7 @@ DISPLAY_LINE
 	CHANNEL = "reset";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 11;
+	TREE_INDEX = 12;
 	TREE_LEVEL = 0;
 }
 

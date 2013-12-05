@@ -1,16 +1,42 @@
 module crc(
-        input logic nextbit,
+        input logic en,
         input logic clk,
         input logic reset,
+        input logic datain,
         output logic [7:0] dataout
     );
     logic inv;
-    assign inv = nextbit ^ dataout[7];
+    // Decide if we're inverting anything.
+    assign inv = datain ^ dataout[7];
+
+    /*
+        This module computes a CRC-8 based on some inputs.
+        The general idea is that you `reset` first,
+        then start feeding in the data on `datain`.
+        `datain` is a bit wide, so you need to feed in each bit.
+        Set the enable when you want to compute something.
+        Each clock cycle it computes a new `dataout`.
+        So in order to get an accurate CRC,
+        you need to wait until you've feed it all the bits you have.
+
+        @param en      Decides whether to compute the CRC or not.
+        @param clk     The clock...
+        @param reset   Clears the dataout to 0000 0000.
+        @param datain  the bit to compute a new CRC with.
+        @param dataout The calculated CRC.
+    */
 
     always@(posedge clk or posedge reset) begin
         if (reset)
             dataout = 0;
-        else begin
+        else if (en) begin
+            // This is basically an LFSR.
+            // This follows from our polynomial:
+            // x^8 + x^4 + x^3 + x^2 + 1 == 1 0001 1101
+            // So what happens is that we ignore the highest bit,
+            // and xor each "1" in the binary representation.
+
+            // Shift everything.
             dataout[7] = dataout[6];
             dataout[6] = dataout[5];
             dataout[5] = dataout[4];
