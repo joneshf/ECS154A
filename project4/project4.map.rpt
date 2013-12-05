@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project4
-Wed Dec 04 22:32:57 2013
+Wed Dec 04 22:51:22 2013
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Dec 04 22:32:57 2013               ;
+; Analysis & Synthesis Status        ; Failed - Wed Dec 04 22:51:22 2013               ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; project4                                        ;
 ; Top-level Entity Name              ; project4                                        ;
@@ -161,7 +161,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Dec 04 22:32:56 2013
+    Info: Processing started: Wed Dec 04 22:51:21 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project4 -c project4
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file baudratedivisor/baudratedivisor.sv
@@ -192,7 +192,7 @@ Info (12021): Found 0 design units, including 0 entities, in source file transmi
 Info (144001): Generated suppressed messages file C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/project4.map.smsg
 Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 6 errors, 1 warning
     Error: Peak virtual memory: 357 megabytes
-    Error: Processing ended: Wed Dec 04 22:32:57 2013
+    Error: Processing ended: Wed Dec 04 22:51:22 2013
     Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 

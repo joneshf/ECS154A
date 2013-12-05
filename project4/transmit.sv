@@ -8,10 +8,12 @@ module transmit(	input logic [7:0] datain,
 	logic [127:0] qu;
 	logic [3:0] count = 4'b0;
 
-	always@(posedge en)
+	always@(posedge en or posedge tfin)
 	begin
 		qu <= {qu[119:0],datain};
-		if(count != 4'b1111)
+		if(tfin)
+			count <= 4'b0;
+		else if(count != 4'b1111)
 			count <= count + 1'b1;
 	end
 	
@@ -19,7 +21,5 @@ module transmit(	input logic [7:0] datain,
 	assign countout = count;
 	
 	assign tbnfout = ~(count[3] & count[2] & count[1] & count[0]);
-	
-	//set the count back to zero
-	
+
 endmodule
