@@ -14,6 +14,7 @@ module project4( // the cpu interface
 		logic [7:0] internalstatus, statout, intout, datarxout, baudout, dataoutput;
 		logic [3:0] countout;
 		logic [127:0] txfifoout;
+		logic [7:0] eightbitthing;
 
 		tristate ts(dataoutput, ~NO, DATA);
 		onefourbusdecode 	busdmx(ADDR, ~NCS, statin, intin, dataregin, baudin);
@@ -28,5 +29,7 @@ module project4( // the cpu interface
 		interruptlogic il(statout, intout, NINT);
 
 		transmitter transx(CLK, statout[1] & statout[0] /* Also need the data from cpu */, countout, txfifoout, baudout, internalstatus[3], TX);
+
+		receive rxbandits(CLK, RX, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[7], eightbitthing);
 
 endmodule
