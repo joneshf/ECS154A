@@ -64,11 +64,8 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformWriteRead.vwf
 set_global_assignment -name SYSTEMVERILOG_FILE transmit.sv
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformtxfifowrite.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformstatreg.vwf
-<<<<<<< HEAD
-set_global_assignment -name SYSTEMVERILOG_FILE transmitter.sv
 set_global_assignment -name SYSTEMVERILOG_FILE receive.sv
+set_global_assignment -name SYSTEMVERILOG_FILE transmitter.sv
+
+
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-=======
-set_global_assignment -name SYSTEMVERILOG_FILE receive.sv
-set_global_assignment -name SYSTEMVERILOG_FILE transmitter.sv
->>>>>>> 59c1388988ba0f14beb604a670c421bd522007ae
