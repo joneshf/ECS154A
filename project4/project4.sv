@@ -14,6 +14,7 @@ module project4( // the cpu interface
 		logic [7:0] internalstatus, statout, intout, datarxout, baudout, dataoutput;
 		logic [3:0] countout;
 		logic [127:0] txfifoout;
+		logic [7:0] eightbitthing;
 		
 		tristate ts(dataoutput, ~NO, DATA);
 		onefourbusdecode 	busdmx(ADDR, ~NCS, statin, intin, dataregin, baudin);
@@ -26,5 +27,7 @@ module project4( // the cpu interface
 		baudratedivisor brd(CLK, ~statout[0], baudin & ~NW & ~statout[0], DATA, baudout);
 		
 		interruptlogic il(statout, intout, NINT);
+		
+		receive rxbandits(CLK, RX, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[7], eightbitthing);
 		
 endmodule

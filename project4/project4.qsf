@@ -64,5 +64,5 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformWriteRead.vwf
 set_global_assignment -name SYSTEMVERILOG_FILE transmit.sv
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformtxfifowrite.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformstatreg.vwf
-set_global_assignment -name SYSTEMVERILOG_FILE transmitter.sv
 set_global_assignment -name SYSTEMVERILOG_FILE receive.sv
+set_global_assignment -name SYSTEMVERILOG_FILE transmitter.sv
