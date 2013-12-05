@@ -42,7 +42,7 @@ module statusregister(	input logic clk,
 			out[3] <= 1'b1;
 		
 		// these two need to be able to zero
-		if(internalin[2])
+		if(internalin[2] == 1'b1)
 			out[2] <= 1'b1;
 		else
 			out[2] <= 1'b0;
