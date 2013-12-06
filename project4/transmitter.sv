@@ -204,4 +204,8 @@ module transmitter(	input logic clk,
 		end
 	end
 
+<<<<<<< HEAD
 endmodule
+=======
+endmodule
+>>>>>>> 0a5db8fa3c0244586e4c1b50957f14ee01591291
