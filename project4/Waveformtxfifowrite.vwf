@@ -222,56 +222,6 @@ SIGNAL("TX")
 	PARENT = "";
 }
 
-SIGNAL("countout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("countout[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "countout";
-}
-
-SIGNAL("countout[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "countout";
-}
-
-SIGNAL("countout[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "countout";
-}
-
-SIGNAL("countout[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "countout";
-}
-
 TRANSITION_LIST("ADDR[1]")
 {
 	NODE
@@ -498,42 +448,6 @@ TRANSITION_LIST("TX")
 	}
 }
 
-TRANSITION_LIST("countout[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5000.0;
-	}
-}
-
-TRANSITION_LIST("countout[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5000.0;
-	}
-}
-
-TRANSITION_LIST("countout[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5000.0;
-	}
-}
-
-TRANSITION_LIST("countout[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 5000.0;
-	}
-}
-
 DISPLAY_LINE
 {
 	CHANNEL = "ADDR";
@@ -717,59 +631,9 @@ DISPLAY_LINE
 	TREE_LEVEL = 0;
 }
 
-DISPLAY_LINE
-{
-	CHANNEL = "countout";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 19;
-	TREE_LEVEL = 0;
-	CHILDREN = 20, 21, 22, 23;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "countout[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 20;
-	TREE_LEVEL = 1;
-	PARENT = 19;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "countout[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 21;
-	TREE_LEVEL = 1;
-	PARENT = 19;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "countout[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 22;
-	TREE_LEVEL = 1;
-	PARENT = 19;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "countout[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 23;
-	TREE_LEVEL = 1;
-	PARENT = 19;
-}
-
 TIME_BAR
 {
-	TIME = 770000;
+	TIME = 760000;
 	MASTER = TRUE;
 }
 ;
