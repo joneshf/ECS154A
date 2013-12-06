@@ -185,11 +185,15 @@ module receive(input logic clk,
 					end
 				end
 			end
-			// 3'b101: begin
-			// 	//this is for the stop bit
-			// 	//fe gets set if the stop bit is one or if there are missing stuff bits
-
-			// end
+			3'b100: begin // Stop state.
+				// Stop resetting the `moreofbit`
+				resetmoreofbit = 1'b0;
+				// Let's check this stop bit.
+				if (baudcounter == baudrate & ~nf) begin
+					// fe gets set if the stop bit is one.
+					fe = moreofbit;
+				end
+			end
 		endcase
 
 	end
