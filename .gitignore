@@ -10,3 +10,4 @@ simulation/
 *.rpt
 *.summary
 *.done
+*.smsg

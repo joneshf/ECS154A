@@ -8,7 +8,7 @@ module receive(input logic clk,
 	logic [7:0] framecrc;				//i don't know what this is
 	logic [3:0] framesize;				//how big each frame should be
 	logic [3:0] statemachine = 3'b0;
-	logic [7:0] baudcounter = 8'b0;  	//internal clk count
+	logic [7:0] baudcounter = 8'b1;  	//internal clk count
 	logic [7:0] ones, zeros;
 	logic [1:0] fsincrement = 2'b0;		//increments through framesize (3..0) to input RX bits
 	logic [1:0] fscounter = 2'b0;			//counter to increment RX
@@ -17,9 +17,8 @@ module receive(input logic clk,
 	logic moreofbit;
 
 	// Our counters.
-	logic [7:0] baudcounter = 8'b1;
 	logic [3:0] framecounter;
-	logic [2:0] bytecounter, statemachine;
+	// logic [2:0] bytecounter, statemachine;
 	logic [1:0] framesizecounter;
 
 	// CRC stuff.
