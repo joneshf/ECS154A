@@ -1,4 +1,4 @@
-module receiver(input logic clk,
+module receive(input logic clk,
 					input logic RX,
 					input logic [7:0] baudrate,
 					output logic dr, nf, over, fe,
