@@ -4,3 +4,5 @@ output_files/
 simulation/
 *.bak
 *.qws
+*assignment_defaults.qdf
+*.ipinfo
