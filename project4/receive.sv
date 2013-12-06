@@ -2,28 +2,27 @@ module receive(input logic clk,
 					input logic RX,
 					input logic [7:0] baudrate,
 					output logic dr, nf, over, crce, fe,
-					// output logic [7:0] dataout,
+					output logic [7:0] dataout
+	);
 
-	output logic [127:0] framedata,  			//the data in the frame
-	output logic [3:0] framecounter,
-	output logic [3:0] framesize,				//how big each frame should be
-	output logic [3:0] statemachine = 3'b0,
-	output logic [7:0] baudcounter = 8'b0,  	//internal clk count
-	output logic [7:0] ones, zeros,
-	// output logic [1:0] fsincrement = 2'b0,		//increments through framesize (3..0) to input RX bits
-	output logic [1:0] fscounter = 2'b0,			//counter to increment RX
-	// output logic [2:0] byteincrement = 3'b0,	//increments through byte0 (7..0) to input RX bits
-	output logic [2:0] bytecounter = 3'b111,		//counter to increment RX
-	output logic moreofbit, resetmoreofbit,
+	logic [127:0] framedata;  			//the data in the frame
+	logic [3:0] statemachine = 3'b0;
 
 	// Our counters.
-	// output logic [3:0] framecounter,
+	logic [7:0] baudcounter = 8'b0;  	//internal clk count
+	logic [3:0] framecounter;
+	logic [3:0] framesize;				//how big the data frame should be
+	logic [2:0] bytecounter = 3'b111;
+	logic [1:0] fscounter = 2'b0;
+
+	// Noise checking.
+	logic [7:0] ones, zeros;
+	logic moreofbit, resetmoreofbit;
 
 	// CRC stuff.
-	output logic crcenable, crcreset = 1'b0,
-	output logic crcin,
-	output logic [7:0] crcout
-	);
+	logic crcenable, crcreset = 1'b0;
+	logic crcin;
+	logic [7:0] crcout;
 	crc crccalc(crcenable, clk, crcreset, crcin, crcout);
 
 	initial begin
