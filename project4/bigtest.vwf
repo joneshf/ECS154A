@@ -222,7 +222,7 @@ SIGNAL("TX")
 	PARENT = "";
 }
 
-SIGNAL("countout")
+SIGNAL("countoutout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -232,44 +232,44 @@ SIGNAL("countout")
 	PARENT = "";
 }
 
-SIGNAL("countout[3]")
+SIGNAL("countoutout[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "countout";
+	PARENT = "countoutout";
 }
 
-SIGNAL("countout[2]")
+SIGNAL("countoutout[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "countout";
+	PARENT = "countoutout";
 }
 
-SIGNAL("countout[1]")
+SIGNAL("countoutout[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "countout";
+	PARENT = "countoutout";
 }
 
-SIGNAL("countout[0]")
+SIGNAL("countoutout[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "countout";
+	PARENT = "countoutout";
 }
 
 TRANSITION_LIST("ADDR[1]")
@@ -559,7 +559,7 @@ TRANSITION_LIST("TX")
 	}
 }
 
-TRANSITION_LIST("countout[3]")
+TRANSITION_LIST("countoutout[3]")
 {
 	NODE
 	{
@@ -568,7 +568,7 @@ TRANSITION_LIST("countout[3]")
 	}
 }
 
-TRANSITION_LIST("countout[2]")
+TRANSITION_LIST("countoutout[2]")
 {
 	NODE
 	{
@@ -577,7 +577,7 @@ TRANSITION_LIST("countout[2]")
 	}
 }
 
-TRANSITION_LIST("countout[1]")
+TRANSITION_LIST("countoutout[1]")
 {
 	NODE
 	{
@@ -586,7 +586,7 @@ TRANSITION_LIST("countout[1]")
 	}
 }
 
-TRANSITION_LIST("countout[0]")
+TRANSITION_LIST("countoutout[0]")
 {
 	NODE
 	{
@@ -780,7 +780,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "countout";
+	CHANNEL = "countoutout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 19;
@@ -790,7 +790,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "countout[3]";
+	CHANNEL = "countoutout[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 20;
@@ -800,7 +800,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "countout[2]";
+	CHANNEL = "countoutout[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 21;
@@ -810,7 +810,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "countout[1]";
+	CHANNEL = "countoutout[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 22;
@@ -820,7 +820,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "countout[0]";
+	CHANNEL = "countoutout[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 23;

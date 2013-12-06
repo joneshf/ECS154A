@@ -7,18 +7,23 @@ module transmitter(	input logic clk,
 							output logic TX
 							);
 
+	// A couple of constants.
 	logic startbit = 1'b1;
 	logic stopbit = 1'b0;
 
+	// Our counters.
 	logic [7:0] baudcounter = 8'b1;
 	logic [3:0] framecounter;
 	logic [2:0] bytecounter, statemachine;
 	logic [1:0] framesizecounter;
 
-	logic en, reset = 1'b0;
+	// CRC stuff.
+	logic crcenable, crcreset = 1'b0;
 	logic crcin;
 	logic [7:0] crcout;
+	crc crccalc(crcenable, clk, crcreset, crcin, crcout);
 
+	// Something to reset the whole game.
 	logic initializer;
 
 	initial begin
@@ -27,9 +32,8 @@ module transmitter(	input logic clk,
 		initializer = 1'b1;
 	end
 
-	crc crccalc(en, clk, reset, crcin, crcout);
-
 	always_ff@(posedge clk) begin
+		// Check if we're ready to go, and turn off the TXI if so.
 		if(tf) begin
 			if(framesize > 4'b0) begin
 				TXI = 1'b0;
@@ -37,113 +41,158 @@ module transmitter(	input logic clk,
 		end
 
 		if(~TXI) begin
+			// Reset everything.
 			if(initializer) begin
+				// We use the baudcounter and framecounter in the first state.
 				baudcounter = 8'b1;
+				// Set the state.
 				statemachine = 3'b0;
-				framecounter = 4'b0;
-				bytecounter = 3'b111;
+				// Turn off the initializer.
 				initializer = 1'b0;
 			end else
 			case(statemachine)
 
-				3'b000: begin
-					reset = 1'b1;
+				3'b000: begin // Start state.
+					// Reset the CRC.
+					crcreset = 1'b1;
+					// Spit out the start bit `baudrate` times.
 					if(baudcounter < baudrate) begin
 						TX = startbit;
 						baudcounter = baudcounter + 1'b1;
 					end
+					// Time to move to the next state.
 					else begin
-						statemachine = 3'b001;
+						// We reset the framesizeconter and baudcounter.
 						framesizecounter = 2'b11;
 						baudcounter = 8'b1;
-						reset = 1'b0;
+						// Turn off the crc reset.
+						crcreset = 1'b0;
+						// Set the state.
+						statemachine = 3'b001;
 					end
 				end
 
-				3'b001: begin
-					en = 1'b0;
+				3'b001: begin // Frame counter state.
+					// Ensure we're not updating the CRC until necessary.
+					crcenable = 1'b0;
+					// Set the next bit for the CRC.
 					crcin = framesize[framesizecounter];
-					if(framesizecounter >= 2'b00) begin
-						if(baudcounter < baudrate) begin
-							TX = framesize[framesizecounter];
-							baudcounter = baudcounter + 1'b1;
-							if (baudcounter == baudrate) begin
-								en = 1'b1;
-							end else en = 1'b0;
+					// Iterate over each bit in the framesize.
+					// Do this `baudrate` times.
+					if(baudcounter < baudrate) begin
+						// Spit out the next bit of `framesize`.
+						TX = framesize[framesizecounter];
+						baudcounter = baudcounter + 1'b1;
+						// If we're on the last transmit of framesize,
+						// update the CRC.
+						crcenable = baudcounter == baudrate ? 1'b1 : 1'b0;
+					end
+					else begin
+						// We've spit out the current bit of `framesize`
+						// `baudrate` number of times.
+
+						// Time to move to the next state.
+						if(framesizecounter - 1'b1 == 2'b11) begin
+							// We use the `{baud,byte,frame}counter`.
+							baudcounter = 8'b1;
+							bytecounter = 3'b111;
+							framecounter = 4'b0;
+							// Ensure the CRC doesn't update.
+							crcenable = 1'b0;
+							// Set the state.
+							statemachine = 3'b010;
 						end
+						// Stay here but go to the next `framesize` bit.
 						else begin
-							if(framesizecounter - 1'b1 == 2'b11) begin
-								baudcounter = 8'b1;
-								statemachine = 3'b010;
-								en = 1'b0;
-							end
-							else begin
-								baudcounter = 8'b1;
-								framesizecounter = framesizecounter - 1'b1;
-							end
+							baudcounter = 8'b1;
+							framesizecounter = framesizecounter - 1'b1;
 						end
 					end
 				end
 
-				3'b010: begin
-					en = 1'b0;
+				3'b010: begin // Frame data state.
+					// Do this `framesize` number of times.
+					// Ensure the CRC doesn't update.
+					crcenable = 1'b0;
+					// Set the next bit for the CRC.
+					// Remember, we traverse from MSb to LSb.
 					crcin = framebits[((15 - framecounter) * 8) + bytecounter];
-					if(framecounter < framesize) begin
-						if(bytecounter >= 3'b0) begin
-							if(baudcounter < baudrate) begin
-								TX = framebits[((15 - framecounter) * 8) + bytecounter];
-								baudcounter = baudcounter + 1'b1;
-								if (baudcounter == baudrate) en = 1'b1;
-								else en = 1'b0;
-							end
-							else begin
-								if(bytecounter - 1'b1 == 3'b111) begin
-									if(framecounter + 1'b1 == framesize) begin
-										bytecounter = bytecounter - 1'b1;
-										baudcounter = 8'b1;
-										en = 1'b0;
-										statemachine = 3'b011;
-									end
-									else begin
-										baudcounter = 8'b1;
-										bytecounter = bytecounter - 1'b1;
-										framecounter = framecounter + 1'b1;
-									end
-								end
-								else begin
-									baudcounter = 8'b1;
-									bytecounter = bytecounter - 1'b1;
-								end
-							end
-						end
+					// Go through each bit in the next byte.
+					// Do this `baudrate` number of times.
+					if(baudcounter < baudrate) begin
+						// Shit out the next frame data bit.
+						TX = framebits[((15 - framecounter) * 8) + bytecounter];
+						baudcounter = baudcounter + 1'b1;
+						// If we're on the last transmit of framesize,
+						// update the CRC.
+						crcenable = baudcounter == baudrate ? 1'b1 : 1'b0;
 					end
-				end
-
-				3'b011: begin
-					if(bytecounter >= 3'b0) begin
-						if(baudcounter < baudrate) begin
-							TX = crcout[bytecounter];
-							baudcounter = baudcounter + 1'b1;
+					// We've given out the frame data bit `baudrate`
+					// number of times.
+					else begin
+						// Check if we've got another byte to go through.
+						if(bytecounter == 3'b000) begin
+							// We're out of data bits, go to the next state.
+							if(framecounter + 1'b1 == framesize) begin
+								// We need the `{baud,byte}counter`
+								baudcounter = 8'b1;
+								bytecounter = 3'b111;
+								// Ensure the CRC doesn't update.
+								crcenable = 1'b0;
+								// Set the state.
+								statemachine = 3'b011;
+							end
+							// Still have another byte of data.
+							else begin
+								// Reset our counters.
+								baudcounter = 8'b1;
+								bytecounter = 3'b111;
+								framecounter = framecounter + 1'b1;
+							end
 						end
+						// Time to move on to the next bit.
 						else begin
-							if(bytecounter - 1'b1 == 3'b111) begin
-								statemachine = 3'b100;
-								baudcounter = 8'b1;
-							end
-							else begin
-								bytecounter = bytecounter - 1'b1;
-								baudcounter = 8'b1;
-							end
+							baudcounter = 8'b1;
+							bytecounter = bytecounter - 1'b1;
 						end
 					end
 				end
 
-				3'b100: begin
+				3'b011: begin // CRC state.
+					// Do this for one byte.
+					// Do this `baudrate` number of times.
+					if(baudcounter < baudrate) begin
+						// Spit out the next bit in the CRC.
+						TX = crcout[bytecounter];
+						baudcounter = baudcounter + 1'b1;
+					end
+					// We've sent a bit `baudrate` times.
+					else begin
+						// Time to move to the next state.
+						if(bytecounter == 3'b000) begin
+							// We need the `baudcounter`.
+							baudcounter = 8'b1;
+							// Set the next state.
+							statemachine = 3'b100;
+						end
+						// More bits!
+						else begin
+							// Go to the next bit.
+							bytecounter = bytecounter - 1'b1;
+							baudcounter = 8'b1;
+						end
+					end
+				end
+
+				3'b100: begin // Stop state.
+					// Just dish out the stop bit `baudrate` times,
+					// Then set the TXI high, and TX low.
 					if(baudcounter < baudrate) begin
 						TX = stopbit;
 						baudcounter = baudcounter + 1'b1;
 					end
 					else begin
+						TX = 1'b0;
 						TXI = 1'b1;
 					end
 				end
@@ -155,6 +204,4 @@ module transmitter(	input logic clk,
 		end
 	end
 
-
 endmodule
-

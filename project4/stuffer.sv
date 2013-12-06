@@ -1,4 +1,4 @@
-module bitstuffer(input logic clk,
+module stuffer(input logic clk,
 						input logic enable,
 						input logic txin,
 						input logic [7:0] baudrate,

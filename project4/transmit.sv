@@ -1,4 +1,5 @@
-module transmit(	input logic [7:0] datain,
+module transmit(	input logic clk,
+						input logic [7:0] datain,
 						input logic en,
 						input logic tfin,
 						output logic [127:0] a,
@@ -8,9 +9,11 @@ module transmit(	input logic [7:0] datain,
 	logic [127:0] qu;
 	logic [3:0] count = 4'b0;
 
-	always@(posedge en or posedge tfin)
+	always_ff@(posedge clk)
 	begin
-		qu <= {qu[119:0],datain};
+		if(en)
+			qu <= {qu[119:0],datain};
+
 		if(tfin)
 			count <= 4'b0;
 		else if(count != 4'b1111)
