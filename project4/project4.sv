@@ -44,6 +44,6 @@ module project4( // the cpu interface
 		transmitter transx(CLK, TF, countin, txfifoout, baudout, internalstatus[3], txout);
 		stuffer stuffon(CLK, ~internalstatus[3], txout, baudout, TX);
 
-		receive rxbandits(CLK, RX, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[7], eightbitthing);
+		receive rxbandits(CLK, RX, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[6], internalstatus[7], eightbitthing);
 
 endmodule

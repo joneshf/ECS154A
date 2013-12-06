@@ -1,7 +1,7 @@
 module receive(input logic clk,
 					input logic RX,
 					input logic [7:0] baudrate,
-					output logic dr, nf, /*over, fe,*/
+					output logic dr, nf, over, crce, fe,
 					// output logic [7:0] dataout,
 
 	output logic [127:0] framedata,  			//the data in the frame
@@ -147,6 +147,11 @@ module receive(input logic clk,
 						end
 						// Time to move on with our lives.
 						else begin
+							// We need the bytecounter.
+							bytecounter = 3'b111;
+							// Clear the crce.
+							crce = 1'b0;
+							// Set the state.
 							statemachine = 3'b011;
 						end
 					end
@@ -155,51 +160,31 @@ module receive(input logic clk,
 						bytecounter -= 1'b1;
 				end
 			end
-			// 	//first data byte
-			// 	if(byteincrement != 3'b111)begin
-			// 		framedata[7] = RX;
-			// 		//RX needs to update
-			// 		framedata[6] = RX;
-			// 		//RX needs to update
-			// 		framedata[5] = RX;
-			// 		//RX needs to update
-			// 		framedata[4] = RX;
-			// 		//RX needs to update
-			// 		framedata[3] = RX;
-			// 		//RX needs to update
-			// 		framedata[2] = RX;
-			// 		//RX needs to update
-			// 		framedata[1] = RX;
-			// 		//RX needs to update
-			// 		framedata[0] = RX;
-			// 		byteincrement = byteincrement + 1'b1;
-			// 	end
-			// 	statemachine = statemachine + 1'b1;
-			// end
-			// 3'b011: begin
-			// 	//fill up the rest of the framedata
-			// 	//first check to see if there is too much data and set OR if there is
-			// 	//(it can still fill up to the end of framedata)
-			// 	if((framesize * 3'b111) > 7'b1111111)  //if the amount of bits to be input into framedata is larger than 127 (index 0)
-			// 	begin
-			// 		over = 1'b1;
-			// 	end
-			// 	//else
-			// 	//begin
-			// 	//follow the above template for the last two states
-			// 	//the difference is, each byte is MSB to LSB, so 15..8, 23..16, and so on
-			// 	//also, i recommend using logic if the over bit is 1 (put bits up to 127 in and stop)
-			// 	//if the over bit hasn't been set, this else statement would figure out how many RX bits go into framedata
-			// 	//remember that the first byte has already been input, so it would start at 15..8 and then go to FS*8-1..FS*7
+			3'b011: begin // CRC state.
+				// Stop resetting the `moreofbit`
+				resetmoreofbit = 1'b0;
+				// Ensure we're not updating the CRC at all.
+				crcenable = 1'b0;
+				// Time to go to the next bit.
+				if (baudcounter == baudrate & ~nf) begin
+					// Check that the current bit is accurate for the CRC generated.
+					crce |= crcout[bytecounter] != moreofbit;
+					// Reset the `moreofbit`.
+					resetmoreofbit = 1'b1;
+					// Reset the `baudcounter`.
+					baudcounter = 8'b0;
 
-
-			// end
-			// 3'b100: begin
-			// 	//this is for CRC
-			// 	//have to check for crc error by comparing the values from the crc RX bits
-			// 	//to the calculated crc
-
-			// end
+					// We have no more CRC bits.
+					if (bytecounter == 3'b0) begin
+						// Go on to the next state.
+						statemachine = 3'b100;
+					end
+					// More bits to check.
+					else begin
+						bytecounter -= 1'b1;
+					end
+				end
+			end
 			// 3'b101: begin
 			// 	//this is for the stop bit
 			// 	//fe gets set if the stop bit is one or if there are missing stuff bits
