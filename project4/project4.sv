@@ -8,11 +8,12 @@ module project4( // the cpu interface
 				output logic NINT, // negative interrupt
 				 // the serial interfaces
 				input logic RX, // receive
-				output logic TX); // transmit
+				output logic TX,
+				output logic [3:0] countout);
 
 		logic statin, intin, dataregin, baudin;
 		logic [7:0] internalstatus, statout, intout, datarxout, baudout, dataoutput;
-		logic [3:0] countout;
+		//logic [3:0] countout;
 		logic [127:0] txfifoout;
 		logic [7:0] eightbitthing;
 
@@ -28,7 +29,7 @@ module project4( // the cpu interface
 
 		interruptlogic il(statout, intout, NINT);
 
-		transmitter transx(CLK, statin & DATA[1] & statout[0], countout, txfifoout, baudout, internalstatus[3], TX);
+		transmitter transx(CLK, statin & DATA[1] & statout[0] & ~NW, countout, txfifoout, baudout, internalstatus[3], TX);
 
 		receive rxbandits(CLK, RX, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[7], eightbitthing);
 
