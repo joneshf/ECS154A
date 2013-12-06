@@ -90,41 +90,31 @@ module receive(input logic clk,
 				resetmoreofbit = 1'b0;
 				// Ensure we're not updating the CRC until necessary.
 				crcenable = 1'b0;
-				// Set the next bit for the CRC.
-				crcin = framesize[fscounter];
+				// Time to go to the next bit.
 				if (baudcounter == baudrate & ~nf) begin
+					// Set the next bit for the CRC.
+					crcin = moreofbit;
+					// Calculate the next CRC.
+					crcenable = 1'b1;
+					// Set the bit in the `framesize`.
+					framesize[fscounter] = moreofbit;
+					// Reset the `moreofbit`.
+					resetmoreofbit = 1'b1;
+
 					// Have more bits to check.
 					if (fscounter > 1'b0) begin
-						// Set the bit in the `framesize`.
-						framesize[fscounter] = moreofbit;
 						// Move to the next bit in the `framesize`.
 						fscounter = fscounter - 1'b1;
 						// Reset the `baudcounter`.
 						baudcounter = 8'b0;
-						// Calculate the next CRC.
-						crcenable = 1'b1;
 					end
 					// Move to the next state.
 					else begin
 						// Set the state.
 						statemachine = 3'b010;
 					end
-					// Reset the `moreofbit`.
-					resetmoreofbit = 1'b1;
+
 				end
-				// //this is kind of right except it needs to also account for the clock so RX will send in the next bit
-				// framesize = 4'b0;
-				// if(fsincrement != 2'b11) begin
-				// 	framesize[3] = RX;
-				// 	//here the RX needs to update to the next bit
-				// 	framesize[2] = RX;
-				// 	//the RX needs to update again
-				// 	framesize[1] = RX;
-				// 	//the RX needs to update again
-				// 	framesize[0] = RX;
-				// 	fsincrement = fsincrement + 1'b1;
-				// end
-				// statemachine = statemachine + 1'b1;
 			end
 			// 3'b010: begin
 			// 	//first data byte
