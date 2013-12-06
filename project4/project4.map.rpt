@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project4
-Fri Dec 06 07:05:02 2013
+Fri Dec 06 10:38:42 2013
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -48,15 +48,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 06 07:05:01 2013           ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 06 10:38:42 2013           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; project4                                        ;
 ; Top-level Entity Name              ; project4                                        ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 456                                             ;
-;     Total combinational functions  ; 300                                             ;
-;     Dedicated logic registers      ; 236                                             ;
-; Total registers                    ; 236                                             ;
+; Total logic elements               ; 762                                             ;
+;     Total combinational functions  ; 606                                             ;
+;     Dedicated logic registers      ; 411                                             ;
+; Total registers                    ; 411                                             ;
 ; Total pins                         ; 17                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -195,9 +195,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                 ; 17               ;
 ; DSP block 9-bit elements ; 0                ;
 ; Maximum fan-out node     ; CLK~input        ;
-; Maximum fan-out          ; 232              ;
-; Total fan-out            ; 1712             ;
-; Average fan-out          ; 2.96             ;
+; Maximum fan-out          ; 407              ;
+; Total fan-out            ; 3254             ;
+; Average fan-out          ; 3.07             ;
 +--------------------------+------------------+
 
 
@@ -206,33 +206,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------+--------------+
-; |project4                  ; 300 (6)           ; 236 (4)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 17   ; 0            ; |project4                                ; work         ;
+; |project4                  ; 606 (6)           ; 411 (4)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 17   ; 0            ; |project4                                ; work         ;
 ;    |baudratedivisor:brd|   ; 6 (6)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|baudratedivisor:brd            ; work         ;
 ;    |fouronebusmux:readbus| ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|fouronebusmux:readbus          ; work         ;
 ;    |interruptlogic:il|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|interruptlogic:il              ; work         ;
 ;    |receive:rxbandits|     ; 61 (61)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|receive:rxbandits              ; work         ;
 ;    |regoneinterrupt:im|    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|regoneinterrupt:im             ; work         ;
 ;    |statusregister:sr|     ; 3 (3)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|statusregister:sr              ; work         ;
-;    |stuffer:stuffon|       ; 31 (31)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|stuffer:stuffon                ; work         ;
+;    |stuffer:stuffon|       ; 362 (362)         ; 199 (199)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|stuffer:stuffon                ; work         ;
 ;    |transmit:txfifo|       ; 6 (6)             ; 132 (132)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|transmit:txfifo                ; work         ;
-;    |transmitter:transx|    ; 173 (169)         ; 36 (28)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|transmitter:transx             ; work         ;
+;    |transmitter:transx|    ; 148 (144)         ; 29 (21)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|transmitter:transx             ; work         ;
 ;       |crc:crccalc|        ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |project4|transmitter:transx|crc:crccalc ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------+
-; State Machine - |project4|transmitter:transx|statemachine                                                       ;
-+------------------+------------------+------------------+------------------+------------------+------------------+
-; Name             ; statemachine.011 ; statemachine.010 ; statemachine.001 ; statemachine.000 ; statemachine.100 ;
-+------------------+------------------+------------------+------------------+------------------+------------------+
-; statemachine.000 ; 0                ; 0                ; 0                ; 0                ; 0                ;
-; statemachine.001 ; 0                ; 0                ; 1                ; 1                ; 0                ;
-; statemachine.010 ; 0                ; 1                ; 0                ; 1                ; 0                ;
-; statemachine.011 ; 1                ; 0                ; 0                ; 1                ; 0                ;
-; statemachine.100 ; 0                ; 0                ; 0                ; 1                ; 1                ;
-+------------------+------------------+------------------+------------------+------------------+------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |project4|transmitter:transx|statemachine                                                                          ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; Name             ; statemachine.111 ; statemachine.100 ; statemachine.011 ; statemachine.010 ; statemachine.001 ; statemachine.000 ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+; statemachine.000 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ;
+; statemachine.001 ; 0                ; 0                ; 0                ; 0                ; 1                ; 1                ;
+; statemachine.010 ; 0                ; 0                ; 0                ; 1                ; 0                ; 1                ;
+; statemachine.011 ; 0                ; 0                ; 1                ; 0                ; 0                ; 1                ;
+; statemachine.100 ; 0                ; 1                ; 0                ; 0                ; 0                ; 1                ;
+; statemachine.111 ; 1                ; 0                ; 0                ; 0                ; 0                ; 1                ;
++------------------+------------------+------------------+------------------+------------------+------------------+------------------+
 
 
 +----------------------------------------------------------------------------------------+
@@ -243,14 +244,16 @@ Encoding Type:  One-Hot
 ; statusregister:sr|out[1]               ; Stuck at GND due to stuck port data_in        ;
 ; receive:rxbandits|over                 ; Stuck at VCC due to stuck port data_in        ;
 ; receive:rxbandits|framesize[0..3]      ; Lost fanout                                   ;
+; transmitter:transx|crcreset            ; Stuck at GND due to stuck port data_in        ;
 ; statusregister:sr|out[5]               ; Stuck at VCC due to stuck port data_in        ;
 ; statusregister:sr|out[6,7]             ; Stuck at GND due to stuck port data_in        ;
 ; receive:rxbandits|fsincrement[0,1]     ; Lost fanout                                   ;
 ; receive:rxbandits|statemachine[3]      ; Merged with receive:rxbandits|statemachine[2] ;
 ; receive:rxbandits|statemachine[2]      ; Stuck at GND due to stuck port clock_enable   ;
-; transmitter:transx|statemachine~7      ; Lost fanout                                   ;
 ; transmitter:transx|statemachine~8      ; Lost fanout                                   ;
-; Total Number of Removed Registers = 15 ;                                               ;
+; transmitter:transx|statemachine~9      ; Lost fanout                                   ;
+; transmitter:transx|statemachine~10     ; Lost fanout                                   ;
+; Total Number of Removed Registers = 17 ;                                               ;
 +----------------------------------------+-----------------------------------------------+
 
 
@@ -260,6 +263,8 @@ Encoding Type:  One-Hot
 ; Register name                  ; Reason for Removal        ; Registers Removed due to This Register                             ;
 +--------------------------------+---------------------------+--------------------------------------------------------------------+
 ; receive:rxbandits|framesize[3] ; Lost Fanouts              ; receive:rxbandits|fsincrement[1], receive:rxbandits|fsincrement[0] ;
+; statusregister:sr|out[1]       ; Stuck at GND              ; transmitter:transx|crcreset                                        ;
+;                                ; due to stuck port data_in ;                                                                    ;
 ; receive:rxbandits|over         ; Stuck at VCC              ; statusregister:sr|out[5]                                           ;
 ;                                ; due to stuck port data_in ;                                                                    ;
 +--------------------------------+---------------------------+--------------------------------------------------------------------+
@@ -270,12 +275,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 236   ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
+; Total registers                              ; 411   ;
+; Number of registers using Synchronous Clear  ; 15    ;
+; Number of registers using Synchronous Load   ; 7     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 192   ;
+; Number of registers using Clock Enable       ; 361   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -285,12 +290,12 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; transmitter:transx|TXI                 ; 14      ;
-; baudratedivisor:brd|out[2]             ; 5       ;
+; stuffer:stuffon|txi                    ; 1       ;
+; baudratedivisor:brd|out[2]             ; 3       ;
 ; stuffer:stuffon|baudcounter[0]         ; 2       ;
-; baudratedivisor:brd|out[0]             ; 5       ;
-; transmitter:transx|initializer         ; 16      ;
-; transmitter:transx|baudcounter[0]      ; 3       ;
+; baudratedivisor:brd|out[0]             ; 3       ;
+; stuffer:stuffon|bufferoffset[0]        ; 3       ;
+; transmitter:transx|initializer         ; 11      ;
 ; Total number of inverted registers = 6 ;         ;
 +----------------------------------------+---------+
 
@@ -300,18 +305,20 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |project4|transmit:txfifo|count[2]               ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |project4|transmitter:transx|baudcounter[1]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |project4|receive:rxbandits|clkcount[6]          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |project4|transmit:txfifo|count[0]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |project4|receive:rxbandits|clkcount[0]          ;
+; 4:1                ; 169 bits  ; 338 LEs       ; 169 LEs              ; 169 LEs                ; Yes        ; |project4|stuffer:stuffon|buffer[161]            ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |project4|receive:rxbandits|statemachine[2]      ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |project4|transmitter:transx|framesizecounter[0] ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |project4|transmitter:transx|framecounter[2]     ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |project4|transmitter:transx|bytecounter[0]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |project4|transmitter:transx|framesizecounter[0] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |project4|stuffer:stuffon|buffersize[6]          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |project4|transmitter:transx|framecounter[0]     ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |project4|transmitter:transx|bytecounter[2]      ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |project4|fouronebusmux:readbus|Mux6             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |project4|fouronebusmux:readbus|Mux7             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |project4|fouronebusmux:readbus|Mux3             ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |project4|receive:rxbandits|zeros                ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |project4|receive:rxbandits|ones                 ;
-; 15:1               ; 5 bits    ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; No         ; |project4|transmitter:transx|statemachine        ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |project4|transmitter:transx|statemachine        ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |project4|transmitter:transx|statemachine        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
@@ -329,7 +336,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -339,7 +346,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Dec 06 07:04:59 2013
+    Info: Processing started: Fri Dec 06 10:38:38 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project4 -c project4
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file crc/crc.sv
@@ -378,6 +385,7 @@ Info (12128): Elaborating entity "transmit" for hierarchy "transmit:txfifo"
 Info (12128): Elaborating entity "baudratedivisor" for hierarchy "baudratedivisor:brd"
 Info (12128): Elaborating entity "interruptlogic" for hierarchy "interruptlogic:il"
 Info (12128): Elaborating entity "transmitter" for hierarchy "transmitter:transx"
+Info (10264): Verilog HDL Case Statement information at transmitter.sv(52): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "crc" for hierarchy "transmitter:transx|crc:crccalc"
 Info (12128): Elaborating entity "stuffer" for hierarchy "stuffer:stuffon"
 Info (12128): Elaborating entity "receive" for hierarchy "receive:rxbandits"
@@ -388,20 +396,20 @@ Warning (10036): Verilog HDL or VHDL warning at receive.sv(18): object "moreofbi
 Warning (10034): Output port "dataout" at receive.sv(5) has no driver
 Warning (10034): Output port "fe" at receive.sv(4) has no driver
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/project4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 493 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 798 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 2 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 476 logic cells
+    Info (21061): Implemented 781 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 371 megabytes
-    Info: Processing ended: Fri Dec 06 07:05:02 2013
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 379 megabytes
+    Info: Processing ended: Fri Dec 06 10:38:42 2013
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+

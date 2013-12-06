@@ -15,7 +15,7 @@ module project4( // the cpu interface
 		logic [3:0] countout, countin;
 		logic [127:0] txfifoout;
 		logic [7:0] eightbitthing;
-		logic txout;
+		logic txout, stuffsend;
 		
 		logic TF, intwrite, txfifowrite, baudwrite;
 		
@@ -41,8 +41,8 @@ module project4( // the cpu interface
 
 		interruptlogic il(statout, intout, NINT);
 
-		transmitter transx(CLK, TF, countin, txfifoout, baudout, internalstatus[3], txout);
-		stuffer stuffon(CLK, ~internalstatus[3], txout, baudout, TX);
+		transmitter transx(CLK, TF, countin, txfifoout, stuffsend, txout);
+		stuffer stuffon(CLK, stuffsend, txout, baudout, internalstatus[3], TX);
 		
 		receive rxbandits(CLK, RX, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[7], eightbitthing);
 
