@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE AUTO
 set_global_assignment -name TOP_LEVEL_ENTITY project4
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:11:03  DECEMBER 02, 2013"
-set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -69,3 +69,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE stuffer.sv
 set_global_assignment -name VECTOR_WAVEFORM_FILE bigtest.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/bootcamp/Documents/GitHub/ECS154A/project4/bigtest.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/Hardy/Documents/GitHub/ECS154A/project4/simulation/qsim/" -section_id eda_simulation

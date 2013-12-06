@@ -1,11 +1,14 @@
 module receive(input logic clk,
 					input logic RX,
+					input logic rxfiforead,
 					input logic [7:0] baudrate,
 					output logic dr, nf, over, crce, fe,
 					output logic [7:0] dataout
 	);
 
 	logic [127:0] framedata;  			//the data in the frame
+	logic [7:0] rxfifo [0:15];
+	logic [3:0] rxfifoin = 4'b0001, rxfifoout = 4'b0000;
 	logic [3:0] statemachine = 3'b0;
 
 	// Our counters.
@@ -28,7 +31,9 @@ module receive(input logic clk,
 	initial begin
 		nf = 1'b0;
 		dr = 1'b0;
+		over = 1'b0;
 		statemachine = 3'b000;
+		for (int i = 0; i < 16; ++i) rxfifo[i] = i[7:0];
 	end
 
 	always_ff@(posedge clk) begin
@@ -65,6 +70,21 @@ module receive(input logic clk,
 				nf = 1'b1;
 		end
 		//end noise flag logic
+
+		// CHeck if we need to read.
+		if (baudcounter == baudrate & rxfiforead) begin
+			// Dish out the data.
+			dataout[7] = rxfifo[rxfifoout][7];
+			dataout[6] = rxfifo[rxfifoout][6];
+			dataout[5] = rxfifo[rxfifoout][5];
+			dataout[4] = rxfifo[rxfifoout][4];
+			dataout[3] = rxfifo[rxfifoout][3];
+			dataout[2] = rxfifo[rxfifoout][2];
+			dataout[1] = rxfifo[rxfifoout][1];
+			dataout[0] = rxfifo[rxfifoout][0];
+			// Adjust the out location.
+			rxfifoout = rxfifoin == rxfifoout + 1'b1 ? rxfifoout : rxfifoout + 1'b1;
+		end
 
 		case(statemachine)
 			3'b000: begin // State state.
@@ -139,6 +159,21 @@ module receive(input logic clk,
 
 					// We have no more bits in this byte
 					if (bytecounter == 3'b0) begin
+						// Move data to the fifo.
+						// If we're trying to put data in where data already exists,
+						// We've overrun the fifo.
+						over |= rxfifoin == rxfifoout;
+						// Put the data in one position before the in location.
+						rxfifo[rxfifoin - 1'b1][7] = framedata[127 - (framecounter * 8)];
+						rxfifo[rxfifoin - 1'b1][6] = framedata[126 - (framecounter * 8)];
+						rxfifo[rxfifoin - 1'b1][5] = framedata[125 - (framecounter * 8)];
+						rxfifo[rxfifoin - 1'b1][4] = framedata[124 - (framecounter * 8)];
+						rxfifo[rxfifoin - 1'b1][3] = framedata[123 - (framecounter * 8)];
+						rxfifo[rxfifoin - 1'b1][2] = framedata[122 - (framecounter * 8)];
+						rxfifo[rxfifoin - 1'b1][1] = framedata[121 - (framecounter * 8)];
+						rxfifo[rxfifoin - 1'b1][0] = framedata[120 - (framecounter * 8)];
+						// Adjust the in location.
+						rxfifoin += 1'b1;
 						// Still have another byte of data to receive.
 						if (framecounter + 1 < framesize) begin
 							// Increment the `framecounter`.

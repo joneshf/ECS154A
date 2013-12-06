@@ -16,13 +16,15 @@ module project4( // the cpu interface
 		logic [127:0] txfifoout;
 		logic [7:0] eightbitthing;
 		logic txout, stuffsend;
-		
+
 		logic TF, intwrite, txfifowrite, baudwrite;
+		logic rxfiforead;
 
 		assign TF = statin & DATA[1] & statout[0] & ~NW;
 		assign intwrite = intin & ~NW & statout[0];
 		assign txfifowrite = dataregin & ~NW & statout[0];
 		assign baudwrite = baudin & ~NW & ~statout[0];
+		assign rxfiforead = dataregin & ~NCS & ~NO & NW;
 
 		always@(posedge TF) begin
 			countin = countout;
@@ -44,6 +46,6 @@ module project4( // the cpu interface
 		transmitter transx(CLK, TF, countin, txfifoout, stuffsend, txout);
 		stuffer stuffon(CLK, stuffsend, txout, baudout, internalstatus[3], TX);
 
-		receive rxbandits(CLK, RX, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[6], internalstatus[7], eightbitthing);
+		receive rxbandits(CLK, RX, rxfiforead, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[6], internalstatus[7], eightbitthing);
 
 endmodule
