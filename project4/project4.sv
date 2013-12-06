@@ -25,7 +25,7 @@ module project4( // the cpu interface
 		assign baudwrite = baudin & ~NW & ~statout[0];
 		
 		always@(posedge TF) begin
-			countin <= countout;
+			countin = countout;
 		end
 
 		tristate ts(dataoutput, ~NO, DATA);
