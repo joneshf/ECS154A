@@ -31,6 +31,6 @@ module project4( // the cpu interface
 
 		transmitter transx(CLK, statin & DATA[1] & statout[0] & ~NW, countout, txfifoout, baudout, internalstatus[3], TX);
 
-		receive rxbandits(CLK, RX, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[7], eightbitthing);
+		receiver rxbandits(CLK, RX, baudout, internalstatus[1], internalstatus[4], internalstatus[5], internalstatus[7], eightbitthing);
 
 endmodule

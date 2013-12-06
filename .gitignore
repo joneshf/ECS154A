@@ -7,3 +7,6 @@ simulation/
 *assignment_defaults.qdf
 *.ipinfo
 *.zip
+*.rpt
+*.summary
+*.done
