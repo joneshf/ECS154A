@@ -141,7 +141,7 @@ module receive(input logic clk,
 					// We have no more bits in this byte
 					if (bytecounter == 3'b0) begin
 						// Still have another byte of data to receive.
-						if (framecounter < framesize) begin
+						if (framecounter + 1 < framesize) begin
 							// Increment the `framecounter`.
 							framecounter += 1'b1;
 						end
