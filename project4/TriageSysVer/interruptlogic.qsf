@@ -18,14 +18,14 @@
 #
 # Quartus II 64-Bit
 # Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-# Date created = 19:11:03  December 02, 2013
+# Date created = 17:59:59  December 02, 2013
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		project4_assignment_defaults.qdf
+#		interruptlogic_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -36,39 +36,21 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone IV GX"
+set_global_assignment -name FAMILY "Arria II GX"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY project4
+set_global_assignment -name TOP_LEVEL_ENTITY interruptlogic
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:11:03  DECEMBER 02, 2013"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:59:59  DECEMBER 02, 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name SYSTEMVERILOG_FILE interruptlogic.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformintlogic.vwf
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_global_assignment -name SYSTEMVERILOG_FILE crc/crc.sv
-set_global_assignment -name VECTOR_WAVEFORM_FILE regwrites.vwf
-set_global_assignment -name SYSTEMVERILOG_FILE baudratedivisor/baudratedivisor.sv
-set_global_assignment -name SYSTEMVERILOG_FILE regoneinterrupt/regoneinterrupt.sv
-set_global_assignment -name SYSTEMVERILOG_FILE statusregister/statusregister.sv
-set_global_assignment -name SYSTEMVERILOG_FILE tristate.sv
-set_global_assignment -name SYSTEMVERILOG_FILE project4.sv
-set_global_assignment -name SYSTEMVERILOG_FILE onefourbusdecode.sv
-set_global_assignment -name SYSTEMVERILOG_FILE interruptlogic.sv
-set_global_assignment -name SYSTEMVERILOG_FILE fouronebusmux.sv
-set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformWriteRead.vwf
-set_global_assignment -name SYSTEMVERILOG_FILE transmit.sv
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformtxfifowrite.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveformstatreg.vwf
-set_global_assignment -name SYSTEMVERILOG_FILE receive.sv
-set_global_assignment -name SYSTEMVERILOG_FILE transmitter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE stuffer.sv
-set_global_assignment -name VECTOR_WAVEFORM_FILE bigtest.vwf
-set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:\\Users\\Brandon Tyler\\Documents\\GitHub\\ECS154A\\project4\\simulation\\qsim" -section_id eda_simulation
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-set_global_assignment -name VECTOR_WAVEFORM_FILE WaveformReceive.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Brandon Tyler/Documents/GitHub/ECS154A/project4/WaveformReceive.vwf"
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Brandon Tyler/Desktop/TriageSysVer/Waveformintlogic.vwf"
